@@ -164,6 +164,7 @@
     .modal-head h3{margin:0;font-size:1.65rem}
     .icon-btn{width:38px;height:38px;border:0;border-radius:12px;background:#f0f3f2;font-size:1.1rem}
     .modal-body{padding:22px;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+    html.embedded .modal-body::after{content:"";display:block;height:clamp(160px,20vh,260px)}
     .verdict-box{background:#f5f8f7;border-radius:16px;padding:16px;margin-bottom:16px}
     .detail-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .detail-block{border:1px solid var(--line);border-radius:16px;padding:15px}
@@ -175,6 +176,7 @@
     .research-card h3{margin:6px 0;font-size:1rem}
     .research-card p{font-size:.84rem;color:var(--muted);margin:0}
     footer{padding:36px 0 90px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}
+    html.embedded footer{padding-bottom:clamp(260px,28vh,380px)}
     .footer-grid{display:flex;justify-content:space-between;gap:25px;align-items:start}
     .hidden{display:none!important}
     @media(max-width:980px){
@@ -253,6 +255,7 @@
   </style>
 </head>
 <body>
+  <script>if(window.self!==window.top)document.documentElement.classList.add('embedded');</script>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top"><span class="brand-mark">MF</span><span>Makersmiths Forge<small>Consumer UV Printer Project</small></span></a>
