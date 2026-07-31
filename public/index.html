@@ -35,15 +35,16 @@
     .wrap{width:min(var(--max),calc(100% - 32px));margin-inline:auto}
     /* Exact Webador/Makersmiths Forge header classes supplied by the site owner. */
     .block-header{position:sticky;background-color:#fff;transition:background-color 200ms ease-in-out;top:0;left:0;right:0;z-index:1000}
-    .block-header__inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:7px 24px;transition:padding 200ms ease-in-out}
+    .block-header__inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22.5px 37.5px;transition:padding 200ms ease-in-out}
     .block-header__brand{flex:0 0 auto}
-    .jw-header-logo{display:flex;align-items:center}
-    .jw-header{float:left;position:relative}
+    .jw-header-logo{display:flex;align-items:center;flex-wrap:nowrap;white-space:nowrap;text-decoration:none}
+    .jw-header{float:none;position:relative;flex:0 0 auto}
     .jw-header-image-toggle,.jw-header-text-toggle{display:block}
     .jw-header-image-toggle{margin-right:20px;line-height:0}
-    .jw-header-image{display:block;width:136px;height:100px;object-fit:contain}
-    .jw-header-title{line-height:1;margin:0;color:#dc2626;font-family:"Open Sans",sans-serif;font-weight:400;font-style:normal;font-size:3.5rem;display:inline}
-    .jw-menu{display:flex;flex-wrap:wrap;gap:1em;font-size:1.5rem;font-family:"Open Sans",sans-serif;line-height:1.5;text-transform:uppercase;list-style:none;margin:0;padding:0}
+    .jw-header-image{display:block;width:129px;height:95px;object-fit:contain}
+    .jw-header-title-container{width:auto;min-width:max-content;flex:0 0 auto;white-space:nowrap}
+    .jw-header-title{line-height:35px;margin:0;color:#dc2626;font-family:"Open Sans",sans-serif;font-weight:400;font-style:normal;font-size:35px;display:block;white-space:nowrap;word-break:keep-all}
+    .jw-menu{display:flex;flex-wrap:wrap;gap:1em;font-size:15px;font-family:"Open Sans",sans-serif;line-height:1.5;text-transform:uppercase;list-style:none;margin:0;padding:0}
     .jw-menu-horizontal>.jw-menu-item{display:block}
     .jw-menu-item,.jw-menu-link{position:relative;box-sizing:border-box}
     .jw-menu-link{display:block;padding:12px 15px;color:#707070;text-decoration:none;transition:200ms ease}
@@ -296,24 +297,24 @@
           <span class="jw-icon-burger jw-icon-burger--cross"></span>
         </button>
         <div class="jw-mobile-header jw-mobile-header--image-text">
-          <a class="jw-mobile-header-content" href="https://www.makersmithsforge.com/">
+          <span class="jw-mobile-header-content">
             <img class="jw-mobile-logo jw-mobile-logo--square" src="./makersmiths-forge-logo.png?v=cupp-header-v4" alt="Makersmiths Forge">
             <span class="jw-mobile-text">Makersmiths Forge</span>
-          </a>
+          </span>
         </div>
         <a href="https://www.makersmithsforge.com/cart" class="jw-mobile-menu__button jw-mobile-header-cart" aria-label="View cart">
           <svg class="jw-header-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5H3v2h1.7l2.1 8.4A2 2 0 0 0 8.75 17H18a2 2 0 0 0 1.9-1.37L22 9H7.2L6.7 7l-.5-2ZM9 19a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
         </a>
       </div>
       <div class="block-header__brand">
-        <a class="jw-header-logo" href="https://www.makersmithsforge.com/" aria-label="Makersmiths Forge home">
+        <div class="jw-header-logo">
           <span class="jw-header jw-header-image-container jw-header-image-toggle">
-            <img class="jw-header-image" src="./makersmiths-forge-logo.png?v=cupp-header-v4" width="136" height="100" alt="Makersmiths Forge">
+            <img class="jw-header-image" src="./makersmiths-forge-logo.png?v=cupp-header-v7" width="129" height="95" alt="Makersmiths Forge">
           </span>
           <span class="jw-header jw-header-title-container jw-header-text jw-header-text-toggle">
             <span class="jw-header-title">Makersmiths Forge</span>
           </span>
-        </a>
+        </div>
       </div>
       <nav class="block-header__menu jw-menu-copy" aria-label="Makersmiths Forge navigation">
         <ul class="jw-menu jw-menu-horizontal">
