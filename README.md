@@ -2,6 +2,8 @@
 
 # MCP example Netlify Express
 
+ChatGPT Connection working
+
 **View this demo site**: https://mcp-example-express.netlify.app/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f15f03f9-55d8-4adc-97d5-f6e085141610/deploy-status)](https://app.netlify.com/sites/mcp-example-express/deploys)
