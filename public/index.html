@@ -33,21 +33,49 @@
     button,input,select{font:inherit}
     button{cursor:pointer}
     .wrap{width:min(var(--max),calc(100% - 32px));margin-inline:auto}
-    .site-header{position:sticky;top:0;z-index:50;background:rgba(246,243,237,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(20,33,43,.08)}
-    .header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:-.02em}
-    .brand-mark{width:54px;height:44px;object-fit:contain;display:block}
-    .brand small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:750}
-    nav{display:flex;align-items:center;gap:20px;font-size:.92rem;font-weight:700;color:#34444f}
-    nav a{text-decoration:none}
-    nav a:hover{color:var(--brand)}
-    nav a[aria-current="page"]{color:var(--brand-dark)}
-    .nav-cta{padding:10px 14px;border-radius:999px;background:var(--ink);color:white}
+    /* Exact Webador/Makersmiths Forge header classes supplied by the site owner. */
+    .block-header{position:sticky;background-color:#fff;transition:background-color 200ms ease-in-out;top:0;left:0;right:0;z-index:1000}
+    .block-header__inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:7px 24px;transition:padding 200ms ease-in-out}
+    .block-header__brand{flex:0 0 auto}
+    .jw-header-logo{display:flex;align-items:center}
+    .jw-header{float:left;position:relative}
+    .jw-header-image-toggle,.jw-header-text-toggle{display:block}
+    .jw-header-image-toggle{margin-right:20px;line-height:0}
+    .jw-header-image{display:block;width:136px;height:100px;object-fit:contain}
+    .jw-header-title{line-height:1;margin:0;color:#dc2626;font-family:"Open Sans",sans-serif;font-weight:400;font-style:normal;font-size:3.5rem;display:inline}
+    .jw-menu{display:flex;flex-wrap:wrap;gap:1em;font-size:1.5rem;font-family:"Open Sans",sans-serif;line-height:1.5;text-transform:uppercase;list-style:none;margin:0;padding:0}
+    .jw-menu-horizontal>.jw-menu-item{display:block}
+    .jw-menu-item,.jw-menu-link{position:relative;box-sizing:border-box}
+    .jw-menu-link{display:block;padding:12px 15px;color:#707070;text-decoration:none;transition:200ms ease}
+    .jw-menu-item>.jw-menu-link:hover{color:#dc2626;background:#fff;text-decoration:none}
+    .jw-menu>.jw-menu-is-active>.jw-menu-link{color:#000;border-bottom:2px solid #dc2626}
+    .jw-menu-link--icon{border:0;background:transparent;font:inherit;cursor:pointer}
+    .jw-icon-badge-wrapper{position:relative;display:inline-block;line-height:1em}
+    .jw-header-icon{display:block;width:20px;height:20px;fill:currentColor}
+    .jw-mobile-menu{display:none}
+    .hidden-desktop-horizontal-menu,.jw-menu-wishlist-item{display:none}
     .cupp-nav{background:var(--surface);border-bottom:1px solid var(--line)}
     .cupp-nav-inner{min-height:48px;display:flex;align-items:center;gap:18px;overflow-x:auto;scrollbar-width:thin}
     .cupp-nav a{flex:0 0 auto;color:#43545f;font-size:.82rem;font-weight:800;text-decoration:none}
     .cupp-nav a:first-child{color:var(--brand-dark)}
     .cupp-nav a:hover{color:var(--brand)}
+    @media(max-width:1130px){
+      .block-header__inner{padding:0}
+      .block-header__brand,.block-header__menu{display:none}
+      .jw-mobile-menu{display:flex;width:100%;position:relative;z-index:1010;box-sizing:border-box;align-items:center}
+      .jw-mobile-menu__button{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:50px;min-height:50px;padding:9px;border:0;background:transparent;color:#dc2626}
+      .jw-mobile-header{flex:1 1 auto;display:flex;justify-content:center;padding:5px 10px;max-height:60px;min-height:50px;box-sizing:border-box;overflow:hidden}
+      .jw-mobile-header-content{display:inline-flex;align-items:center;justify-content:center;height:100%}
+      .jw-mobile-logo{display:block;max-height:40px;max-width:70px;object-fit:contain}
+      .jw-mobile-text{margin-left:10px;color:#dc2626;display:inline-flex;align-items:center;font-family:"Open Sans",sans-serif;font-size:1.45rem;font-weight:400;line-height:1}
+      .jw-icon-burger{position:relative;width:22px;height:16px;border-top:2px solid currentColor;border-bottom:2px solid currentColor}
+      .jw-icon-burger:after{content:"";position:absolute;left:0;right:0;top:5px;border-top:2px solid currentColor}
+      .block-header.mobile-open .block-header__menu{display:block;position:absolute;top:50px;left:0;right:0;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.18)}
+      .block-header.mobile-open .jw-menu{display:block;font-size:1rem}
+      .block-header.mobile-open .jw-menu-item{display:block;width:100%}
+      .block-header.mobile-open .jw-menu-link{padding:14px 18px;text-align:center}
+      .block-header.mobile-open .jw-menu>.jw-menu-is-active>.jw-menu-link{border-bottom:0}
+    }
     .hero{padding:70px 0 34px;position:relative;overflow:hidden}
     .hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-150px;top:-140px;background:radial-gradient(circle,#f7c4aa 0,#f3dacb 42%,transparent 72%);opacity:.8;pointer-events:none}
     .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #d9c4b8;border-radius:999px;background:#fff8f3;color:#7d3b21;font-size:.78rem;font-weight:850;text-transform:uppercase;letter-spacing:.06em}
@@ -184,10 +212,12 @@
     .footer-grid{display:flex;justify-content:space-between;gap:25px;align-items:start}
     .hidden{display:none!important}
     @media(max-width:980px){
-      .hero-grid,.benchmark{grid-template-columns:1fr}.hero-card{max-width:720px}.use-grid{grid-template-columns:repeat(2,1fr)}.card-grid,.evidence-grid,.research-grid{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}nav a:not(.nav-cta){display:none}
+      .hero-grid,.benchmark{grid-template-columns:1fr}.hero-card{max-width:720px}.use-grid{grid-template-columns:repeat(2,1fr)}.card-grid,.evidence-grid,.research-grid{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}
+      .header-inner{min-height:88px;padding:0 20px}.brand-mark{width:78px;height:58px}.brand-name{font-size:24px}.primary-nav a:not([aria-current="page"]):not(.header-icon){display:none}.primary-nav{gap:22px}.primary-nav a[aria-current="page"]:after{bottom:27px}
     }
     @media(max-width:680px){
       .wrap{width:min(100% - 20px,var(--max))}.hero{padding-top:42px}h1{font-size:3rem}.section-head{display:block}.use-grid,.card-grid,.evidence-grid,.research-grid,.job-grid,.detail-columns{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.finder-actions{display:block}.finder-actions .btn{width:100%;margin-top:12px}.stats{grid-template-columns:1fr 1fr}.matrix-toolbar{align-items:stretch;flex-direction:column}.matrix-tools{display:grid;grid-template-columns:1fr}.footer-grid{display:block}.compare-bar{align-items:stretch;flex-direction:column}.compare-items{width:100%}
+      .header-inner{min-height:76px;padding:0 12px;gap:12px}.brand{gap:9px}.brand-mark{width:58px;height:44px}.brand-name{font-size:18px}.primary-nav{gap:14px;font-size:11px}.primary-nav .header-search{display:none}.primary-nav a[aria-current="page"]:after{bottom:20px}
     }
       .why-toggle{background:none;border:0;padding:0;margin-top:8px;color:var(--teal);font-weight:800;font-size:.78rem;text-decoration:underline;text-align:left}
     .why-box{display:none;margin-top:8px;background:#f5f8f7;border-radius:10px;padding:10px 12px;font-size:.78rem;color:#3f505a}
@@ -259,18 +289,48 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="https://www.makersmithsforge.com/" aria-label="Makersmiths Forge home"><img class="brand-mark" src="/makersmiths-forge-logo.png" alt=""><span>Makersmiths Forge<small>Consumer UV Printer Project</small></span></a>
-      <nav aria-label="Primary navigation">
-        <a href="https://www.makersmithsforge.com/">Home</a>
-        <a href="https://www.makersmithsforge.com/about-us">About Us</a>
-        <a href="https://www.makersmithsforge.com/blog">Blog</a>
-        <a href="https://www.makersmithsforge.com/product-categories">Product Categories</a>
-        <a href="https://www.makersmithsforge.com/faq">FAQ</a>
-        <a href="https://www.makersmithsforge.com/uv-sticker-design-tips">UV Sticker Tips</a>
-        <a href="#top" aria-current="page">CUPP</a>
-        <a class="nav-cta" href="https://store.makersmithsforge.com/">Shop</a>
+  <header class="block-header js-topbar-content-container js-fixed-header-container">
+    <div class="block-header__inner">
+      <div class="jw-mobile-menu jw-mobile-is-text js-mobile-menu">
+        <button type="button" class="jw-mobile-menu__button jw-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="jw-icon-burger jw-icon-burger--cross"></span>
+        </button>
+        <div class="jw-mobile-header jw-mobile-header--image-text">
+          <a class="jw-mobile-header-content" href="https://www.makersmithsforge.com/">
+            <img class="jw-mobile-logo jw-mobile-logo--square" src="./makersmiths-forge-logo.png?v=cupp-header-v4" alt="Makersmiths Forge">
+            <span class="jw-mobile-text">Makersmiths Forge</span>
+          </a>
+        </div>
+        <a href="https://www.makersmithsforge.com/cart" class="jw-mobile-menu__button jw-mobile-header-cart" aria-label="View cart">
+          <svg class="jw-header-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5H3v2h1.7l2.1 8.4A2 2 0 0 0 8.75 17H18a2 2 0 0 0 1.9-1.37L22 9H7.2L6.7 7l-.5-2ZM9 19a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
+        </a>
+      </div>
+      <div class="block-header__brand">
+        <a class="jw-header-logo" href="https://www.makersmithsforge.com/" aria-label="Makersmiths Forge home">
+          <span class="jw-header jw-header-image-container jw-header-image-toggle">
+            <img class="jw-header-image" src="./makersmiths-forge-logo.png?v=cupp-header-v4" width="136" height="100" alt="Makersmiths Forge">
+          </span>
+          <span class="jw-header jw-header-title-container jw-header-text jw-header-text-toggle">
+            <span class="jw-header-title">Makersmiths Forge</span>
+          </span>
+        </a>
+      </div>
+      <nav class="block-header__menu jw-menu-copy" aria-label="Makersmiths Forge navigation">
+        <ul class="jw-menu jw-menu-horizontal">
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/">Home</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/about-us">About Us</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/blog">Blog</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/product-categories">Product Categories</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/faq">FAQ</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/uv-sticker-design-tips">UV Sticker Design Tips</a></li>
+          <li class="jw-menu-item jw-menu-is-active"><a class="jw-menu-link js-active-menu-item" href="#top">CUPP</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link jw-menu-link--icon" href="https://www.makersmithsforge.com/search" aria-label="Search">
+            <svg class="jw-header-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 4a6.5 6.5 0 1 0 3.98 11.64l4.44 4.44 1.42-1.42-4.44-4.44A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg>
+          </a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link jw-menu-link--icon" href="https://www.makersmithsforge.com/cart" aria-label="View cart">
+            <svg class="jw-header-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5H3v2h1.7l2.1 8.4A2 2 0 0 0 8.75 17H18a2 2 0 0 0 1.9-1.37L22 9H7.2L6.7 7l-.5-2ZM9 19a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
+          </a></li>
+        </ul>
       </nav>
     </div>
     <div class="cupp-nav">
@@ -2839,6 +2899,12 @@ function renderMatrix(){
         <p class="tco-note"><strong>Model limitations (from CUPP Master v0.9, TCO Assumptions sheet):</strong> excludes labor, electricity, taxes, financing, failure rate, and resale value. Printhead replacement cost is undisclosed by every manufacturer in this comparison — it is shown as an advisory, and only added to the total if you tick "include community estimate" above. ${p.tco.tcoSourceNote}</p>`;
     }
 
+    const mobileToggle=document.querySelector('.jw-mobile-toggle');
+    if(mobileToggle) mobileToggle.addEventListener('click',()=>{
+      const header=document.querySelector('.block-header');
+      const open=header.classList.toggle('mobile-open');
+      mobileToggle.setAttribute('aria-expanded',open?'true':'false');
+    });
     document.getElementById('runFinder').addEventListener('click',renderResults);
     ['budget','risk','priority','needRotary','needUvdtf','needOpenInk','needHighEvidence'].forEach(id=>document.getElementById(id).addEventListener('change',renderResults));
     document.querySelectorAll('[data-matrix-view]').forEach(btn=>btn.addEventListener('click',()=>{comparisonView=btn.dataset.matrixView;document.querySelectorAll('[data-matrix-view]').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-selected',b===btn?'true':'false')});renderMatrix();}));
