@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="CUPP — a guided, evidence-first comparison of consumer UV printers, merged from the finder/compare-tray prototype and the fully cited data model, with a real cost-of-ownership calculator." />
-  <title>CUPP — Consumer UV Printer Project | Merged Buying Guide v1.1</title>
+  <title>CUPP — Consumer UV Printer Project | Research Release v1.2</title>
   <style>
     :root{
       --ink:#14212b;
@@ -256,6 +256,11 @@
     .tco-table .total-row td{border-top:2px solid var(--ink);font-weight:900}
     .tco-note{font-size:.8rem;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
     .watchlist-note{background:var(--amber-soft);border:1px solid #e9c672;color:#6d521d;border-radius:14px;padding:14px 16px;font-size:.86rem;margin-top:18px}
+    .research-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}
+    .research-actions p{margin:0;color:var(--muted);font-size:.86rem}
+    .printhead-table{min-width:720px}
+    .printhead-table td:first-child,.printhead-table th:first-child{position:static;min-width:150px}
+    .evidence-note{padding:13px 15px;border-left:4px solid var(--teal);background:var(--teal-soft);border-radius:0 12px 12px 0;font-size:.86rem;color:#31545a}
   
     .affiliate-disclosure{margin:0 0 18px;padding:14px 16px;border-left:4px solid var(--brand);background:#fff8f3;color:#6c4333;border-radius:0 12px 12px 0;font-size:.82rem;line-height:1.5}
     .comparison-tabs{display:flex;gap:10px;padding:14px 0 16px;border-bottom:1px solid var(--line)}
@@ -487,16 +492,17 @@
           <article class="research-card"><div class="n">04</div><h3>Soluble-support handling</h3><p>Removal time, temperature, residue, agitation, consumables, SDS, and wastewater guidance.</p></article>
           <article class="research-card"><div class="n">05</div><h3>AI and software cost</h3><p>Credits, subscriptions, cloud dependency, export restrictions, and what stops when payment ends.</p></article>
           <article class="research-card"><div class="n">06</div><h3>Long-term ownership</h3><p>Nozzle clogs, weekly maintenance, support response, parts availability, and firmware history.</p></article>
-          <article class="research-card"><div class="n">07</div><h3>New-entrant watchlist</h3><p>Rumored launches (e.g. a possible new Anycubic UV printer) get tracked here until there's a real spec sheet to evaluate — never added to the comparison as a guess.</p></article>
+          <article class="research-card"><div class="n">07</div><h3>New-entrant watchlist</h3><p>Credible product-discovery signals get tracked here until there is a real announcement and specification sheet — never added to the comparison as a guess.</p></article>
           <article class="research-card"><div class="n">08</div><h3>Community-sourced cost figures</h3><p>Printhead replacement costs, ink consumption, and failure reports pulled from Facebook/Reddit communities need independent, non-anecdotal confirmation.</p></article>
         </div>
-        <div class="watchlist-note"><strong>Anycubic watchlist (2026-07-26 research pass):</strong> a rumored new Anycubic UV printer was searched for across Anycubic's official site, Kickstarter, Reddit, and general web search. No product page, spec sheet, teaser, or credible leak was found — so it is <em>not</em> added as a tracked configuration. This stays a watchlist item, revisited on each periodic research pass.</div>
+        <div class="watchlist-note"><strong>Anycubic — market watch, product unannounced (updated 2026-08-02):</strong> In July 2026, Anycubic invited users to participate in research on consumer-grade UV printers, with selected respondents considered for extended interviews. Anycubic also holds <a href="https://patents.google.com/patent/CN115195127A/en" target="_blank" rel="noopener">Chinese patent CN115195127</a>, covering multi-nozzle CMYK photosensitive-ink printing with UV-cured stacked layers for full-color 3D models. Together, these are credible signs of relevant research and product discovery, but Anycubic has not announced a commercial UV printer, specifications, pricing, or a release schedule. It remains outside the available-product comparison.</div>
+        <div class="research-actions"><button class="btn btn-dark" id="openPrintheadInfo" type="button">Printhead information: F1080 vs. I3200</button><p>Share owner tests and research leads with <strong>#CUPPUVResearch</strong>.</p></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap footer-grid"><div><strong><a href="https://www.makersmithsforge.com/">Makersmiths Forge</a> · CUPP — Consumer UV Printer Project</strong><br>Merged v1.1 — built from CUPP Master Workbook v0.9 and the 2026-07-26/27 Facebook/Reddit research pass. Governed by the CUPP Project Constitution v1.0.<br><a href="https://www.makersmithsforge.com/about-us">About Us</a> · <a href="https://www.makersmithsforge.com/blog">Blog</a> · <a href="https://www.makersmithsforge.com/product-categories">Products</a> · <a href="https://www.makersmithsforge.com/faq">FAQ</a></div><div>Prices and campaign status change. Verify current terms before purchasing.<br>Some links are affiliate links; compensation does not affect CUPP research.<br>Cost-of-ownership figures are planning estimates, not purchasing guarantees.</div></div>
+    <div class="wrap footer-grid"><div><strong><a href="https://www.makersmithsforge.com/">Makersmiths Forge</a> · CUPP — Consumer UV Printer Project</strong><br>Research Release v1.2 — updated 2026-08-02 from CUPP Master Workbook v0.9 and the latest owner, evaluator, campaign, and manufacturer evidence. Governed by the CUPP Project Constitution v1.0.<br><a href="https://www.makersmithsforge.com/about-us">About Us</a> · <a href="https://www.makersmithsforge.com/blog">Blog</a> · <a href="https://www.makersmithsforge.com/product-categories">Products</a> · <a href="https://www.makersmithsforge.com/faq">FAQ</a></div><div>Prices and campaign status change. Verify current terms before purchasing.<br>Some links are affiliate links; compensation does not affect CUPP research.<br>Cost-of-ownership figures are planning estimates, not purchasing guarantees.</div></div>
   </footer>
 
   <div class="compare-bar" id="compareBar"><div class="compare-items" id="compareItems"></div><button id="clearCompare">Clear</button><button id="openCompare" style="background:var(--brand);color:#fff">Compare selected</button></div>
@@ -573,6 +579,7 @@
       "High-capacity CISS (announced, not yet released)"
     ],
     "callouts": [
+      "NEW 2026-08-02: eufyMake's official US price for each 100ml UV ink cartridge is now $29.99, reduced from $42.99; the 980ml ink-and-cleaning kit is $209.99. Subscription and regional pricing may differ.",
       "NEW 2026-07-26 (Reddit, r/eufyMakeOfficial and r/printers owner sentiment): broader sampling skews more mixed-positive than press coverage alone suggests -- several long-time owners report the machine has \"paid for itself,\" including one small shop that scaled from 2 to 5 units plus 2 additional E1s across two locations.",
       "Ink & mandatory maintenance cost is the #1 complaint across every review — no vacation/idle mode; a beta unit was bricked by improper long-term power-off.",
       "AI relief-generation features sit behind a token/credit paywall on top of the hardware cost.",
@@ -715,14 +722,26 @@
       }
     },
     "accessories": [
-      "Rotary attachment ($2,699 combo)",
-      "Laminator ($2,699 combo)",
-      "Roll-to-roll system (leather/film)",
-      "Conveyor belt (batch automation)",
-      "DTF upgrade kit ($2,699 combo)",
-      "All-in-One combo, $3,859"
+      "ePrint SE Rotary (single-printhead model) — $369 Kickstarter add-on",
+      "Laminator Kit (machine plus initial laminating materials) — $389 Kickstarter add-on",
+      "Conveyor — $499 Kickstarter add-on",
+      "Roll-to-Roll Attachment — $639 Kickstarter add-on",
+      "UV Cleaning Kit — $299 Kickstarter add-on",
+      "DTF Upgrade Kit — $459 Kickstarter add-on",
+      "200ml Flexible White Ink ×3 — $149 Kickstarter add-on",
+      "200ml White Ink ×3 — $149 Kickstarter add-on",
+      "200ml Glossy Ink ×3 — $149 Kickstarter add-on",
+      "200ml ×6 W+G+CMYK Ink set — $299 Kickstarter add-on",
+      "Hot Stamping Foils — $109 Kickstarter add-on",
+      "Laminator Machine Material Kit (materials only) — $79 Kickstarter add-on",
+      "UV Films — $229 Kickstarter add-on",
+      "Material Kit — $169 Kickstarter add-on"
     ],
     "callouts": [
+      "NEW 2026-08-02: Campaign fulfillment is now estimated for the end of August 2026. This is a revised estimate after the earlier June target passed, not confirmed delivery.",
+      "NEW 2026-08-02: Five CUPP owner-test videos show a physical ePrint unit producing high-relief, multi-pass, embossed, and flat full-color jobs. A flat pet-photo recording runs about 6.7 minutes, but substrate size and quality mode are not yet controlled for cross-brand comparison.",
+      "NEW 2026-08-02: Video review found mild visible banding in flat or low-detail color areas on two samples. Confidence is low-to-moderate because this is visual footage analysis without a measurement target.",
+      "NEW 2026-08-02: Relief-height evidence remains contradictory: the current claim is 15mm, an official test demonstrates 22mm, and early promotion claimed 60mm. CUPP preserves all three dated values.",
       "NEW 2026-07-26 (Facebook, community sentiment): early sentiment in LONGER-adjacent groups remains mixed -- several commenters repeat the unresolved open-tank-vs-cartridge question first flagged in the research backlog; still no shipping-unit confirmation either way.",
       "Not shipped as of Jul 24, 2026 — every spec here is manufacturer-sourced; no independent reviewer, Reddit owner, or teardown exists.",
       "Software currently supports only JPG/PNG — no TIFF/PSD/AI/CAD support yet, per the maker's own FAQ.",
@@ -735,8 +754,8 @@
     ],
     "sources": [
       [
-        "Kickstarter + official FAQ",
-        "https://www.kickstarter.com/projects/longer3d/longer-eprint-the-worlds-1st-dual-head-personal-uv-printer/faqs"
+        "Kickstarter campaign + current add-ons",
+        "https://www.kickstarter.com/projects/longer3d/longer-eprint-the-worlds-1st-dual-head-personal-uv-printer/description#h:Add-Ons"
       ],
       [
         "Official product page",
@@ -745,6 +764,14 @@
       [
         "Longer3D press blog",
         "https://www.longer3d.com/blogs/news/longer-eprint-the-first-dual-print-head-personal-uv-printer-makes-a-grand-debut"
+      ],
+      [
+        "LONGER official ePrint video playlist",
+        "https://www.youtube.com/playlist?list=PLLz1z_0pXsW2ELs95FjDNXh5iCkrGznNp"
+      ],
+      [
+        "LONGER official 22mm relief test — 16h09m, 222ml",
+        "https://www.youtube.com/shorts/7TR_nrRYTjE"
       ],
       [
         "Yanko Design",
@@ -853,14 +880,26 @@
       }
     },
     "accessories": [
-      "Rotary attachment ($2,699 combo)",
-      "Laminator ($2,699 combo)",
-      "Roll-to-roll system (leather/film)",
-      "Conveyor belt (batch automation)",
-      "DTF upgrade kit ($2,699 combo)",
-      "All-in-One combo, $3,859"
+      "ePrint Rotary (dual-printhead model) — $389 Kickstarter add-on",
+      "Laminator Kit (machine plus initial laminating materials) — $389 Kickstarter add-on",
+      "Conveyor — $499 Kickstarter add-on",
+      "Roll-to-Roll Attachment — $639 Kickstarter add-on",
+      "UV Cleaning Kit — $299 Kickstarter add-on",
+      "DTF Upgrade Kit — $459 Kickstarter add-on",
+      "200ml Flexible White Ink ×3 — $149 Kickstarter add-on",
+      "200ml White Ink ×3 — $149 Kickstarter add-on",
+      "200ml Glossy Ink ×3 — $149 Kickstarter add-on",
+      "200ml ×6 W+G+CMYK Ink set — $299 Kickstarter add-on",
+      "Hot Stamping Foils — $109 Kickstarter add-on",
+      "Laminator Machine Material Kit (materials only) — $79 Kickstarter add-on",
+      "UV Films — $229 Kickstarter add-on",
+      "Material Kit — $169 Kickstarter add-on"
     ],
     "callouts": [
+      "NEW 2026-08-02: Campaign fulfillment is now estimated for the end of August 2026. This is a revised estimate after the earlier June target passed, not confirmed delivery.",
+      "NEW 2026-08-02: Five CUPP owner-test videos show a physical ePrint unit producing high-relief, multi-pass, embossed, and flat full-color jobs. A flat pet-photo recording runs about 6.7 minutes, but substrate size and quality mode are not yet controlled for cross-brand comparison.",
+      "NEW 2026-08-02: Video review found mild visible banding in flat or low-detail color areas on two samples. Confidence is low-to-moderate because this is visual footage analysis without a measurement target.",
+      "NEW 2026-08-02: Relief-height evidence remains contradictory: the current claim is 15mm, an official test demonstrates 22mm, and early promotion claimed 60mm. CUPP preserves all three dated values.",
       "NEW 2026-07-26 (Facebook, community sentiment): same open-tank-vs-cartridge ambiguity applies to the dual-head configuration; treat as unresolved pending a shipping unit.",
       "Not shipped as of Jul 24, 2026 — every spec here is manufacturer-sourced; no independent reviewer, Reddit owner, or teardown exists.",
       "Software currently supports only JPG/PNG — no TIFF/PSD/AI/CAD support yet, per the maker's own FAQ.",
@@ -873,8 +912,8 @@
     ],
     "sources": [
       [
-        "Kickstarter + official FAQ",
-        "https://www.kickstarter.com/projects/longer3d/longer-eprint-the-worlds-1st-dual-head-personal-uv-printer/faqs"
+        "Kickstarter campaign + current add-ons",
+        "https://www.kickstarter.com/projects/longer3d/longer-eprint-the-worlds-1st-dual-head-personal-uv-printer/description#h:Add-Ons"
       ],
       [
         "Official product page",
@@ -883,6 +922,14 @@
       [
         "Longer3D press blog",
         "https://www.longer3d.com/blogs/news/longer-eprint-the-first-dual-print-head-personal-uv-printer-makes-a-grand-debut"
+      ],
+      [
+        "LONGER official ePrint video playlist",
+        "https://www.youtube.com/playlist?list=PLLz1z_0pXsW2ELs95FjDNXh5iCkrGznNp"
+      ],
+      [
+        "LONGER official 22mm relief test — 16h09m, 222ml",
+        "https://www.youtube.com/shorts/7TR_nrRYTjE"
       ],
       [
         "Yanko Design",
@@ -1243,6 +1290,8 @@
       "OR1 Rotary Attachment (tumblers/mugs, 1:1 3D preview)"
     ],
     "callouts": [
+      "NEW 2026-08-02: Secondary reporting cites roughly 6–12 months reference printhead life and a three-month printhead warranty. Primary xTool confirmation is still required; replacement cost and long-term storage remain unresolved.",
+      "NEW 2026-08-02: Shipping timing remains order- and configuration-dependent. CUPP will not collapse early-owner sightings, preorder estimates, and broad fulfillment into a single date.",
       "NEW 2026-07-26 (Facebook, xTool O1 Omni Official Group): the printhead-replacement-cost question was reaffirmed as still unanswered by xTool staff in the official group as of this pass -- not a new gap, but confirmed still open.",
       "No edition upgrade path — printhead/ink configuration is factory-fixed for the machine's life. Buying UV-only forecloses ever adding apparel printing.",
       "Closed, proprietary ink cartridges (trade-off for fewer clogging variables vs. open-ink rivals).",
@@ -1375,6 +1424,8 @@
       "OR1 Rotary Attachment (tumblers/mugs, 1:1 3D preview)"
     ],
     "callouts": [
+      "NEW 2026-08-02: Secondary reporting cites roughly 6–12 months reference printhead life and a three-month printhead warranty. Primary xTool confirmation is still required; replacement cost and long-term storage remain unresolved.",
+      "NEW 2026-08-02: Shipping timing remains order- and configuration-dependent. CUPP will not collapse early-owner sightings, preorder estimates, and broad fulfillment into a single date.",
       "NEW 2026-07-26 (Facebook, xTool O1 Omni Official Group): same unresolved printhead-replacement-cost question applies to this configuration.",
       "No edition upgrade path — printhead/ink configuration is factory-fixed for the machine's life. Buying UV-only forecloses ever adding apparel printing.",
       "Closed, proprietary ink cartridges (trade-off for fewer clogging variables vs. open-ink rivals).",
@@ -1508,6 +1559,8 @@
       "Compatible with xTool WonderPress heat press (DTF/DTG curing)"
     ],
     "callouts": [
+      "NEW 2026-08-02: Secondary reporting cites roughly 6–12 months reference printhead life and a three-month printhead warranty. Primary xTool confirmation is still required; replacement cost and long-term storage remain unresolved.",
+      "NEW 2026-08-02: Shipping timing remains order- and configuration-dependent. CUPP will not collapse early-owner sightings, preorder estimates, and broad fulfillment into a single date.",
       "NEW 2026-07-26 (Facebook, xTool O1 Omni Official Group): same unresolved printhead-replacement-cost question applies to this configuration.",
       "No edition upgrade path — printhead/ink configuration is factory-fixed for the machine's life. Buying UV-only forecloses ever adding apparel printing.",
       "Closed, proprietary ink cartridges (trade-off for fewer clogging variables vs. open-ink rivals).",
@@ -2054,6 +2107,8 @@
       "Open Jig System + SDK"
     ],
     "callouts": [
+      "NEW 2026-08-02: Multiple creators now show real printing on Morpho units. These remain preproduction, loaned, evaluator, or controlled-access machines; they verify capability but not ordinary-customer fulfillment, production reliability, or long-term TCO.",
+      "NEW 2026-08-02: Morpho remained pre-Kickstarter as of August 1. The August campaign timing and refundable reservation deposit are campaign-stage signals, not shipment evidence.",
       "NEW 2026-07-26 (Facebook, early-creator program): a small early-creator unit has reportedly reached at least one tester ahead of the public Kickstarter launch -- unverified beyond a single post, no independent review yet.",
       "NEW 2026-07-26 (Facebook, brand livestream recap): a Morpho-run livestream recap repeated the G7 Master ColorSpace certification claim without providing a registry number -- the registry conflict flagged in the backlog remains unresolved.",
       "Furthest from shipping of all 8 machines — Kickstarter itself isn't live yet as of this report. Every spec is manufacturer-sourced; zero independent verification exists.",
@@ -2078,6 +2133,14 @@
       [
         "Kickstarter (pre-launch)",
         "https://www.kickstarter.com/projects/morpho-inc/morpho-desktop-uv-printer"
+      ],
+      [
+        "HansTechTalk — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=oN5fgnnTl4c"
+      ],
+      [
+        "Bitner Built — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=JvEeQZSuvLk"
       ],
       [
         "3D Printing Cost Calculator — deep-dive analysis",
@@ -2199,6 +2262,8 @@
       "Open Jig System + SDK"
     ],
     "callouts": [
+      "NEW 2026-08-02: Multiple creators now show real printing on Morpho units. These remain preproduction, loaned, evaluator, or controlled-access machines; they verify capability but not ordinary-customer fulfillment, production reliability, or long-term TCO.",
+      "NEW 2026-08-02: Morpho remained pre-Kickstarter as of August 1. The August campaign timing and refundable reservation deposit are campaign-stage signals, not shipment evidence.",
       "NEW 2026-07-26 (Facebook, early-creator program): see F1080 tier -- same early-unit sighting applies to the i3200 configuration.",
       "Furthest from shipping of all 8 machines — Kickstarter itself isn't live yet as of this report. Every spec is manufacturer-sourced; zero independent verification exists.",
       "The full-color-3D claim (the single most eye-catching feature on paper) is explicitly unconfirmed by independent analysis — no finished object has been shown, Pro model only, no water-soluble support material has been described anywhere.",
@@ -2222,6 +2287,14 @@
       [
         "Kickstarter (pre-launch)",
         "https://www.kickstarter.com/projects/morpho-inc/morpho-desktop-uv-printer"
+      ],
+      [
+        "HansTechTalk — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=oN5fgnnTl4c"
+      ],
+      [
+        "Bitner Built — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=JvEeQZSuvLk"
       ],
       [
         "3D Printing Cost Calculator — deep-dive analysis",
@@ -2339,6 +2412,8 @@
       "Roll-to-film/DTF attachment (price TBD)"
     ],
     "callouts": [
+      "NEW 2026-08-02: Campaign FAQ estimates December 2026 for G1X rewards and March 2027 for the G1/F1080 Starter Pack. These are campaign estimates, not delivery confirmation.",
+      "NEW 2026-08-02: Four evaluator videos show flat UV, raised-texture, and full-color 3D output on evaluator units. The units are sponsored, loaned, or preproduction evidence and do not establish production reliability or long-term TCO.",
       "NEW 2026-07-26 (Facebook/Reddit, cost estimation thread): community members independently produced a similar ~$1,300 printhead-replacement estimate via a third-party cost-estimator method, converging with (but not independently confirming) the earlier Reddit figure.",
       "If it ships as advertised, this would be the first sub-$5,500 desktop machine doing true full-color 3D printing with water-soluble support — a capability previously exclusive to $30k+ industrial machines (e.g. Stratasys J-series).",
       "G1 vs. G1X naming is genuinely confusing: only the “Full-3D Pack” configuration does full-color 3D. The “G1X Starter” (same i3200 head) does NOT include the Resin Station and cannot do it.",
@@ -2357,6 +2432,22 @@
       [
         "Official blog — G1X announcement",
         "https://store.heygears.com/blogs/blog/meet-heygears-g1x-the-world-s-1st-desktop-3-in-1-full-color-3d-uv-printer"
+      ],
+      [
+        "Steve Makes Everything — G1X evaluator video",
+        "https://www.youtube.com/watch?v=IlAAKqK1rCg"
+      ],
+      [
+        "stlDenise3D — G1X evaluator video",
+        "https://www.youtube.com/watch?v=znvGpn81yn8"
+      ],
+      [
+        "BuildDanielBuild — G1X evaluator video",
+        "https://www.youtube.com/watch?v=htlvYz8XlaI"
+      ],
+      [
+        "Spen's Painting — sponsored G1X evaluator video",
+        "https://www.youtube.com/watch?v=YJ9C3oFTGuE"
       ],
       [
         "3D Printing Industry — spec table + pricing",
@@ -2478,6 +2569,8 @@
       "Roll-to-film/DTF attachment (price TBD)"
     ],
     "callouts": [
+      "NEW 2026-08-02: Campaign FAQ estimates December 2026 for G1X rewards and March 2027 for the G1/F1080 Starter Pack. These are campaign estimates, not delivery confirmation.",
+      "NEW 2026-08-02: Four evaluator videos show flat UV, raised-texture, and full-color 3D output on evaluator units. The units are sponsored, loaned, or preproduction evidence and do not establish production reliability or long-term TCO.",
       "NEW 2026-07-26 (Facebook/Reddit, cost estimation thread): same converging community estimate applies to the Full-3D configuration.",
       "If it ships as advertised, this would be the first sub-$5,500 desktop machine doing true full-color 3D printing with water-soluble support — a capability previously exclusive to $30k+ industrial machines (e.g. Stratasys J-series).",
       "G1 vs. G1X naming is genuinely confusing: only the “Full-3D Pack” configuration does full-color 3D. The “G1X Starter” (same i3200 head) does NOT include the Resin Station and cannot do it.",
@@ -2496,6 +2589,22 @@
       [
         "Official blog — G1X announcement",
         "https://store.heygears.com/blogs/blog/meet-heygears-g1x-the-world-s-1st-desktop-3-in-1-full-color-3d-uv-printer"
+      ],
+      [
+        "Steve Makes Everything — G1X evaluator video",
+        "https://www.youtube.com/watch?v=IlAAKqK1rCg"
+      ],
+      [
+        "stlDenise3D — G1X evaluator video",
+        "https://www.youtube.com/watch?v=znvGpn81yn8"
+      ],
+      [
+        "BuildDanielBuild — G1X evaluator video",
+        "https://www.youtube.com/watch?v=htlvYz8XlaI"
+      ],
+      [
+        "Spen's Painting — sponsored G1X evaluator video",
+        "https://www.youtube.com/watch?v=YJ9C3oFTGuE"
       ],
       [
         "3D Printing Industry — spec table + pricing",
@@ -2611,6 +2720,7 @@
       "SimbaSlicer software (bundled)"
     ],
     "callouts": [
+      "NEW 2026-08-02: The campaign was reported at $1,425,248 from 226 backers and lists a two-year warranty. The original June 2026 shipping claim still lacks verified owner-delivery evidence.",
       "NEW 2026-07-26 (Reddit, delivery tracking): a backer post gives an informal delivery-timeline estimate that is later than Kickstarter's original June 2026 date, consistent with the backlog's flagged 'delivery status unknown and overdue for a check' item -- still not an official confirmation from iNew3D/SIMBA 3D.",
       "DIFFERENT PRODUCT CATEGORY — this is a fully enclosed desktop full-color material-jetting 3D printer (conceptually a mini Stratasys/Mimaki PolyJet machine), not a UV flatbed printer. It cannot print on your own mugs, phone cases, or wood panels — compare it on the full-color-3D tier only, not on bed size/camera/height-sensor specs against the other machines.",
       "Small build volume (200×160×80mm) is flagged by an independent reviewer as the model's main limitation.",
@@ -2900,6 +3010,27 @@ function renderMatrix(){
         <p class="tco-note"><strong>Model limitations (from CUPP Master v0.9, TCO Assumptions sheet):</strong> excludes labor, electricity, taxes, financing, failure rate, and resale value. Printhead replacement cost is undisclosed by every manufacturer in this comparison — it is shown as an advisory, and only added to the total if you tick "include community estimate" above. ${p.tco.tcoSourceNote}</p>`;
     }
 
+    function openPrintheadInfo(){
+      document.getElementById('modalMaker').textContent='CUPP printhead research';
+      document.getElementById('modalTitle').textContent='Epson F1080 vs. I3200';
+      document.getElementById('modalBadges').innerHTML='<span class="badge promising">Specifications + derived capacity</span>';
+      document.getElementById('modalBody').innerHTML=`
+        <div class="verdict-box"><strong>User-facing takeaway</strong><p>The I3200 offers much more theoretical output capacity and is purpose-designated by Epson for UV ink. That makes it the stronger head on paper, but the complete printer—not the head alone—determines actual speed, print quality, maintenance burden, and ownership cost.</p></div>
+        <p class="evidence-note"><strong>Epson's published specifications indicate substantially greater potential throughput from the I3200, but they do not prove that an I3200-equipped printer is a fixed multiple faster than an F1080-equipped printer.</strong> Comparable real-job tests are required.</p>
+        <div class="table-wrap" style="max-height:none"><table class="printhead-table"><thead><tr><th>Epson specification</th><th>F1080-A1</th><th>I3200-U1</th><th>CUPP interpretation</th></tr></thead><tbody>
+          <tr><td><b>Nozzles</b></td><td>1,080</td><td>3,200</td><td>I3200 has 2.96× as many nozzles.</td></tr>
+          <tr><td><b>Effective print width</b></td><td>25.4 mm</td><td>33.8 mm</td><td>I3200 has a 33% wider swath.</td></tr>
+          <tr><td><b>Single-size firing frequency</b></td><td>46 kHz</td><td>43.2 kHz</td><td>F1080 is slightly higher per nozzle; I3200's aggregate capacity comes from nozzle count.</td></tr>
+          <tr><td><b>Multilevel firing frequency</b></td><td>11.52 kHz</td><td>21.6 kHz</td><td>I3200 is nearly 1.9× higher per nozzle in this mode.</td></tr>
+          <tr><td><b>Epson ink designation</b></td><td>Aqueous</td><td>UV</td><td>Epson does not directly validate third-party UV adaptation of the aqueous-designated F1080-A1.</td></tr>
+        </tbody></table></div>
+        <div class="modal-section"><h4>What the capacity math means</h4><p>CUPP calculates roughly 2.8× the theoretical aggregate firing capacity in single-size operation and 5.6× in multilevel operation. Those are derived head-capacity figures—not measured printer speeds. Actual output depends on ink-channel configuration, resolution, pass count, carriage speed, curing strategy, RIP settings, and the equipment maker's implementation.</p></div>
+        <div class="modal-section"><h4>Supply-chain note — contributor knowledge, verification pending</h4><p>Michael reports that F1080 heads used in third-party equipment historically were generally not purchased from Epson as standalone printheads. Instead, suppliers purchased Epson printers containing the F1080 and removed the heads for installation in other machines. He also reports that Epson's broad sale of printheads as OEM components is comparatively recent. CUPP presents this as informed contributor knowledge—not an Epson-confirmed fact—until primary documentation or independent supply-chain corroboration is obtained.</p></div>
+        <div class="modal-section"><h4>Model-name note — Epson representative attribution</h4><p>Epson representative Daniel Valles told Michael that the F1080 is also referred to as the XP600. Epson's published page uses <code>F1080-A1</code>. CUPP therefore searches both names but verifies the actual head and configuration before treating a seller's “XP600” as interchangeable.</p></div>
+        <div class="modal-section"><h4>Primary sources</h4><ul class="source-list"><li><a href="https://www.epson.com.cn/products/ph/f1080-a1.html" target="_blank" rel="noopener">Epson F1080-A1 specifications</a></li><li><a href="https://www.epson.com.cn/products/ph/i3200-u1.html" target="_blank" rel="noopener">Epson I3200-U1 specifications</a></li><li><a href="https://inkjet-solution.epson.com/knowledge/documents/pdf/20220428_PrintheadI3200_4_I1600_EN.pdf" target="_blank" rel="noopener">Epson I3200/I1600 datasheet</a></li></ul></div>`;
+      showDetailModal();
+    }
+
     const mobileToggle=document.querySelector('.jw-mobile-toggle');
     if(mobileToggle) mobileToggle.addEventListener('click',()=>{
       const header=document.querySelector('.block-header');
@@ -2911,6 +3042,7 @@ function renderMatrix(){
     document.querySelectorAll('[data-matrix-view]').forEach(btn=>btn.addEventListener('click',()=>{comparisonView=btn.dataset.matrixView;document.querySelectorAll('[data-matrix-view]').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-selected',b===btn?'true':'false')});renderMatrix();}));
     document.getElementById('clearCompare').addEventListener('click',()=>{compareSet=[];updateCompareBar();renderResults();});
     document.getElementById('openCompare').addEventListener('click',openComparison);
+    document.getElementById('openPrintheadInfo').addEventListener('click',openPrintheadInfo);
     function showDetailModal(){document.getElementById('detailModal').classList.add('show');document.body.style.overflow='hidden';}
     function hideDetailModal(){document.getElementById('detailModal').classList.remove('show');document.body.style.overflow='';}
     document.getElementById('closeModal').addEventListener('click',hideDetailModal);
