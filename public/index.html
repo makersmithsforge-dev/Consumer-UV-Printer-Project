@@ -297,7 +297,9 @@
     .comparison-matrix th.matrix-spec{position:sticky;left:0;z-index:4;width:190px;min-width:190px;font-size:.76rem;font-weight:850}
     .comparison-matrix tbody th.matrix-spec{color:var(--ink);background:#f0f4f2;text-transform:none;letter-spacing:0;box-shadow:8px 0 18px rgba(20,33,43,.06)}
     .matrix-printer{display:grid;gap:8px}
-    .matrix-printer button{width:fit-content;padding:0;color:#fff;background:none;border:0;font-size:.95rem;font-weight:900;text-align:left;text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:5px}
+    .matrix-printer .detail-btn{width:fit-content;padding:0;color:#fff;background:none;border:0;font-size:.95rem;font-weight:900;text-align:left;text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:5px}
+    .matrix-compare{width:fit-content;padding:6px 10px;color:#d8f3f1;background:transparent;border:1px solid #5b777d;border-radius:999px;font:inherit;font-size:.68rem;font-weight:900;white-space:nowrap}
+    .matrix-compare.selected{color:#fff;background:var(--teal);border-color:var(--teal)}
     .matrix-status{display:inline-flex;width:fit-content;padding:5px 8px;border-radius:999px;font-size:.65rem;font-weight:850}
     .matrix-status.shipping{background:#dff4e9;color:var(--green)}
     .matrix-status.promising{background:var(--amber-soft);color:var(--amber)}
@@ -2997,7 +2999,7 @@
       document.getElementById('openTcoFrom').addEventListener('click',()=>{hideDetailModal();document.getElementById('tcoSelect').value=p.id;renderTCO();const tcoSec=document.getElementById('tco'); if(tcoSec.scrollIntoView) tcoSec.scrollIntoView({behavior:'smooth'});});
       showDetailModal();
     }
-    function toggleCompare(id){if(compareSet.includes(id)) compareSet=compareSet.filter(x=>x!==id);else if(compareSet.length<4) compareSet.push(id);else alert('Compare up to four configurations at a time.');updateCompareBar();renderResults();}
+    function toggleCompare(id){if(compareSet.includes(id)) compareSet=compareSet.filter(x=>x!==id);else if(compareSet.length<4) compareSet.push(id);else alert('Compare up to four configurations at a time.');updateCompareBar();renderResults();renderMatrix();}
     function updateCompareBar(){const bar=document.getElementById('compareBar');bar.classList.toggle('show',compareSet.length>0);document.getElementById('compareItems').innerHTML=compareSet.map(id=>`<span class="compare-pill">${printers.find(p=>p.id===id).name}</span>`).join('');}
     const inkChannelDetails={
       'eufy-e1':'6 channels · CMYKWG',
@@ -3080,7 +3082,7 @@
     }
     let comparisonView='engineering';
 function matrixTierLabel(v){return v==='yes'?'Yes':v==='no'?'No':'Partial'}
-function matrixHeader(p){return `<div class="matrix-printer"><button type="button" class="detail-btn" data-id="${p.id}">${p.name}</button><span class="matrix-status ${statusClass(p.status)}">${p.statusText}</span><span class="matrix-confidence">${p.confidenceNote||('Evidence '+p.confidence+'/5')}</span></div>`}
+function matrixHeader(p){const selected=compareSet.includes(p.id);return `<div class="matrix-printer"><button type="button" class="detail-btn" data-id="${p.id}">${p.name}</button><button type="button" class="matrix-compare ${selected?'selected':''}" data-id="${p.id}" aria-pressed="${selected}">${selected?'✓ Added':'＋ Compare'}</button><span class="matrix-status ${statusClass(p.status)}">${p.statusText}</span><span class="matrix-confidence">${p.confidenceNote||('Evidence '+p.confidence+'/5')}</span></div>`}
 function matrixFeatureCell(t){return `<td><span class="tier-result ${t.v}">${matrixTierLabel(t.v)}</span>${t.height?`<b style="display:block;margin-top:8px">${t.height}</b>`:''}<p class="feature-detail">${t.note||''}</p></td>`}
 function renderMatrix(){
   const engineeringRows=[
@@ -3102,6 +3104,7 @@ function renderMatrix(){
   html+='</tbody>';
   document.getElementById('comparisonMatrix').innerHTML=html;
   document.querySelectorAll('#comparisonMatrix .detail-btn').forEach(b=>b.addEventListener('click',()=>openDetail(b.dataset.id)));
+  document.querySelectorAll('#comparisonMatrix .matrix-compare').forEach(b=>b.addEventListener('click',()=>toggleCompare(b.dataset.id)));
 }
 
 
@@ -3159,7 +3162,7 @@ function renderMatrix(){
     document.getElementById('runFinder').addEventListener('click',renderResults);
     ['budget','risk','priority','needRotary','needUvdtf','needOpenInk','needHighEvidence'].forEach(id=>document.getElementById(id).addEventListener('change',renderResults));
     document.querySelectorAll('[data-matrix-view]').forEach(btn=>btn.addEventListener('click',()=>{comparisonView=btn.dataset.matrixView;document.querySelectorAll('[data-matrix-view]').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-selected',b===btn?'true':'false')});renderMatrix();}));
-    document.getElementById('clearCompare').addEventListener('click',()=>{compareSet=[];updateCompareBar();renderResults();});
+    document.getElementById('clearCompare').addEventListener('click',()=>{compareSet=[];updateCompareBar();renderResults();renderMatrix();});
     document.getElementById('openCompare').addEventListener('click',openComparison);
     document.getElementById('openPrintheadInfo').addEventListener('click',openPrintheadInfo);
     function showDetailModal(){
