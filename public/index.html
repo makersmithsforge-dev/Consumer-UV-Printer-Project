@@ -192,14 +192,18 @@
     tr:hover td:first-child{background:#fffaf7}
     .table-name{font-weight:850}
     .table-sub{color:var(--muted);font-size:.72rem;margin-top:3px}
-    .detail-modal{position:fixed;inset:0;background:rgba(8,14,18,.64);z-index:80;display:none;align-items:center;justify-content:center;padding:20px}
+    .detail-modal{position:fixed;inset:0;background:rgba(8,14,18,.70);z-index:80;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
     .detail-modal.show{display:flex}
-    .modal-card{width:min(860px,100%);max-height:calc(100vh - 40px);max-height:min(760px,calc(100dvh - 40px));overflow:hidden;display:flex;flex-direction:column;background:#fff;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.35)}
-    .modal-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:start;flex:0 0 auto}
+    .modal-card{width:min(1040px,100%);overflow:visible;background:#fff;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.35)}
+    .modal-head{position:sticky;top:-40px;z-index:3;padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:start;background:rgba(255,255,255,.96);border-radius:24px 24px 0 0;backdrop-filter:blur(10px)}
     .modal-head h3{margin:0;font-size:1.65rem}
     .icon-btn{width:38px;height:38px;border:0;border-radius:12px;background:#f0f3f2;font-size:1.1rem}
-    .modal-body{padding:22px;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+    .modal-body{padding:22px 22px 30px}
     .verdict-box{background:#f5f8f7;border-radius:16px;padding:16px;margin-bottom:16px}
+    .modal-summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-bottom:18px}
+    .modal-summary-row{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px dotted var(--line);font-size:.9rem}
+    .modal-summary-row span{color:var(--muted)}
+    .modal-summary-row strong{text-align:right;font-weight:800}
     .detail-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .detail-block{border:1px solid var(--line);border-radius:16px;padding:15px}
     .detail-block h4{margin:0 0 8px;font-size:.86rem;text-transform:uppercase;letter-spacing:.05em}
@@ -217,7 +221,7 @@
       .header-inner{min-height:88px;padding:0 20px}.brand-mark{width:78px;height:58px}.brand-name{font-size:24px}.primary-nav a:not([aria-current="page"]):not(.header-icon){display:none}.primary-nav{gap:22px}.primary-nav a[aria-current="page"]:after{bottom:27px}
     }
     @media(max-width:680px){
-      .wrap{width:min(100% - 20px,var(--max))}.hero{padding-top:42px}h1{font-size:3rem}.section-head{display:block}.use-grid,.card-grid,.evidence-grid,.research-grid,.job-grid,.detail-columns{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.finder-actions{display:block}.finder-actions .btn{width:100%;margin-top:12px}.stats{grid-template-columns:1fr 1fr}.matrix-toolbar{align-items:stretch;flex-direction:column}.matrix-tools{display:grid;grid-template-columns:1fr}.footer-grid{display:block}.compare-bar{align-items:stretch;flex-direction:column}.compare-items{width:100%}
+      .wrap{width:min(100% - 20px,var(--max))}.hero{padding-top:42px}h1{font-size:3rem}.section-head{display:block}.use-grid,.card-grid,.evidence-grid,.research-grid,.job-grid,.detail-columns,.modal-summary-grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.finder-actions{display:block}.finder-actions .btn{width:100%;margin-top:12px}.stats{grid-template-columns:1fr 1fr}.matrix-toolbar{align-items:stretch;flex-direction:column}.matrix-tools{display:grid;grid-template-columns:1fr}.footer-grid{display:block}.compare-bar{align-items:stretch;flex-direction:column}.compare-items{width:100%}.detail-modal{padding:16px 10px}.modal-head{top:-16px}.modal-body{padding:18px 16px 24px}.modal-summary-row{gap:12px}
       .header-inner{min-height:76px;padding:0 12px;gap:12px}.brand{gap:9px}.brand-mark{width:58px;height:44px}.brand-name{font-size:18px}.primary-nav{gap:14px;font-size:11px}.primary-nav .header-search{display:none}.primary-nav a[aria-current="page"]:after{bottom:20px}
     }
       .why-toggle{background:none;border:0;padding:0;margin-top:8px;color:var(--teal);font-weight:800;font-size:.78rem;text-decoration:underline;text-align:left}
@@ -2946,6 +2950,16 @@
       const tco3=computeTCO(p,3,'Base',false);
       document.getElementById('modalBody').innerHTML=`
         <div class="verdict-box"><strong>CUPP verdict</strong><p>${p.best}</p></div>
+        <div class="modal-summary-grid" aria-label="Printer specifications">
+          <div class="modal-summary-row"><span>Price</span><strong>${p.priceDetail||('$'+p.price.toLocaleString())}</strong></div>
+          <div class="modal-summary-row"><span>Technology</span><strong>${p.tech||'Not disclosed'}</strong></div>
+          <div class="modal-summary-row"><span>Printhead</span><strong>${p.printheadDetail||p.head||'Not disclosed'}</strong></div>
+          <div class="modal-summary-row"><span>Camera</span><strong>${p.camera||'Not disclosed'}</strong></div>
+          <div class="modal-summary-row"><span>Bed / height sensing</span><strong>${p.bedSensor||'Not disclosed'}</strong></div>
+          <div class="modal-summary-row"><span>Bed size</span><strong>${p.bedSize||p.envelope||'Not disclosed'}</strong></div>
+          <div class="modal-summary-row"><span>Speed / throughput</span><strong>${p.speed||'Not disclosed'}</strong></div>
+          <div class="modal-summary-row"><span>Evidence confidence</span><strong>${p.confidence}/5</strong></div>
+        </div>
         <div class="detail-columns">
           <div class="detail-block"><h4>Best for</h4><p>${p.best}</p></div>
           <div class="detail-block"><h4>Avoid if</h4><p>${p.avoid}</p></div>
