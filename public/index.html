@@ -195,7 +195,7 @@
     .detail-modal{position:fixed;inset:0;background:rgba(8,14,18,.70);z-index:80;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
     .detail-modal.show{display:flex}
     .modal-card{width:min(1040px,100%);overflow:visible;background:#fff;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.35)}
-    .modal-head{position:sticky;top:-40px;z-index:3;padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:start;background:rgba(255,255,255,.96);border-radius:24px 24px 0 0;backdrop-filter:blur(10px)}
+    .modal-head{position:sticky;top:0;z-index:3;padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:start;background:rgba(255,255,255,.96);border-radius:24px 24px 0 0;backdrop-filter:blur(10px)}
     .modal-head h3{margin:0;font-size:1.65rem}
     .icon-btn{width:38px;height:38px;border:0;border-radius:12px;background:#f0f3f2;font-size:1.1rem}
     .modal-body{padding:22px 22px 30px}
@@ -221,7 +221,7 @@
       .header-inner{min-height:88px;padding:0 20px}.brand-mark{width:78px;height:58px}.brand-name{font-size:24px}.primary-nav a:not([aria-current="page"]):not(.header-icon){display:none}.primary-nav{gap:22px}.primary-nav a[aria-current="page"]:after{bottom:27px}
     }
     @media(max-width:680px){
-      .wrap{width:min(100% - 20px,var(--max))}.hero{padding-top:42px}h1{font-size:3rem}.section-head{display:block}.use-grid,.card-grid,.evidence-grid,.research-grid,.job-grid,.detail-columns,.modal-summary-grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.finder-actions{display:block}.finder-actions .btn{width:100%;margin-top:12px}.stats{grid-template-columns:1fr 1fr}.matrix-toolbar{align-items:stretch;flex-direction:column}.matrix-tools{display:grid;grid-template-columns:1fr}.footer-grid{display:block}.compare-bar{align-items:stretch;flex-direction:column}.compare-items{width:100%}.detail-modal{padding:16px 10px}.modal-head{top:-16px}.modal-body{padding:18px 16px 24px}.modal-summary-row{gap:12px}
+      .wrap{width:min(100% - 20px,var(--max))}.hero{padding-top:42px}h1{font-size:3rem}.section-head{display:block}.use-grid,.card-grid,.evidence-grid,.research-grid,.job-grid,.detail-columns,.modal-summary-grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.finder-actions{display:block}.finder-actions .btn{width:100%;margin-top:12px}.stats{grid-template-columns:1fr 1fr}.matrix-toolbar{align-items:stretch;flex-direction:column}.matrix-tools{display:grid;grid-template-columns:1fr}.footer-grid{display:block}.compare-bar{align-items:stretch;flex-direction:column}.compare-items{width:100%}.detail-modal{padding:16px 10px}.modal-body{padding:18px 16px 24px}.modal-summary-row{gap:12px}
       .header-inner{min-height:76px;padding:0 12px;gap:12px}.brand{gap:9px}.brand-mark{width:58px;height:44px}.brand-name{font-size:18px}.primary-nav{gap:14px;font-size:11px}.primary-nav .header-search{display:none}.primary-nav a[aria-current="page"]:after{bottom:20px}
     }
       .why-toggle{background:none;border:0;padding:0;margin-top:8px;color:var(--teal);font-weight:800;font-size:.78rem;text-decoration:underline;text-align:left}
@@ -3088,8 +3088,22 @@ function renderMatrix(){
     document.getElementById('clearCompare').addEventListener('click',()=>{compareSet=[];updateCompareBar();renderResults();});
     document.getElementById('openCompare').addEventListener('click',openComparison);
     document.getElementById('openPrintheadInfo').addEventListener('click',openPrintheadInfo);
-    function showDetailModal(){document.getElementById('detailModal').classList.add('show');document.body.style.overflow='hidden';}
-    function hideDetailModal(){document.getElementById('detailModal').classList.remove('show');document.body.style.overflow='';}
+    function showDetailModal(){
+      const modal=document.getElementById('detailModal');
+      modal.scrollTop=0;
+      modal.classList.add('show');
+      document.body.style.overflow='hidden';
+      requestAnimationFrame(()=>{
+        modal.scrollTop=0;
+        document.getElementById('closeModal').focus({preventScroll:true});
+      });
+    }
+    function hideDetailModal(){
+      const modal=document.getElementById('detailModal');
+      modal.classList.remove('show');
+      modal.scrollTop=0;
+      document.body.style.overflow='';
+    }
     document.getElementById('closeModal').addEventListener('click',hideDetailModal);
     document.getElementById('detailModal').addEventListener('click',e=>{if(e.target===e.currentTarget)hideDetailModal()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')hideDetailModal()});
