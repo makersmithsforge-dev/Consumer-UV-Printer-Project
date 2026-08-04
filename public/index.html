@@ -135,7 +135,11 @@
     .empty-state p{margin:0;color:var(--muted)}
     .printer-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:19px;display:flex;flex-direction:column;min-height:100%;box-shadow:0 10px 30px rgba(20,33,43,.05)}
     .card-top{display:flex;align-items:start;justify-content:space-between;gap:12px}
+    .card-name-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 2px}
     .printer-card h4{font-size:1.16rem;margin:8px 0 2px;line-height:1.2}
+    .card-name-row h4{margin:0}
+    .quick-compare{border:1px solid #b9d8d6;background:var(--teal-soft);color:var(--teal);border-radius:999px;padding:5px 9px;font:inherit;font-size:.68rem;font-weight:850;white-space:nowrap}
+    .quick-compare.selected{color:#fff;background:var(--teal);border-color:var(--teal)}
     .maker{font-size:.78rem;color:var(--muted);font-weight:750}
     .rank{width:38px;height:38px;border-radius:12px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:900;flex:0 0 auto}
     .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 9px;font-size:.72rem;font-weight:850;margin-top:10px}
@@ -204,6 +208,19 @@
     .modal-summary-row{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px dotted var(--line);font-size:.9rem}
     .modal-summary-row span{color:var(--muted)}
     .modal-summary-row strong{text-align:right;font-weight:800}
+    .comparison-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+    .comparison-actions p{margin:0;color:var(--muted);font-size:.84rem;max-width:700px}
+    .comparison-group{border:1px solid var(--line);border-radius:16px;margin-top:12px;overflow:hidden;background:#fff}
+    .comparison-group summary{cursor:pointer;list-style:none;padding:15px 17px;background:#f5f8f7;font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .comparison-group summary::-webkit-details-marker{display:none}
+    .comparison-group summary:after{content:'+';font-size:1.25rem;color:var(--teal)}
+    .comparison-group[open] summary:after{content:'−'}
+    .comparison-group .table-wrap{max-height:none;border-top:1px solid var(--line)}
+    .comparison-table{min-width:760px}
+    .comparison-table th,.comparison-table td{min-width:190px}
+    .comparison-table td.difference{background:#fff8f3;box-shadow:inset 0 3px 0 rgba(255,107,53,.16)}
+    .comparison-table tr:hover td.difference{background:#fff3ec}
+    .channel-note{margin:12px 0 0;padding:12px 14px;background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 12px 12px 0;color:#31545a;font-size:.82rem}
     .detail-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .detail-block{border:1px solid var(--line);border-radius:16px;padding:15px}
     .detail-block h4{margin:0 0 8px;font-size:.86rem;text-transform:uppercase;letter-spacing:.05em}
@@ -2884,7 +2901,7 @@
       bindCardActions();
     }
     function whyRowsHTML(parts){return parts.map(pt=>`<div class="why-row"><span>${pt.label}</span><b>${pt.value>0?'+':''}${pt.value}</b></div>`).join('');}
-    function cardHTML(p,rank){return `<article class="printer-card"><div class="card-top"><div><div class="maker">${p.maker}</div><h4>${p.name}</h4><span class="badge ${statusClass(p.status)}">${p.statusText}</span></div><span class="rank">${rank}</span></div><div class="price">$${p.price.toLocaleString()} <small>starting</small></div><p class="verdict">${p.best}</p><div class="chips">${p.caps.slice(0,5).map(c=>`<span class="chip">${capLabels[c]}</span>`).join('')}</div><div class="mini-grid"><div class="mini"><span>Evidence</span><b>${p.confidence} / 5</b></div><div class="mini"><span>Printhead</span><b>${p.head}</b></div></div><div class="warning"><strong>Primary concern:</strong> ${p.concern}</div><button class="why-toggle" data-why="${p.id}-${rank}">Why ranked #${rank} here? ▾</button><div class="why-box" id="why-${p.id}-${rank}"><div class="why-row" style="font-weight:900;border-bottom:2px solid var(--ink)"><span>Fit score</span><b>${Math.round(p.fit*10)/10}</b></div>${whyRowsHTML(p.fitParts)}</div><div class="card-actions"><button class="btn btn-secondary detail-btn" data-id="${p.id}">Full review</button><button class="btn btn-secondary compare-btn" data-id="${p.id}">${compareSet.includes(p.id)?'Remove':'Add to compare'}</button><a class="btn btn-dark wide" href="${p.url}" target="_blank" rel="noopener sponsored">${p.affiliate?'Affiliate link · ':''}Check current price</a></div></article>`}
+    function cardHTML(p,rank){const selected=compareSet.includes(p.id);return `<article class="printer-card"><div class="card-top"><div><div class="maker">${p.maker}</div><div class="card-name-row"><h4>${p.name}</h4><button class="quick-compare compare-btn ${selected?'selected':''}" data-id="${p.id}" aria-pressed="${selected}">${selected?'✓ Added':'＋ Add to compare'}</button></div><span class="badge ${statusClass(p.status)}">${p.statusText}</span></div><span class="rank">${rank}</span></div><div class="price">$${p.price.toLocaleString()} <small>starting</small></div><p class="verdict">${p.best}</p><div class="chips">${p.caps.slice(0,5).map(c=>`<span class="chip">${capLabels[c]}</span>`).join('')}</div><div class="mini-grid"><div class="mini"><span>Evidence</span><b>${p.confidence} / 5</b></div><div class="mini"><span>Printhead</span><b>${p.head}</b></div></div><div class="warning"><strong>Primary concern:</strong> ${p.concern}</div><button class="why-toggle" data-why="${p.id}-${rank}">Why ranked #${rank} here? ▾</button><div class="why-box" id="why-${p.id}-${rank}"><div class="why-row" style="font-weight:900;border-bottom:2px solid var(--ink)"><span>Fit score</span><b>${Math.round(p.fit*10)/10}</b></div>${whyRowsHTML(p.fitParts)}</div><div class="card-actions"><button class="btn btn-secondary detail-btn" data-id="${p.id}">Full review</button><a class="btn btn-dark wide" href="${p.url}" target="_blank" rel="noopener sponsored">${p.affiliate?'Affiliate link · ':''}Check current price</a></div></article>`}
     function bindCardActions(){
       document.querySelectorAll('.detail-btn').forEach(b=>b.addEventListener('click',()=>openDetail(b.dataset.id)));
       document.querySelectorAll('.compare-btn').forEach(b=>b.addEventListener('click',()=>toggleCompare(b.dataset.id)));
@@ -2982,6 +2999,34 @@
     }
     function toggleCompare(id){if(compareSet.includes(id)) compareSet=compareSet.filter(x=>x!==id);else if(compareSet.length<4) compareSet.push(id);else alert('Compare up to four configurations at a time.');updateCompareBar();renderResults();}
     function updateCompareBar(){const bar=document.getElementById('compareBar');bar.classList.toggle('show',compareSet.length>0);document.getElementById('compareItems').innerHTML=compareSet.map(id=>`<span class="compare-pill">${printers.find(p=>p.id===id).name}</span>`).join('');}
+    const inkChannelDetails={
+      'eufy-e1':'6 channels · CMYKWG',
+      'longer-se':'6 channels · ink assignment not fully disclosed',
+      'longer-dual':'12 channels across 2 heads · up to 6 white channels',
+      'omtech-u1':'6 channels · CMYKWW',
+      'omtech-pro':'7 active ink channels across 2 heads · CMYKWW + varnish',
+      'xtool-single':'6 physical F1080 channels · active ink assignment not fully disclosed',
+      'xtool-dual':'12 physical channels across 2 F1080 heads · active ink assignment not fully disclosed',
+      'xtool-dtuv':'12 physical channels across 2 F1080 heads · dedicated UV and fabric paths',
+      'xone-basic':'Not disclosed for the unverified XH-6 heads',
+      'xone-standard':'Not disclosed for the unverified XH-6 heads',
+      'xone-pro':'Not disclosed for the unverified XH-6 heads',
+      'morpho-f1080':'6 physical F1080 channels',
+      'morpho-i3200':'8 physical i3200 channels',
+      'g1x-starter':'8 physical i3200 channels · active ink assignment not fully disclosed',
+      'g1x-full':'8 channels · CMYK + 2 white + transparent + water-soluble support',
+      'inew3d':'6 channels · CMYW + transparent + water-soluble support; no black'
+    };
+    function inkChannels(p){return inkChannelDetails[p.id]||'Not disclosed'}
+    function comparisonRow(label,picked,getValue){
+      const values=picked.map(getValue);
+      const normalized=values.map(v=>String(v??'Not disclosed').replace(/<[^>]*>/g,'').trim());
+      const different=new Set(normalized).size>1;
+      return `<tr><td><b>${label}</b></td>${values.map(v=>`<td class="${different?'difference':''}">${v??'Not disclosed'}</td>`).join('')}</tr>`;
+    }
+    function comparisonGroup(title,picked,rows,open=false){
+      return `<details class="comparison-group" ${open?'open':''}><summary>${title}</summary><div class="table-wrap"><table class="comparison-table"><thead><tr><th>Dimension</th>${picked.map(p=>`<th>${p.name}</th>`).join('')}</tr></thead><tbody>${rows.map(([label,getValue])=>comparisonRow(label,picked,getValue)).join('')}</tbody></table></div></details>`;
+    }
     function openComparison(){
       if(compareSet.length<2){alert('Select at least two configurations to compare.');return;}
       const picked=compareSet.map(id=>printers.find(p=>p.id===id));
@@ -2989,19 +3034,48 @@
       document.getElementById('modalTitle').textContent=`${picked.length} configurations side by side`;
       document.getElementById('modalBadges').innerHTML='';
       const tcos=picked.map(p=>computeTCO(p,3,'Base',false));
-      document.getElementById('modalBody').innerHTML=`<div class="table-wrap" style="max-height:none"><table style="min-width:760px"><thead><tr><th>Dimension</th>${picked.map(p=>`<th>${p.name}</th>`).join('')}</tr></thead><tbody>
-        <tr><td><b>Status</b></td>${picked.map(p=>`<td><span class="badge ${statusClass(p.status)}">${p.statusText}</span></td>`).join('')}</tr>
-        <tr><td><b>Starting price</b></td>${picked.map(p=>`<td>$${p.price.toLocaleString()}</td>`).join('')}</tr>
-        <tr><td><b>Best for</b></td>${picked.map(p=>`<td>${p.best}</td>`).join('')}</tr>
-        <tr><td><b>Capabilities</b></td>${picked.map(p=>`<td>${p.caps.map(c=>capLabels[c]).join(', ')}</td>`).join('')}</tr>
-        <tr><td><b>Envelope</b></td>${picked.map(p=>`<td>${p.envelope}</td>`).join('')}</tr>
-        <tr><td><b>Printhead</b></td>${picked.map(p=>`<td>${p.head}</td>`).join('')}</tr>
-        <tr><td><b>Evidence</b></td>${picked.map(p=>`<td>${p.confidence}/5</td>`).join('')}</tr>
-        <tr><td><b>Known-input 3-yr TCO (Base)</b></td>${tcos.map(t=>`<td>$${Math.round(t.knownTotal).toLocaleString()}</td>`).join('')}</tr>
-        <tr><td><b>Ink/resin cost disclosed?</b></td>${tcos.map(t=>`<td>${t.inkKnown?'Yes':'No'}</td>`).join('')}</tr>
-        <tr><td><b>Ownership</b></td>${picked.map(p=>`<td>${p.ownership}</td>`).join('')}</tr>
-        <tr><td><b>Primary concern</b></td>${picked.map(p=>`<td>${p.concern}</td>`).join('')}</tr>
-        </tbody></table></div>`;
+      const tcoById=Object.fromEntries(picked.map((p,i)=>[p.id,tcos[i]]));
+      const tierValue=(p,key)=>{const t=p.tiers?.[key];return t?`${tvLabel[t.v]||t.v}${t.height?` · ${t.height}`:''}${t.note?`<div class="table-sub">${t.note}</div>`:''}`:'Not disclosed'};
+      document.getElementById('modalBody').innerHTML=`
+        <div class="comparison-actions"><p>Cells shaded orange differ among the selected printers. Ink-channel count shows physical or disclosed active channels; duplicated channels may increase throughput, while distinct inks can add capability.</p><button class="btn btn-secondary" id="expandAllComparison" aria-expanded="false">Expand all sections</button></div>
+        ${comparisonGroup('Key differences',picked,[
+          ['Status',p=>`<span class="badge ${statusClass(p.status)}">${p.statusText}</span>`],
+          ['Starting price',p=>p.priceDetail||('$'+p.price.toLocaleString())],
+          ['Best for',p=>p.best],
+          ['Printhead configuration',p=>p.printheadDetail||p.head],
+          ['Ink / material channels',p=>inkChannels(p)],
+          ['Speed / throughput',p=>p.speed||'Not disclosed'],
+          ['Evidence',p=>`${p.confidence}/5 · ${p.confidenceNote||'No additional confidence note'}`]
+        ],true)}
+        <div class="channel-note"><strong>Why channels matter:</strong> A dual F1080 system can expose up to 12 physical channels versus eight on a single i3200. Manufacturers may use those channels for additional inks, dedicated workflows, or duplicate colors/white for throughput. Channel count is useful context, but it does not by itself prove faster printing or broader capability.</div>
+        ${comparisonGroup('Print capabilities',picked,[
+          ['Capability set',p=>p.caps.map(c=>capLabels[c]).join(', ')],
+          ['Flat UV printing',p=>tierValue(p,'flat')],
+          ['Raised / 2.5D relief',p=>tierValue(p,'raised')],
+          ['Full-color 3D',p=>tierValue(p,'full3d')],
+          ['DTF capability',p=>tierValue(p,'dtf')]
+        ])}
+        ${comparisonGroup('Hardware and work area',picked,[
+          ['Print technology',p=>p.tech||'Not disclosed'],
+          ['Working envelope',p=>p.envelope||'Not disclosed'],
+          ['Bed size / clearance',p=>p.bedSize||p.envelope||'Not disclosed'],
+          ['Camera / vision',p=>p.camera||'Not disclosed'],
+          ['Bed / height sensing',p=>p.bedSensor||'Not disclosed']
+        ])}
+        ${comparisonGroup('Ownership and cost',picked,[
+          ['Known-input 3-yr TCO (Base)',p=>'$'+Math.round(tcoById[p.id].knownTotal).toLocaleString()],
+          ['Ink / resin cost disclosed?',p=>tcoById[p.id].inkKnown?'Yes':'No'],
+          ['Printhead replacement figure',p=>p.tco.printheadEstimate?.label||'Not disclosed'],
+          ['Ownership snapshot',p=>p.ownership],
+          ['Primary concern',p=>p.concern]
+        ])}`;
+      document.getElementById('expandAllComparison').addEventListener('click',e=>{
+        const groups=[...document.querySelectorAll('#modalBody .comparison-group')];
+        const expand=groups.some(group=>!group.open);
+        groups.forEach(group=>group.open=expand);
+        e.currentTarget.textContent=expand?'Collapse all sections':'Expand all sections';
+        e.currentTarget.setAttribute('aria-expanded',String(expand));
+      });
       showDetailModal();
     }
     let comparisonView='engineering';
