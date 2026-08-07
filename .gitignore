@@ -3,3 +3,11 @@ node_modules
 
 # Local Netlify folder
 .netlify
+
+# Build outputs
+dist
+.astro
+
+# Local env / OS
+.env
+.DS_Store
