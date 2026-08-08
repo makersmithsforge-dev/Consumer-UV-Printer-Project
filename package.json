@@ -1,8 +1,8 @@
 {
-    "name": "netlify-example-express-mcp",
+    "name": "cupp-site",
     "version": "1.0.0",
-    "description": "A site to show a MCP example using Netlify Functions and Express",
-    "author": "Netlify",
+    "description": "CUPP — Consumer UV Printer Project: an evidence-first comparison of consumer UV printers, built with Astro.",
+    "author": "Makersmiths Forge",
     "type": "module",
     "license": "ISC",
     "scripts": {
@@ -12,17 +12,10 @@
     },
     "dependencies": {
         "@astrojs/react": "^4.4.2",
-        "@modelcontextprotocol/sdk": "^1.10.2",
         "@nanostores/react": "^0.8.4",
-        "@netlify/functions": "^2.5.1",
-        "@types/express": "^5.0.1",
         "astro": "^5.18.2",
-        "express": "^5.1.0",
-        "fetch-to-node": "^2.0.0",
         "nanostores": "^0.11.4",
         "react": "^19.2.8",
-        "react-dom": "^19.2.8",
-        "serverless-http": "^3.2.0",
-        "zod": "^3.24.3"
+        "react-dom": "^19.2.8"
     }
 }

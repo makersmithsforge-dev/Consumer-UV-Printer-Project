@@ -1,5 +1,6 @@
 ---
 import printers from '../../data/printers.json';
+import siteMeta from '../../data/site-meta.json';
 import FinderIsland from '../components/FinderIsland.jsx';
 import CompareSection from '../components/CompareSection.jsx';
 import TcoSection from '../components/TcoSection.jsx';
@@ -14,7 +15,7 @@ import PrintheadInfoButton from '../components/PrintheadInfoButton.jsx';
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="CUPP — a guided, evidence-first comparison of consumer UV printers, merged from the finder/compare-tray prototype and the fully cited data model, with a real cost-of-ownership calculator." />
-  <title>CUPP — Consumer UV Printer Project | Research Release v1.2.1</title>
+  <title>CUPP — Consumer UV Printer Project | Research Release {siteMeta.version}</title>
   <style is:global>
     :root{
       --ink:#14212b;
@@ -389,7 +390,7 @@ import PrintheadInfoButton from '../components/PrintheadInfoButton.jsx';
       <div class="wrap">
         <div class="hero-grid">
           <div>
-            <span class="eyebrow">CUPP · Research Release v1.2.1 — finder + full evidence trail</span>
+            <span class="eyebrow">CUPP · Research Release {siteMeta.version} — finder + full evidence trail</span>
             <h1>Choose the job first. Then choose the printer.</h1>
             <p>An evidence-first guide to consumer UV printers for makers and small businesses. Start with what you want to produce, see the best-fit configurations complete with a transparent scoring breakdown, then inspect the full engineering detail, every cited source, and a real cost-of-ownership estimate — not just a one-line verdict.</p>
             <div class="hero-actions">
@@ -428,7 +429,7 @@ import PrintheadInfoButton from '../components/PrintheadInfoButton.jsx';
 
     <section class="evidence-band">
       <div class="wrap">
-        <div class="section-head"><div><div class="kicker" style="color:#ffad84">Evidence, not hype</div><h2>Three separate questions drive every recommendation.</h2><p>A product can be promising yet unproven. Another can be well documented but a poor fit for your workflow. V4 keeps those distinctions explicit.</p></div></div>
+        <div class="section-head"><div><div class="kicker" style="color:#ffad84">Evidence, not hype</div><h2>Three separate questions drive every recommendation.</h2><p>A product can be promising yet unproven. Another can be well documented but a poor fit for your workflow. CUPP keeps those distinctions explicit.</p></div></div>
         <div class="evidence-grid">
           <article class="evidence-card"><span class="score-dot">1</span><h3>Does it fit the job?</h3><p>Process, rotary support, object clearance, print area, ink configuration, and required accessories.</p></article>
           <article class="evidence-card"><span class="score-dot">2</span><h3>Can you buy it responsibly?</h3><p>Retail availability, preorder maturity, campaign fulfillment, service path, warranty, and consumables.</p></article>
@@ -486,7 +487,7 @@ import PrintheadInfoButton from '../components/PrintheadInfoButton.jsx';
   </main>
 
   <footer>
-    <div class="wrap footer-grid"><div><strong><a href="https://www.makersmithsforge.com/">Makersmiths Forge</a> · CUPP — Consumer UV Printer Project</strong><br>Research Release v1.2.1 — updated 2026-08-02 from CUPP Master Workbook v0.9 and the latest owner, evaluator, campaign, and manufacturer evidence. Governed by the CUPP Project Constitution v1.0.<br><a href="https://www.makersmithsforge.com/about-us">About Us</a> · <a href="https://www.makersmithsforge.com/blog">Blog</a> · <a href="https://www.makersmithsforge.com/product-categories">Products</a> · <a href="https://www.makersmithsforge.com/faq">FAQ</a></div><div>Prices and campaign status change. Verify current terms before purchasing.<br>Some links are affiliate links; compensation does not affect CUPP research.<br>Cost-of-ownership figures are planning estimates, not purchasing guarantees.</div></div>
+    <div class="wrap footer-grid"><div><strong><a href="https://www.makersmithsforge.com/">Makersmiths Forge</a> · CUPP — Consumer UV Printer Project</strong><br>Research Release {siteMeta.version} — updated 2026-08-02 from CUPP Master Workbook v0.9 and the latest owner, evaluator, campaign, and manufacturer evidence. Governed by the CUPP Project Constitution v1.0.<br><a href="https://www.makersmithsforge.com/about-us">About Us</a> · <a href="https://www.makersmithsforge.com/blog">Blog</a> · <a href="https://www.makersmithsforge.com/product-categories">Products</a> · <a href="https://www.makersmithsforge.com/faq">FAQ</a></div><div>Prices and campaign status change. Verify current terms before purchasing.<br>Some links are affiliate links; compensation does not affect CUPP research.<br>Cost-of-ownership figures are planning estimates, not purchasing guarantees.</div></div>
   </footer>
 
   <CompareBar client:load printers={printers} />
