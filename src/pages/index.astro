@@ -1,0 +1,505 @@
+---
+import printers from '../../data/printers.json';
+import FinderIsland from '../components/FinderIsland.jsx';
+import CompareSection from '../components/CompareSection.jsx';
+import TcoSection from '../components/TcoSection.jsx';
+import CompareBar from '../components/CompareBar.jsx';
+import DetailModal from '../components/DetailModal.jsx';
+import PrintheadInfoButton from '../components/PrintheadInfoButton.jsx';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CUPP — a guided, evidence-first comparison of consumer UV printers, merged from the finder/compare-tray prototype and the fully cited data model, with a real cost-of-ownership calculator." />
+  <title>CUPP — Consumer UV Printer Project | Research Release v1.2.1</title>
+  <style is:global>
+    :root{
+      --ink:#14212b;
+      --muted:#60707b;
+      --paper:#f6f3ed;
+      --surface:#ffffff;
+      --line:#d9dfdf;
+      --brand:#d85c2f;
+      --brand-dark:#a53f1c;
+      --teal:#176b70;
+      --teal-soft:#e9f5f3;
+      --amber:#9a6500;
+      --amber-soft:#fff4d6;
+      --red:#a63232;
+      --red-soft:#fff0ef;
+      --green:#246b45;
+      --green-soft:#eaf6ef;
+      --shadow:0 18px 45px rgba(20,33,43,.10);
+      --radius:20px;
+      --max:1240px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+    a{color:inherit}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    .wrap{width:min(var(--max),calc(100% - 32px));margin-inline:auto}
+    /* Exact Webador/Makersmiths Forge header classes supplied by the site owner. */
+    .block-header{position:sticky;background-color:#fff;transition:background-color 200ms ease-in-out;top:0;left:0;right:0;z-index:1000}
+    .block-header__inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22.5px 37.5px;transition:padding 200ms ease-in-out}
+    .block-header__brand{flex:0 0 auto}
+    .jw-header-logo{display:flex;align-items:center;flex-wrap:nowrap;white-space:nowrap;text-decoration:none}
+    .jw-header{float:none;position:relative;flex:0 0 auto}
+    .jw-header-image-toggle,.jw-header-text-toggle{display:block}
+    .jw-header-image-toggle{margin-right:20px;line-height:0}
+    .jw-header-image{display:block;width:129px;height:95px;object-fit:contain}
+    .jw-header-title-container{width:auto;min-width:max-content;flex:0 0 auto;white-space:nowrap}
+    .jw-header-title{line-height:35px;margin:0;color:#dc2626;font-family:"Open Sans",sans-serif;font-weight:400;font-style:normal;font-size:35px;display:block;white-space:nowrap;word-break:keep-all}
+    .jw-menu{display:flex;flex-wrap:wrap;gap:1em;font-size:15px;font-family:"Open Sans",sans-serif;line-height:1.5;text-transform:uppercase;list-style:none;margin:0;padding:0}
+    .jw-menu-horizontal>.jw-menu-item{display:block}
+    .jw-menu-item,.jw-menu-link{position:relative;box-sizing:border-box}
+    .jw-menu-link{display:block;padding:12px 15px;color:#707070;text-decoration:none;transition:200ms ease}
+    .jw-menu-item>.jw-menu-link:hover{color:#dc2626;background:#fff;text-decoration:none}
+    .jw-menu>.jw-menu-is-active>.jw-menu-link{color:#000;border-bottom:2px solid #dc2626}
+    .jw-menu-link--icon{border:0;background:transparent;font:inherit;cursor:pointer}
+    .jw-icon-badge-wrapper{position:relative;display:inline-block;line-height:1em}
+    .jw-header-icon{display:block;width:20px;height:20px;fill:currentColor}
+    .jw-mobile-menu{display:none}
+    .hidden-desktop-horizontal-menu,.jw-menu-wishlist-item{display:none}
+    .cupp-nav{background:var(--surface);border-bottom:1px solid var(--line)}
+    .cupp-nav-inner{min-height:48px;display:flex;align-items:center;gap:18px;overflow-x:auto;scrollbar-width:thin}
+    .cupp-nav a{flex:0 0 auto;color:#43545f;font-size:.82rem;font-weight:800;text-decoration:none}
+    .cupp-nav a:first-child{color:var(--brand-dark)}
+    .cupp-nav a:hover{color:var(--brand)}
+    @media(max-width:1130px){
+      .block-header__inner{padding:0}
+      .block-header__brand,.block-header__menu{display:none}
+      .jw-mobile-menu{display:flex;width:100%;position:relative;z-index:1010;box-sizing:border-box;align-items:center}
+      .jw-mobile-menu__button{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:50px;min-height:50px;padding:9px;border:0;background:transparent;color:#dc2626}
+      .jw-mobile-header{flex:1 1 auto;display:flex;justify-content:center;padding:5px 10px;max-height:60px;min-height:50px;box-sizing:border-box;overflow:hidden}
+      .jw-mobile-header-content{display:inline-flex;align-items:center;justify-content:center;height:100%}
+      .jw-mobile-logo{display:block;max-height:40px;max-width:70px;object-fit:contain}
+      .jw-mobile-text{margin-left:10px;color:#dc2626;display:inline-flex;align-items:center;font-family:"Open Sans",sans-serif;font-size:1.45rem;font-weight:400;line-height:1}
+      .jw-icon-burger{position:relative;width:22px;height:16px;border-top:2px solid currentColor;border-bottom:2px solid currentColor}
+      .jw-icon-burger:after{content:"";position:absolute;left:0;right:0;top:5px;border-top:2px solid currentColor}
+      .block-header.mobile-open .block-header__menu{display:block;position:absolute;top:50px;left:0;right:0;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.18)}
+      .block-header.mobile-open .jw-menu{display:block;font-size:1rem}
+      .block-header.mobile-open .jw-menu-item{display:block;width:100%}
+      .block-header.mobile-open .jw-menu-link{padding:14px 18px;text-align:center}
+      .block-header.mobile-open .jw-menu>.jw-menu-is-active>.jw-menu-link{border-bottom:0}
+    }
+    .hero{padding:70px 0 34px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-150px;top:-140px;background:radial-gradient(circle,#f7c4aa 0,#f3dacb 42%,transparent 72%);opacity:.8;pointer-events:none}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #d9c4b8;border-radius:999px;background:#fff8f3;color:#7d3b21;font-size:.78rem;font-weight:850;text-transform:uppercase;letter-spacing:.06em}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;position:relative;z-index:1}
+    h1{font-size:clamp(2.6rem,6vw,5.3rem);line-height:.96;letter-spacing:-.055em;margin:20px 0 22px;max-width:880px}
+    .hero p{font-size:1.15rem;color:#4a5b66;max-width:720px;margin:0 0 26px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{border:0;border-radius:14px;padding:13px 18px;font-weight:850;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:.2s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 28px rgba(216,92,47,.24)}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
+    .btn-dark{background:var(--ink);color:#fff}
+    .hero-card{background:rgba(255,255,255,.83);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow);border-radius:28px;padding:26px;backdrop-filter:blur(10px)}
+    .hero-card h2{margin:0 0 6px;font-size:1.35rem}
+    .hero-card p{font-size:.92rem;margin:0 0 18px}
+    .signal{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+    .signal:first-of-type{border-top:0}
+    .signal-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal);font-weight:900}
+    .signal strong{display:block;font-size:.93rem}
+    .signal span{font-size:.84rem;color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:40px}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+    .stat b{display:block;font-size:1.55rem;letter-spacing:-.04em}
+    .stat span{font-size:.78rem;color:var(--muted);font-weight:720;text-transform:uppercase;letter-spacing:.04em}
+    section{padding:64px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:26px}
+    .section-head h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.04;letter-spacing:-.045em;margin:0}
+    .section-head p{max-width:590px;margin:8px 0 0;color:var(--muted)}
+    .kicker{color:var(--brand-dark);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;margin-bottom:8px}
+    .finder-shell{background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+    .finder-step{padding:26px;border-bottom:1px solid var(--line)}
+    .step-title{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+    .step-num{width:32px;height:32px;border-radius:10px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:900}
+    .step-title h3{margin:0;font-size:1.08rem}
+    .use-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .use-card{border:1px solid var(--line);background:#fbfcfb;border-radius:16px;padding:15px;text-align:left;min-height:112px;transition:.18s}
+    .use-card:hover,.use-card.active{border-color:var(--brand);background:#fff8f3;transform:translateY(-1px)}
+    .use-card .icon{font-size:1.45rem;display:block;margin-bottom:9px}
+    .use-card b{display:block;font-size:.93rem}
+    .use-card small{color:var(--muted)}
+    .controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field label{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;font-weight:850;color:#4b5a63}
+    .field select,.field input{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;color:var(--ink)}
+    .checks{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
+    .check{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:700;padding:10px 12px;background:#f7f8f7;border-radius:12px;border:1px solid var(--line)}
+    .finder-actions{padding:20px 26px;background:#f5f8f7;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .finder-actions .note{color:var(--muted);font-size:.86rem;max-width:680px}
+    .results-meta{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:28px 0 14px}
+    .results-meta h3{margin:0}
+    .results-meta span{color:var(--muted);font-size:.88rem}
+    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .empty-state{grid-column:1/-1;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;text-align:center}
+    .empty-state h4{margin:0 0 8px;font-size:1.15rem}
+    .empty-state p{margin:0;color:var(--muted)}
+    .printer-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:19px;display:flex;flex-direction:column;min-height:100%;box-shadow:0 10px 30px rgba(20,33,43,.05)}
+    .card-top{display:flex;align-items:start;justify-content:space-between;gap:12px}
+    .card-name-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 2px}
+    .printer-card h4{font-size:1.16rem;margin:8px 0 2px;line-height:1.2}
+    .card-name-row h4{margin:0}
+    .quick-compare{border:1px solid #b9d8d6;background:var(--teal-soft);color:var(--teal);border-radius:999px;padding:5px 9px;font:inherit;font-size:.68rem;font-weight:850;white-space:nowrap}
+    .quick-compare.selected{color:#fff;background:var(--teal);border-color:var(--teal)}
+    .maker{font-size:.78rem;color:var(--muted);font-weight:750}
+    .rank{width:38px;height:38px;border-radius:12px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:900;flex:0 0 auto}
+    .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 9px;font-size:.72rem;font-weight:850;margin-top:10px}
+    .shipping{background:var(--green-soft);color:var(--green)}
+    .promising{background:var(--amber-soft);color:var(--amber)}
+    .watchlist{background:var(--red-soft);color:var(--red)}
+    .price{font-size:1.8rem;font-weight:900;letter-spacing:-.04em;margin:14px 0 0}
+    .price small{font-size:.74rem;color:var(--muted);font-weight:700;letter-spacing:0}
+    .verdict{font-size:.9rem;margin:12px 0;color:#3f505a}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+    .chip{font-size:.7rem;font-weight:800;background:#eef2f1;color:#42555f;border-radius:999px;padding:5px 8px}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}
+    .mini{background:#f7f8f7;border-radius:12px;padding:10px}
+    .mini span{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:850}
+    .mini b{font-size:.88rem}
+    .warning{margin:12px 0;padding:10px 12px;border-left:3px solid var(--amber);background:#fffaf0;border-radius:8px;font-size:.8rem;color:#6d521d}
+    .card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+    .card-actions .btn{font-size:.82rem;padding:10px 9px;border-radius:11px}
+    .card-actions .wide{grid-column:1/-1}
+    .compare-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;width:min(820px,calc(100% - 24px));background:rgba(20,33,43,.96);color:#fff;z-index:60;border-radius:18px;padding:12px 14px;box-shadow:0 18px 50px rgba(0,0,0,.25);display:none;align-items:center;gap:10px}
+    .compare-bar.show{display:flex}
+    .compare-items{display:flex;gap:7px;flex:1;overflow:auto}
+    .compare-pill{white-space:nowrap;background:rgba(255,255,255,.12);border-radius:999px;padding:7px 10px;font-size:.75rem}
+    .compare-bar button{border:0;border-radius:10px;padding:10px 13px;font-weight:850}
+    .evidence-band{background:var(--ink);color:#fff}
+    .evidence-band .section-head p{color:#b9c4ca}
+    .evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .evidence-card{background:#1e303d;border:1px solid #324653;border-radius:20px;padding:20px}
+    .evidence-card h3{margin:10px 0 7px;font-size:1.12rem}
+    .evidence-card p{margin:0;color:#bdc8ce;font-size:.9rem}
+    .score-dot{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:12px;background:#fff;color:var(--ink);font-weight:900}
+    .benchmark{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}
+    .benchmark-intro{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+    .benchmark-intro h3{font-size:1.5rem;margin:0 0 10px}
+    .benchmark-intro p{color:var(--muted)}
+    .job-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .job-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px}
+    .job-card h4{margin:0 0 5px}
+    .job-card .duration{font-size:1.65rem;font-weight:900;letter-spacing:-.04em}
+    .job-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+    .job-spec{background:#f5f7f6;border-radius:11px;padding:9px}
+    .job-spec span{display:block;font-size:.68rem;color:var(--muted);font-weight:800;text-transform:uppercase}
+    .matrix-shell{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+    .matrix-toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:16px;border-bottom:1px solid var(--line);background:#fafbfa}
+    .matrix-tools{display:flex;gap:8px;flex-wrap:wrap}
+    .matrix-tools input,.matrix-tools select{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff}
+    .table-wrap{overflow:auto;max-height:690px}
+    table{width:100%;border-collapse:separate;border-spacing:0;min-width:1120px;font-size:.82rem}
+    th,td{padding:13px 12px;border-bottom:1px solid #e4e8e7;vertical-align:top;text-align:left}
+    th{position:sticky;top:0;background:#f7f8f7;z-index:2;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:#53636c}
+    td:first-child,th:first-child{position:sticky;left:0;background:#fff;z-index:1;min-width:190px}
+    th:first-child{z-index:3;background:#f7f8f7}
+    tr:hover td{background:#fffaf7}
+    tr:hover td:first-child{background:#fffaf7}
+    .table-name{font-weight:850}
+    .table-sub{color:var(--muted);font-size:.72rem;margin-top:3px}
+    .detail-modal{position:fixed;inset:0;background:rgba(8,14,18,.70);z-index:2000;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+    .detail-modal.show{display:flex}
+    .modal-card{width:min(1040px,100%);overflow:visible;background:#fff;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.35)}
+    .modal-head{position:sticky;top:0;z-index:3;padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:start;background:rgba(255,255,255,.96);border-radius:24px 24px 0 0;backdrop-filter:blur(10px)}
+    .modal-head h3{margin:0;font-size:1.65rem}
+    .icon-btn{width:38px;height:38px;border:0;border-radius:12px;background:#f0f3f2;font-size:1.1rem}
+    .modal-body{padding:22px 22px 30px}
+    .verdict-box{background:#f5f8f7;border-radius:16px;padding:16px;margin-bottom:16px}
+    .modal-summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-bottom:18px}
+    .modal-summary-row{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px dotted var(--line);font-size:.9rem}
+    .modal-summary-row span{color:var(--muted)}
+    .modal-summary-row strong{text-align:right;font-weight:800}
+    .comparison-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+    .comparison-actions p{margin:0;color:var(--muted);font-size:.84rem;max-width:700px}
+    .comparison-group{border:1px solid var(--line);border-radius:16px;margin-top:12px;overflow:hidden;background:#fff}
+    .comparison-group summary{cursor:pointer;list-style:none;padding:15px 17px;background:#f5f8f7;font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .comparison-group summary::-webkit-details-marker{display:none}
+    .comparison-group summary:after{content:'+';font-size:1.25rem;color:var(--teal)}
+    .comparison-group[open] summary:after{content:'−'}
+    .comparison-group .table-wrap{max-height:none;border-top:1px solid var(--line)}
+    .comparison-table{min-width:760px}
+    .comparison-table th,.comparison-table td{min-width:190px}
+    .comparison-table td.difference{background:#fff8f3;box-shadow:inset 0 3px 0 rgba(255,107,53,.16)}
+    .comparison-table tr:hover td.difference{background:#fff3ec}
+    .channel-note{margin:12px 0 0;padding:12px 14px;background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 12px 12px 0;color:#31545a;font-size:.82rem}
+    .detail-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .detail-block{border:1px solid var(--line);border-radius:16px;padding:15px}
+    .detail-block h4{margin:0 0 8px;font-size:.86rem;text-transform:uppercase;letter-spacing:.05em}
+    .detail-block p{margin:0;color:#4c5c66;font-size:.9rem}
+    .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .research-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+    .research-card .n{font-size:1.55rem;font-weight:900;color:var(--brand)}
+    .research-card h3{margin:6px 0;font-size:1rem}
+    .research-card p{font-size:.84rem;color:var(--muted);margin:0}
+    footer{padding:36px 0 90px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;align-items:start}
+    .hidden{display:none!important}
+    @media(max-width:980px){
+      .hero-grid,.benchmark{grid-template-columns:1fr}.hero-card{max-width:720px}.use-grid{grid-template-columns:repeat(2,1fr)}.card-grid,.evidence-grid,.research-grid{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}
+      .header-inner{min-height:88px;padding:0 20px}.brand-mark{width:78px;height:58px}.brand-name{font-size:24px}.primary-nav a:not([aria-current="page"]):not(.header-icon){display:none}.primary-nav{gap:22px}.primary-nav a[aria-current="page"]:after{bottom:27px}
+    }
+    @media(max-width:680px){
+      .wrap{width:min(100% - 20px,var(--max))}.hero{padding-top:42px}h1{font-size:3rem}.section-head{display:block}.use-grid,.card-grid,.evidence-grid,.research-grid,.job-grid,.detail-columns,.modal-summary-grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.finder-actions{display:block}.finder-actions .btn{width:100%;margin-top:12px}.stats{grid-template-columns:1fr 1fr}.matrix-toolbar{align-items:stretch;flex-direction:column}.matrix-tools{display:grid;grid-template-columns:1fr}.footer-grid{display:block}.compare-bar{align-items:stretch;flex-direction:column}.compare-items{width:100%}.detail-modal{padding:16px 10px}.modal-body{padding:18px 16px 24px}.modal-summary-row{gap:12px}
+      .header-inner{min-height:76px;padding:0 12px;gap:12px}.brand{gap:9px}.brand-mark{width:58px;height:44px}.brand-name{font-size:18px}.primary-nav{gap:14px;font-size:11px}.primary-nav .header-search{display:none}.primary-nav a[aria-current="page"]:after{bottom:20px}
+    }
+      .why-toggle{background:none;border:0;padding:0;margin-top:8px;color:var(--teal);font-weight:800;font-size:.78rem;text-decoration:underline;text-align:left}
+    .why-box{display:none;margin-top:8px;background:#f5f8f7;border-radius:10px;padding:10px 12px;font-size:.78rem;color:#3f505a}
+    .why-box.show{display:block}
+    .why-row{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px dashed #dde3e2}
+    .why-row:last-child{border-bottom:0}
+    .new-tag{display:inline-block;background:var(--brand);color:#fff;font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em;border-radius:999px;padding:2px 7px;margin-right:6px;vertical-align:middle}
+    .callout-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+    .callout-list li{border-left:3px solid var(--line);padding:2px 0 2px 12px;font-size:.86rem;color:#3f505a}
+    .callout-list li.flagged{border-left-color:var(--brand)}
+    .source-list{margin:0;padding:0;list-style:none;columns:2;column-gap:18px;font-size:.82rem}
+    .source-list li{break-inside:avoid;margin-bottom:6px}
+    .source-list a{color:var(--teal);text-decoration:none}
+    .source-list a:hover{text-decoration:underline}
+    .tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .tier-cell{border:1px solid var(--line);border-radius:12px;padding:10px;font-size:.78rem}
+    .tier-cell .tv{font-weight:900;font-size:.9rem;display:block;margin-bottom:3px}
+    .tv-yes{color:var(--green)}
+    .tv-partial{color:var(--amber)}
+    .tv-no{color:var(--red)}
+    .acc-list{margin:0;padding-left:18px;font-size:.86rem;color:#3f505a}
+    .tco-mini{background:#f5f8f7;border-radius:14px;padding:14px;font-size:.85rem}
+    .tco-mini table{min-width:0;font-size:.82rem}
+    .tco-mini th,.tco-mini td{padding:6px 4px}
+    .modal-section{margin-top:20px}
+    .modal-section h4{font-size:.86rem;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;color:#4b5a63}
+    .tco-shell{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:24px}
+    .tco-controls{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr auto;gap:12px;align-items:end;margin-bottom:20px}
+    .tco-controls .field label{font-size:.72rem}
+    .tco-table{width:100%;border-collapse:collapse;font-size:.9rem}
+    .tco-table th,.tco-table td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    .tco-table th{background:#f7f8f7;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:#53636c}
+    .tco-table .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .tco-table .unknown{color:var(--red);font-style:italic}
+    .tco-table .total-row td{border-top:2px solid var(--ink);font-weight:900}
+    .tco-note{font-size:.8rem;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+    .watchlist-note{background:var(--amber-soft);border:1px solid #e9c672;color:#6d521d;border-radius:14px;padding:14px 16px;font-size:.86rem;margin-top:18px}
+    .research-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}
+    .research-actions p{margin:0;color:var(--muted);font-size:.86rem}
+    .printhead-table{min-width:720px}
+    .printhead-table td:first-child,.printhead-table th:first-child{position:static;min-width:150px}
+    .evidence-note{padding:13px 15px;border-left:4px solid var(--teal);background:var(--teal-soft);border-radius:0 12px 12px 0;font-size:.86rem;color:#31545a}
+  
+    .affiliate-disclosure{margin:0 0 18px;padding:14px 16px;border-left:4px solid var(--brand);background:#fff8f3;color:#6c4333;border-radius:0 12px 12px 0;font-size:.82rem;line-height:1.5}
+    .comparison-tabs{display:flex;gap:10px;padding:14px 0 16px;border-bottom:1px solid var(--line)}
+    .comparison-tabs button{min-height:48px;padding:0 20px;color:var(--muted);font-weight:850;background:#fff;border:1px solid var(--line);border-radius:12px}
+    .comparison-tabs button.active{color:#fff;background:var(--ink);border-color:var(--ink);box-shadow:inset 0 -4px 0 var(--brand)}
+    .comparison-meta{display:flex;justify-content:space-between;gap:18px;padding:13px 0;color:var(--muted);font-size:.78rem}
+    .comparison-shell{border-radius:20px}
+    .comparison-wrap{max-height:none;overflow:auto}
+    .comparison-matrix{min-width:4380px;font-size:.8rem}
+    .comparison-matrix th,.comparison-matrix td{min-width:255px;width:255px;padding:14px 13px;line-height:1.48;border-right:1px solid #e4e8e7}
+    .comparison-matrix thead th{height:188px;vertical-align:top;color:#fff;background:var(--ink);text-transform:none;letter-spacing:0}
+    .comparison-matrix thead th:first-child{color:#fff;background:#0f1b22}
+    .comparison-matrix th.matrix-spec{position:sticky;left:0;z-index:4;width:190px;min-width:190px;font-size:.76rem;font-weight:850}
+    .comparison-matrix tbody th.matrix-spec{color:var(--ink);background:#f0f4f2;text-transform:none;letter-spacing:0;box-shadow:8px 0 18px rgba(20,33,43,.06)}
+    .matrix-printer{display:grid;gap:8px}
+    .matrix-printer .detail-btn{width:fit-content;padding:0;color:#fff;background:none;border:0;font-size:.95rem;font-weight:900;text-align:left;text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:5px}
+    .matrix-compare{width:fit-content;padding:6px 10px;color:#d8f3f1;background:transparent;border:1px solid #5b777d;border-radius:999px;font:inherit;font-size:.68rem;font-weight:900;white-space:nowrap}
+    .matrix-compare.selected{color:#fff;background:var(--teal);border-color:var(--teal)}
+    .matrix-status{display:inline-flex;width:fit-content;padding:5px 8px;border-radius:999px;font-size:.65rem;font-weight:850}
+    .matrix-status.shipping{background:#dff4e9;color:var(--green)}
+    .matrix-status.promising{background:var(--amber-soft);color:var(--amber)}
+    .matrix-status.watchlist{background:var(--red-soft);color:var(--red)}
+    .matrix-confidence{color:#bac5cb;font-size:.72rem;line-height:1.4}
+    .matrix-note{display:block;margin-top:9px;padding-top:9px;color:var(--muted);border-top:1px solid var(--line);font-size:.72rem}
+    .matrix-flag{display:block;margin-top:9px;padding:9px;color:#6d521d;background:#fff5df;border-left:3px solid var(--amber);font-size:.72rem}
+    .tier-result{display:inline-flex;width:fit-content;padding:4px 7px;border-radius:999px;font-size:.65rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+    .tier-result.yes{color:var(--green);background:var(--green-soft)}
+    .tier-result.partial{color:var(--amber);background:var(--amber-soft)}
+    .tier-result.no{color:var(--red);background:var(--red-soft)}
+    .feature-detail{margin:9px 0 0;color:var(--muted);font-size:.75rem}
+    .affiliate-inline{font-size:.72rem;font-weight:850;color:var(--brand-dark)}
+    @media(max-width:680px){.comparison-tabs{display:grid;grid-template-columns:1fr}.comparison-meta{align-items:flex-start;flex-direction:column}}
+
+  </style>
+</head>
+<body>
+  <header class="block-header js-topbar-content-container js-fixed-header-container">
+    <div class="block-header__inner">
+      <div class="jw-mobile-menu jw-mobile-is-text js-mobile-menu">
+        <button type="button" class="jw-mobile-menu__button jw-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="jw-icon-burger jw-icon-burger--cross"></span>
+        </button>
+        <div class="jw-mobile-header jw-mobile-header--image-text">
+          <span class="jw-mobile-header-content">
+            <img class="jw-mobile-logo jw-mobile-logo--square" src="./makersmiths-forge-logo.png?v=cupp-header-v4" alt="Makersmiths Forge">
+            <span class="jw-mobile-text">Makersmiths Forge</span>
+          </span>
+        </div>
+        <a href="https://www.makersmithsforge.com/cart" class="jw-mobile-menu__button jw-mobile-header-cart" aria-label="View cart">
+          <svg class="jw-header-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5H3v2h1.7l2.1 8.4A2 2 0 0 0 8.75 17H18a2 2 0 0 0 1.9-1.37L22 9H7.2L6.7 7l-.5-2ZM9 19a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
+        </a>
+      </div>
+      <div class="block-header__brand">
+        <div class="jw-header-logo">
+          <span class="jw-header jw-header-image-container jw-header-image-toggle">
+            <img class="jw-header-image" src="./makersmiths-forge-logo.png?v=cupp-header-v7" width="129" height="95" alt="Makersmiths Forge">
+          </span>
+          <span class="jw-header jw-header-title-container jw-header-text jw-header-text-toggle">
+            <span class="jw-header-title">Makersmiths Forge</span>
+          </span>
+        </div>
+      </div>
+      <nav class="block-header__menu jw-menu-copy" aria-label="Makersmiths Forge navigation">
+        <ul class="jw-menu jw-menu-horizontal">
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/">Home</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/about-us">About Us</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/blog">Blog</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/product-categories">Product Categories</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/faq">FAQ</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link" href="https://www.makersmithsforge.com/uv-sticker-design-tips">UV Sticker Design Tips</a></li>
+          <li class="jw-menu-item jw-menu-is-active"><a class="jw-menu-link js-active-menu-item" href="#top">CUPP</a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link jw-menu-link--icon" href="https://www.makersmithsforge.com/search" aria-label="Search">
+            <svg class="jw-header-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 4a6.5 6.5 0 1 0 3.98 11.64l4.44 4.44 1.42-1.42-4.44-4.44A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg>
+          </a></li>
+          <li class="jw-menu-item"><a class="jw-menu-link jw-menu-link--icon" href="https://www.makersmithsforge.com/cart" aria-label="View cart">
+            <svg class="jw-header-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 5H3v2h1.7l2.1 8.4A2 2 0 0 0 8.75 17H18a2 2 0 0 0 1.9-1.37L22 9H7.2L6.7 7l-.5-2ZM9 19a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="cupp-nav">
+      <nav class="wrap cupp-nav-inner" aria-label="CUPP navigation">
+        <a href="#top">CUPP</a>
+        <a href="#finder">Find a printer</a>
+        <a href="#compare">Compare</a>
+        <a href="#benchmarks">Benchmarks</a>
+        <a href="#tco">Cost of ownership</a>
+        <a href="#research">Research</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">CUPP · Research Release v1.2.1 — finder + full evidence trail</span>
+            <h1>Choose the job first. Then choose the printer.</h1>
+            <p>An evidence-first guide to consumer UV printers for makers and small businesses. Start with what you want to produce, see the best-fit configurations complete with a transparent scoring breakdown, then inspect the full engineering detail, every cited source, and a real cost-of-ownership estimate — not just a one-line verdict.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#finder">Find my printer →</a>
+              <a class="btn btn-secondary" href="#compare">Compare all configurations</a>
+            </div>
+            <div class="stats" aria-label="CUPP dataset summary">
+              <div class="stat"><b>8</b><span>Printer families</span></div>
+              <div class="stat"><b>16</b><span>Configurations</span></div>
+              <div class="stat"><b>37</b><span>Sources logged</span></div>
+              <div class="stat"><b>44</b><span>Evidence records</span></div>
+              <div class="stat"><b>3</b><span>Shipping retail</span></div>
+              <div class="stat"><b>Aug 2 '26</b><span>Last research pass</span></div>
+            </div>
+          </div>
+          <aside class="hero-card">
+            <h2>What CUPP changes</h2>
+            <p>This build merges the guided finder with the full CUPP evidence model: every ranking shows its own math, and every printer card links to its complete sourced detail.</p>
+            <div class="signal"><span class="signal-icon">✓</span><div><strong>Best fit is contextual</strong><span>A tumbler shop and a raised-art studio should not receive the same ranking.</span></div></div>
+            <div class="signal"><span class="signal-icon">5</span><div><strong>Evidence confidence stays visible</strong><span>Confidence reflects source quality—not how good the machine is.</span></div></div>
+            <div class="signal"><span class="signal-icon">!</span><div><strong>Unknowns remain part of the answer</strong><span>Missing head prices, support terms, and long-term maintenance are never hidden.</span></div></div>
+            <div class="signal"><span class="signal-icon">$</span><div><strong>Cost of ownership is computed, not guessed</strong><span>A real 1/3/5-year calculator, honest about which line items are disclosed vs. unknown.</span></div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="finder">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">Guided finder</div><h2>Build a shortlist in under a minute.</h2><p>Select the work you care about, set practical limits, and CUPP will rank configurations by fit while keeping buying risk visible.</p></div>
+        </div>
+        <FinderIsland client:load printers={printers} />
+      </div>
+    </section>
+
+    <section class="evidence-band">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker" style="color:#ffad84">Evidence, not hype</div><h2>Three separate questions drive every recommendation.</h2><p>A product can be promising yet unproven. Another can be well documented but a poor fit for your workflow. V4 keeps those distinctions explicit.</p></div></div>
+        <div class="evidence-grid">
+          <article class="evidence-card"><span class="score-dot">1</span><h3>Does it fit the job?</h3><p>Process, rotary support, object clearance, print area, ink configuration, and required accessories.</p></article>
+          <article class="evidence-card"><span class="score-dot">2</span><h3>Can you buy it responsibly?</h3><p>Retail availability, preorder maturity, campaign fulfillment, service path, warranty, and consumables.</p></article>
+          <article class="evidence-card"><span class="score-dot">3</span><h3>How strong is the evidence?</h3><p>Primary documentation, independent measurement, owner reports, unresolved conflicts, and missing data.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmarks">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Measured reality</div><h2>Two real jobs beat a page of “up to” claims.</h2><p>These are measured eufyMake E1 examples from Tom’s Hardware. They are job examples, not cross-printer benchmarks.</p></div></div>
+        <div class="benchmark">
+          <div class="benchmark-intro"><h3>Raised work is a time-and-white-ink business.</h3><p>Relief height can dominate cycle time and consumable use. CUPP benchmarks should record layer strategy, white, gloss, cleaning waste, labor, failed attempts, firmware, and sponsorship—not only finished dimensions.</p><a class="btn btn-secondary" href="https://www.tomshardware.com/3d-printing/eufymake-e1-review" target="_blank" rel="noopener">Read the measured review →</a></div>
+          <div class="job-grid">
+            <article class="job-card"><h4>Textured phone case</h4><div class="duration">1 hr 12 min</div><div class="job-specs"><div class="job-spec"><span>Texture</span><b>0.4 mm</b></div><div class="job-spec"><span>Total ink</span><b>4.5 mL</b></div><div class="job-spec"><span>White</span><b>2.26 mL</b></div><div class="job-spec"><span>Gloss</span><b>2.18 mL</b></div></div></article>
+            <article class="job-card"><h4>12 × 16 textured canvas</h4><div class="duration">6 hr 55 min</div><div class="job-specs"><div class="job-spec"><span>Texture</span><b>2 mm</b></div><div class="job-spec"><span>Total ink</span><b>46.27 mL</b></div><div class="job-spec"><span>Ink cost</span><b>$19.89</b></div><div class="job-spec"><span>White + gloss</span><b>45.12 mL</b></div></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Advanced comparison</div><h2>The complete engineering view, after you know what matters.</h2><p>The comparison currently tracks 16 consumer UV printer configurations from eight manufacturers, spanning a wide range of features, capabilities, and price points.</p></div></div>
+        <p class="affiliate-disclosure"><strong>Affiliate disclosure:</strong> Some product links are affiliate links. Makersmiths Forge may earn a commission, at no additional cost to you. Affiliate compensation does not affect CUPP research, confidence ratings, or recommendations.</p>
+        <CompareSection client:load printers={printers} />
+      </div>
+    </section>
+
+
+    <section id="tco">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Cost of ownership</div><h2>What does it actually cost to run one of these for a year?</h2><p>Purchase price is one line in a much longer bill. This calculator uses only figures CUPP has actually sourced — a machine price, a disclosed ink rate, or a claimed maintenance figure — and clearly labels every line item that is genuinely unknown instead of quietly assuming a number.</p></div></div>
+        <TcoSection client:load printers={printers} />
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Open research ledger</div><h2>The gaps are part of the product.</h2><p>CUPP does not convert missing information into a favorable score. These are the highest-value questions still needed for responsible buying recommendations.</p></div></div>
+        <div class="research-grid">
+          <article class="research-card"><div class="n">01</div><h3>Replacement printheads</h3><p>Official part number, public price, calibration, downtime, replacement steps, and warranty impact.</p></article>
+          <article class="research-card"><div class="n">02</div><h3>Shipping-unit benchmarks</h3><p>Shared job files with time, ink or resin use, cleaning waste, photos, firmware, and failure notes.</p></article>
+          <article class="research-card"><div class="n">03</div><h3>Campaign fulfillment</h3><p>Verified delivery and current production timelines for LONGER, HeyGears, Morpho, Procolored, and iNew3D.</p></article>
+          <article class="research-card"><div class="n">04</div><h3>Soluble-support handling</h3><p>Removal time, temperature, residue, agitation, consumables, SDS, and wastewater guidance.</p></article>
+          <article class="research-card"><div class="n">05</div><h3>AI and software cost</h3><p>Active audit: credits, subscriptions, cloud dependency, offline use, export restrictions, OS support, licensing, and what stops when payment ends.</p></article>
+          <article class="research-card"><div class="n">06</div><h3>Long-term ownership</h3><p>Active audit: nozzle clogs, maintenance, warranties, support response, replacement parts, serviceability, firmware history, and ecosystem lock-in.</p></article>
+          <article class="research-card"><div class="n">07</div><h3>New-entrant watchlist</h3><p>Credible product-discovery signals get tracked here until there is a real announcement and specification sheet — never added to the comparison as a guess.</p></article>
+          <article class="research-card"><div class="n">08</div><h3>Community-sourced cost figures</h3><p>Printhead replacement costs, ink consumption, and failure reports pulled from Facebook/Reddit communities need independent, non-anecdotal confirmation.</p></article>
+        </div>
+        <div class="watchlist-note"><strong>Anycubic — market watch, product unannounced (updated 2026-08-02):</strong> In July 2026, Anycubic invited users to participate in research on consumer-grade UV printers, with selected respondents considered for extended interviews. Anycubic also holds <a href="https://patents.google.com/patent/CN115195127A/en" target="_blank" rel="noopener">Chinese patent CN115195127</a>, covering multi-nozzle CMYK photosensitive-ink printing with UV-cured stacked layers for full-color 3D models. Together, these are credible signs of relevant research and product discovery, but Anycubic has not announced a commercial UV printer, specifications, pricing, or a release schedule. It remains outside the available-product comparison.</div>
+        <div class="research-actions"><PrintheadInfoButton client:load /><p>Share owner tests and research leads with <strong>#CUPPUVResearch</strong>.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid"><div><strong><a href="https://www.makersmithsforge.com/">Makersmiths Forge</a> · CUPP — Consumer UV Printer Project</strong><br>Research Release v1.2.1 — updated 2026-08-02 from CUPP Master Workbook v0.9 and the latest owner, evaluator, campaign, and manufacturer evidence. Governed by the CUPP Project Constitution v1.0.<br><a href="https://www.makersmithsforge.com/about-us">About Us</a> · <a href="https://www.makersmithsforge.com/blog">Blog</a> · <a href="https://www.makersmithsforge.com/product-categories">Products</a> · <a href="https://www.makersmithsforge.com/faq">FAQ</a></div><div>Prices and campaign status change. Verify current terms before purchasing.<br>Some links are affiliate links; compensation does not affect CUPP research.<br>Cost-of-ownership figures are planning estimates, not purchasing guarantees.</div></div>
+  </footer>
+
+  <CompareBar client:load printers={printers} />
+
+  <DetailModal client:load printers={printers} />
+
+  <script>
+    const mobileToggle = document.querySelector('.jw-mobile-toggle');
+    if (mobileToggle) mobileToggle.addEventListener('click', () => {
+      const header = document.querySelector('.block-header');
+      const open = header.classList.toggle('mobile-open');
+      mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
+</body>
+</html>
