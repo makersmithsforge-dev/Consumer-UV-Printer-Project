@@ -1,1 +1,30 @@
+name: Weekly build
 
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Wednesday 06:00 ET (UTC-4, EDT). Does not deploy -- Netlify builds
+    # from the branch, and production deploys stay a manual, Thursday-gated
+    # decision.
+    - cron: "0 10 * * 3"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate data/printers.json
+        run: node scripts/validate-printers.mjs
+
+      - name: Build
+        run: npm run build
