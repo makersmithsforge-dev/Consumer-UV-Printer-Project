@@ -1,69 +1,59 @@
-![Netlify Examples](https://github.com/netlify/examples/assets/5865/4145aa2f-b915-404f-af02-deacee24f7bf)
+# CUPP — Consumer UV Printer Project
 
-# MCP example Netlify Express
+An evidence-first comparison of consumer UV printers, published at
+[cupp.makersmithsforge.com](https://cupp.makersmithsforge.com) by
+[Makersmiths Forge](https://www.makersmithsforge.com/).
 
-ChatGPT Connection working
+CUPP tracks specs, pricing, ownership cost, and sourced evidence for
+consumer/prosumer UV printers — a guided finder, a full engineering
+comparison matrix, and a cost-of-ownership calculator, all backed by cited
+sources with confidence ratings instead of one-line verdicts.
 
-**View this demo site**: https://mcp-example-express.netlify.app/
+## Stack
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f15f03f9-55d8-4adc-97d5-f6e085141610/deploy-status)](https://app.netlify.com/sites/mcp-example-express/deploys)
+Built with [Astro](https://astro.build) so the page ships pre-rendered
+static HTML (for SEO and load speed); the interactive pieces (finder,
+comparison matrix, TCO calculator, compare tray, detail modals) are React
+islands (`client:load`) that hydrate on top, sharing state via
+[nanostores](https://github.com/nanostores/nanostores).
 
+- `src/pages/index.astro` — the page shell: static header/hero/evidence
+  sections plus the mounted islands.
+- `src/components/` — the React islands.
+- `src/lib/cupp-logic.js` — scoring, TCO math, and HTML-string builders
+  shared between server rendering and client interactivity.
+- `src/stores/cupp-store.js` — cross-island state (compare set, open modal,
+  TCO selection).
+- `data/printers.json` — the 16 tracked printer configurations. Extracted
+  from the original single-file page via `scripts/extract-data.mjs`, with
+  a `deepStrictEqual` check against the original parse to guarantee
+  byte-for-byte fidelity. Every spec value, confidence score, and source
+  URL here is sourced research — do not hand-edit without updating the
+  evidence behind it.
+- `data/site-meta.json` — small site-level fields (currently just the
+  displayed research-release version) read by the template.
+- `data/evidence.json`, `data/sources.json`, `data/owned-products.json` —
+  placeholders for future data extraction work.
 
-
-## About this example site
-
-This site shows a very a basic example of developing and running serverless MCP using Netlify Functions. It includes links to a deployed serverless function and an example of accessing the function using a customized URL.
-
-- [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
-- [Docs: Netlify Functions](https://docs.netlify.com/functions/overview/?utm_campaign=dx-examples&utm_source=example-site&utm_medium=web&utm_content=example-mcp-express)
-- [Agent Experience (AX)](https://agentexperience.ax?utm_source=express-mcp-guide&utm_medium=web&utm_content=example-mcp-express)
-
-Importantly, because of how Express handles mapping routes, ensure you set the `netlify.toml` redirects to the correct path. In this example we have the following to ensure <domain>/mcp catches all of the requests to this server:
-
-```toml
-[[redirects]]
-  force = true
-  from = "/mcp"
-  status = 200
-  to = "/.netlify/functions/express-mcp-server"
-```
-
-
-
-## Speedily deploy your own version
-
-Deploy your own version of this example site, by clicking the Deploy to Netlify Button below. This will automatically:
-
-- Clone a copy of this example from the examples repo to your own GitHub account
-- Create a new project in your [Netlify account](https://app.netlify.com/?utm_medium=social&utm_source=github&utm_campaign=devex-ph&utm_content=devex-examples), linked to your new repo
-- Create an automated deployment pipeline to watch for changes on your repo
-- Build and deploy your new site
-- This repo can then be used to iterate on locally using `netlify dev`
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/examples/&create_from_path=examples/mcp/express-mcp&utm_campaign=dx-examples)
-
-
-## Install and run the examples locally
-
-You can clone this entire examples repo to explore this and other examples, and to run them locally.
+## Development
 
 ```shell
-
-# 1. Clone the examples repository to your local development environment
-git clone git@github.com:netlify/examples
-
-# 2. Move into the project directory for this example
-cd examples/mcp/express-mcp
-
-# 3. Install the Netlify CLI to let you locally serve your site using Netlify's features
-npm i -g netlify-cli
-
-# 4. Serve your site using Netlify Dev to get local serverless functions
-netlify dev
-
-# 5. While the site is running locally, open a separate terminal tab to run the MCP inspector or client you desire
-npx @modelcontextprotocol/inspector npx mcp-remote@next http://localhost:8888/mcp
-
+npm install
+npm run dev       # local dev server
+npm run build     # static build to dist/
+npm run preview   # serve the built dist/ locally
 ```
 
+## Deployment
 
+Netlify builds this repo (`npm run build`, publishing `dist`) and creates a
+deploy preview for every pull request. Production deploys from `main` are
+approved manually — do not push directly to `main`; open a PR and let the
+preview build before merging.
+
+## Data discipline
+
+This project's value is its evidence discipline. Spec values, confidence
+scores, source URLs, and the affiliate disclosure text should never change
+as a side effect of a structural or tooling change — only through
+deliberate research updates.
