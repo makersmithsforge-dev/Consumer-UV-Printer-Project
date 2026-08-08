@@ -1,1 +1,398 @@
-
+[
+  {
+    "name": "3D Printing Cost Calculator — deep-dive analysis",
+    "url": "https://3dprintingcostcalculator.com/news/morpho-uv-printer"
+  },
+  {
+    "name": "3D Printing Cost Calculator — field comparison",
+    "url": "https://3dprintingcostcalculator.com/news/best-desktop-uv-printer"
+  },
+  {
+    "name": "3D Printing Cost Calculator — ink cost analysis",
+    "url": "https://3dprintingcostcalculator.com/news/heygears-g1-price"
+  },
+  {
+    "name": "3D Printing Industry — spec table + pricing",
+    "url": "https://3dprintingindustry.com/news/heygears-g1-series-desktop-full-color-3d-and-uv-printer-technical-specifications-and-pricing-252408/"
+  },
+  {
+    "name": "3D Printing Journal",
+    "url": "https://www.3dprintingjournal.com/p/inew3d-qc2a-full-color-uv-3d-printing"
+  },
+  {
+    "name": "3DPrint.com — Kickstarter-risk framing",
+    "url": "https://3dprint.com/329298/heygears-g1-series-launches-on-kickstarter-bringing-full-color-3d-and-uv-printing-to-the-desktop/"
+  },
+  {
+    "name": "All3DP",
+    "url": "https://all3dp.com/4/longer-releases-eprint-the-worlds-first-dual-printhead-3d-texture-personal-uv-printer/"
+  },
+  {
+    "name": "All3DP — “Buyer Be Aware”",
+    "url": "https://all3dp.com/4/procoloreds-x-one-folds-a-uv-printer-a-laser-cutter-and-a-sticker-maker-into-one-box/"
+  },
+  {
+    "name": "All3DP (marked Sponsored Content)",
+    "url": "https://all3dp.com/4/realistic-full-color-3d-prints-in-one-step-meet-the-inew3d-qc2a/"
+  },
+  {
+    "name": "Amazon listing",
+    "url": "https://www.amazon.com/OMTech-Spectra-1440X720-Cleaning-Textures/dp/B0GQ3438P2"
+  },
+  {
+    "name": "AndresJet — industry-blog skepticism",
+    "url": "https://www.andresjet.com/blogs/knowledge/procolored-x-one-raises-a-hard-question-for-desktop-uv-printing"
+  },
+  {
+    "name": "Barchart/press wire",
+    "url": "https://www.barchart.com/story/news/36783298/longer-eprint-worlds-first-all-in-one-printer-supporting-both-uv-dtf-is-now-the-no-1-kickstarter-live-project"
+  },
+  {
+    "name": "Bitner Built — Morpho evaluator video",
+    "url": "https://www.youtube.com/watch?v=JvEeQZSuvLk"
+  },
+  {
+    "name": "BleepingComputer — malware coverage",
+    "url": "https://www.bleepingcomputer.com/news/security/printer-maker-procolored-offered-malware-laced-drivers-for-months/"
+  },
+  {
+    "name": "BuildDanielBuild — G1X evaluator video",
+    "url": "https://www.youtube.com/watch?v=htlvYz8XlaI"
+  },
+  {
+    "name": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/05/21/procolored-x-one-a-3-in-1-uv-printer-and-color-laser-engraver-with-uv-dtf-support/"
+  },
+  {
+    "name": "Fabbaloo — independent analysis",
+    "url": "https://www.fabbaloo.com/news/qc2a-desktop-3d-printer-brings-full-color-3d-printing-below-us10k"
+  },
+  {
+    "name": "Facebook — \"Are procolored printers trash?\" group, K13 Lite reliability report",
+    "url": "https://www.facebook.com/groups/1270712091796928/"
+  },
+  {
+    "name": "Facebook — HeyGears G1 Series Official Community, $7M/22hr stretch-goal post (private group; membership required to view)",
+    "url": "https://www.facebook.com/groups/heygears.gseries/"
+  },
+  {
+    "name": "Facebook — HeyGears G1 Series Official Community, Blue Print Studio material-usage estimator confirmation",
+    "url": "https://www.facebook.com/groups/heygears.gseries/"
+  },
+  {
+    "name": "Facebook — inew3d QC2A Full-Color 3D Printer Launch Group, delivery-timeline comment",
+    "url": "https://www.facebook.com/groups/888231600602196/"
+  },
+  {
+    "name": "Facebook — Longer ePrint Kickstarter Backers, continued-silence sentiment thread",
+    "url": "https://www.facebook.com/groups/eprinter/"
+  },
+  {
+    "name": "Facebook — Morpho UV Printer Official Group, livestream software recap",
+    "url": "https://www.facebook.com/groups/1841037633231835/"
+  },
+  {
+    "name": "Facebook — Morpho UV Printer Users, early-creator unit prints thread",
+    "url": "https://www.facebook.com/groups/1039221979045867/"
+  },
+  {
+    "name": "Facebook — Procolored X one Launch Group, official Q&A on power loss/emergency stop (private group; membership required to view)",
+    "url": "https://www.facebook.com/groups/1670774934298034/"
+  },
+  {
+    "name": "Facebook — xTool O1 Omni Printer Official Group, printhead storage question (private group; membership required to view)",
+    "url": "https://www.facebook.com/groups/1369975394262258/"
+  },
+  {
+    "name": "Fauxhammer — independent commentary",
+    "url": "https://www.fauxhammer.com/3d-printing/heygears-g1-g1-x-announced-full-colour-resin-3d-printing-is-finally-coming-home/"
+  },
+  {
+    "name": "Fauxhammer review (\"2.5D\" framing)",
+    "url": "https://www.fauxhammer.com/reviews/eufymake-e1-review-a-real-look-at-the-2-5d-resin-printer-that-might-actually-change-home-uv-printing/"
+  },
+  {
+    "name": "Forbes — funding record + spec sheet",
+    "url": "https://www.forbes.com/sites/marksparrow/2025/06/26/eufymake-smashes-kickstarter-record-with-launch-of-brands-new-3d-uv-printer/"
+  },
+  {
+    "name": "G DATA — malware disclosure",
+    "url": "https://www.gdatasoftware.com/blog/2025/05/38200-printer-infected-software-downloads"
+  },
+  {
+    "name": "Gizmocrowd — spec table",
+    "url": "https://www.gizmocrowd.com/post/inew3d-qc2a-3d-printer"
+  },
+  {
+    "name": "GlobeNewswire — press release",
+    "url": "https://www.globenewswire.com/news-release/2026/07/02/3321428/0/en/Morpho-Unveils-Desktop-UV-Printing-System-to-Bridge-the-Gap-Between-Industrial-Power-and-Creative-Freedom.html"
+  },
+  {
+    "name": "HansTechTalk — Morpho evaluator video",
+    "url": "https://www.youtube.com/watch?v=oN5fgnnTl4c"
+  },
+  {
+    "name": "Kickstarter (pre-launch)",
+    "url": "https://www.kickstarter.com/projects/morpho-inc/morpho-desktop-uv-printer"
+  },
+  {
+    "name": "Kickstarter campaign",
+    "url": "https://www.kickstarter.com/projects/ankermake/eufymake-e1-the-first-personal-3d-textured-uv-printer"
+  },
+  {
+    "name": "Kickstarter campaign",
+    "url": "https://www.kickstarter.com/projects/procolored/procolored-x-one-full-color-uv-laser-in-one-system"
+  },
+  {
+    "name": "Kickstarter campaign",
+    "url": "https://www.kickstarter.com/projects/inew3d/inew3d-the-desktop-full-color-3d-printer-with-ai-modeling"
+  },
+  {
+    "name": "Kickstarter campaign + current add-ons",
+    "url": "https://www.kickstarter.com/projects/longer3d/longer-eprint-the-worlds-1st-dual-head-personal-uv-printer/description#h:Add-Ons"
+  },
+  {
+    "name": "Kickstarter FAQ",
+    "url": "https://www.kickstarter.com/projects/inew3d/inew3d-the-desktop-full-color-3d-printer-with-ai-modeling/faqs"
+  },
+  {
+    "name": "Laserbuying (independent comparison)",
+    "url": "https://www.laserbuying.com/blogs/articles/eufymake-e1-vs-longer-eprint-which-personal-uv-printer-wins-in-2026"
+  },
+  {
+    "name": "LONGER official 22mm relief test — 16h09m, 222ml",
+    "url": "https://www.youtube.com/shorts/7TR_nrRYTjE"
+  },
+  {
+    "name": "LONGER official ePrint video playlist",
+    "url": "https://www.youtube.com/playlist?list=PLLz1z_0pXsW2ELs95FjDNXh5iCkrGznNp"
+  },
+  {
+    "name": "Longer3D press blog",
+    "url": "https://www.longer3d.com/blogs/news/longer-eprint-the-first-dual-print-head-personal-uv-printer-makes-a-grand-debut"
+  },
+  {
+    "name": "Machines for Makers — spec listing",
+    "url": "https://www.machinesformakers.com/products/morpho-desktop-uv-printer"
+  },
+  {
+    "name": "Make: — coverage",
+    "url": "https://makezine.com/article/digital-fabrication/3d-printing-workshop/heygears-unveils-g1x-the-worlds-first-desktop-full-color-3d-uv-printer/"
+  },
+  {
+    "name": "MonsonMade co. — unboxing/honest review (YouTube)",
+    "url": "https://www.youtube.com/watch?v=YrEjS_z3wEM"
+  },
+  {
+    "name": "Morpho Facebook — i3200 vs. F1080 timing comparison (screen-capture reviewed by CUPP)",
+    "url": "https://www.facebook.com/share/v/14jZwj24jSr/"
+  },
+  {
+    "name": "Official blog — G1X announcement",
+    "url": "https://store.heygears.com/blogs/blog/meet-heygears-g1x-the-world-s-1st-desktop-3-in-1-full-color-3d-uv-printer"
+  },
+  {
+    "name": "Official consumables — 500mL Hard UV Ink Set",
+    "url": "https://omtech.com/products/omtech-500ml-hard-uv-ink-set-cmykwv-6-pack"
+  },
+  {
+    "name": "Official deposit/store page",
+    "url": "https://estore.morpho.inc/products/morpho-uv-printer"
+  },
+  {
+    "name": "Official pricing/ink update (Jul 2026)",
+    "url": "https://www.eufymake.com/blogs/news/lower-ink-prices-faster-printing-ciss"
+  },
+  {
+    "name": "Official printhead replacement SOP",
+    "url": "https://wiki.eufymake.com/en/Maintenance-Care/printhead-replacement-sop"
+  },
+  {
+    "name": "Official product page",
+    "url": "https://www.eufymake.com/products/eufymake-e1"
+  },
+  {
+    "name": "Official product page",
+    "url": "https://www.longer3d.com/products/longer-eprint-dual-head-uv-printer"
+  },
+  {
+    "name": "Official product page",
+    "url": "https://omtech.com/products/omtech-spectra-a3-plus-dual-head-uv-printer"
+  },
+  {
+    "name": "Official product page",
+    "url": "https://www.xtool.com/pages/the-worlds-first-4-in-1-xtool-o1-omni-printer"
+  },
+  {
+    "name": "Official product page",
+    "url": "https://store.heygears.com/pages/heygears-g1"
+  },
+  {
+    "name": "Official replacement UV printhead — $599",
+    "url": "https://www.eufymake.com/products/uv-print-head"
+  },
+  {
+    "name": "Official sale page — U1/U1 Pro current pricing",
+    "url": "https://omtech.com/pages/omtech-2026-sale"
+  },
+  {
+    "name": "Official site / spec table",
+    "url": "https://www.morpho.inc/"
+  },
+  {
+    "name": "PR Newswire launch release",
+    "url": "https://www.prnewswire.com/news-releases/xtool-launches-o1-omni-printer-the-worlds-first-all-in-one-desktop-printer-for-virtually-any-material-302811463.html"
+  },
+  {
+    "name": "Procolored — X one launch",
+    "url": "https://www.procolored.com/blogs/news/x-one-launches-uv-printer-laser-engraver"
+  },
+  {
+    "name": "Reddit r/3DDruck — German-language coverage (FDM+inkjet claim)",
+    "url": "https://www.reddit.com/r/3DDruck/comments/1rbn5fn/inew3d_simba3d_vollfarb3ddruck_für_den_desktop/"
+  },
+  {
+    "name": "Reddit r/3dprinter — HeyGears thread w/ 9-month E1 owner comment",
+    "url": "https://www.reddit.com/r/3dprinter/comments/1utx2un/has_anyone_heard_of_this_3d_printer_brand_is_it/"
+  },
+  {
+    "name": "Reddit r/3dprinter — printhead cost/maintenance discussion",
+    "url": "https://www.reddit.com/r/3dprinter/comments/1utx2un/has_anyone_heard_of_this_3d_printer_brand_is_it/"
+  },
+  {
+    "name": "Reddit r/3Dprinting — category-wide maintenance discussion",
+    "url": "https://www.reddit.com/r/3Dprinting/comments/1v2fcrf/whats_with_this_recent_wave_of_uv_printers/"
+  },
+  {
+    "name": "Reddit r/3Dprinting — expert endorsement + skepticism thread",
+    "url": "https://www.reddit.com/r/3Dprinting/comments/1s09ey3/inew3d/"
+  },
+  {
+    "name": "Reddit r/DTFTransferTalk — brand sentiment",
+    "url": "https://www.reddit.com/r/DTFTransferTalk/comments/1tyilaf/procolored_and_their_support_have_been_so_bad_im/"
+  },
+  {
+    "name": "Reddit r/eufyMakeOfficial — profitable products thread",
+    "url": "https://www.reddit.com/r/eufyMakeOfficial/comments/1sca4t5/eufymake_e1_owners_what_products_are_actually/"
+  },
+  {
+    "name": "Reddit r/eufyMakeOfficial — small-scale production thread",
+    "url": "https://www.reddit.com/r/eufyMakeOfficial/comments/1ssgsoy/those_using_their_e1_for_small_scale_production/"
+  },
+  {
+    "name": "Reddit r/lasercutting — X one Q&A (Brand Affiliate tagged)",
+    "url": "https://www.reddit.com/r/lasercutting/comments/1rw1dot/answering_your_questions_about_the_procolored_x/"
+  },
+  {
+    "name": "Reddit r/MorphoPrintOfficial — brand G7/spectrophotometer claim",
+    "url": "https://www.reddit.com/r/MorphoPrintOfficial/"
+  },
+  {
+    "name": "Reddit r/MorphoPrintOfficial — MRRF hands-on account",
+    "url": "https://www.reddit.com/r/MorphoPrintOfficial/comments/1uty7sr/my_morpho_experience_from_mrrf_event/"
+  },
+  {
+    "name": "Reddit r/printers — ink pricing rant",
+    "url": "https://www.reddit.com/r/printers/comments/1tmyeik/eufymake_e1_has_incredible_potential_ruined_by/"
+  },
+  {
+    "name": "Reddit r/UVprinting — \"maintenance trap\" startup thread",
+    "url": "https://www.reddit.com/r/UVprinting/comments/1tt2do9/buying_the_unreleased_longer_eprint_for_a_startup/"
+  },
+  {
+    "name": "Reddit r/UVprinting — backer reselling slot",
+    "url": "https://www.reddit.com/r/UVprinting/comments/1uvkb93/selling_longer_eprint_backer_1250/"
+  },
+  {
+    "name": "Reddit r/UVprinting — owner thread incl. printhead-failure report",
+    "url": "https://www.reddit.com/r/UVprinting/comments/1sce40h/omtech_spectra_uv_printer/"
+  },
+  {
+    "name": "Reddit r/xToolOfficial — early owner showcase thread",
+    "url": "https://www.reddit.com/r/xToolOfficial/comments/1uxkkec/new_productions_with_o1_omniprinter/"
+  },
+  {
+    "name": "Reddit r/xToolOfficial — vs. eufyMake E1 discussion",
+    "url": "https://www.reddit.com/r/xToolOfficial/comments/1uxgusg/xtool_omni_vs_eufymake_e1/"
+  },
+  {
+    "name": "Ryan Mercer — Spectra U1 Pro hands-on (related model)",
+    "url": "https://www.ryanmercer.com/ryansthoughts/2026/2/27/omtech-spectra-u1-pro-review-a-serious-desktop-uv-printer-for-small-businesses"
+  },
+  {
+    "name": "Samcraft — model comparison guide",
+    "url": "https://samcraft.shop/blogs/guides/xtool-o1-omni-models-compared"
+  },
+  {
+    "name": "Samcraft — vs. HeyGears G1",
+    "url": "https://samcraft.shop/blogs/guides/xtool-o1-omni-vs-heygears-g1"
+  },
+  {
+    "name": "SlashGear review",
+    "url": "https://www.slashgear.com/2144864/eufymake-e1-price-specs-review/"
+  },
+  {
+    "name": "Spen's Painting — sponsored G1X evaluator video",
+    "url": "https://www.youtube.com/watch?v=YJ9C3oFTGuE"
+  },
+  {
+    "name": "Steve Makes Everything — G1X evaluator video",
+    "url": "https://www.youtube.com/watch?v=IlAAKqK1rCg"
+  },
+  {
+    "name": "stlDenise3D — G1X evaluator video",
+    "url": "https://www.youtube.com/watch?v=znvGpn81yn8"
+  },
+  {
+    "name": "TechRadar — malware coverage",
+    "url": "https://www.techradar.com/pro/security/procolored-printers-shipped-out-with-malware-ridden-drivers-for-half-a-year"
+  },
+  {
+    "name": "The Crafty Catsman — digest",
+    "url": "https://www.thecraftycatsman.com/news/uv-printing-digest-2026-07-12/"
+  },
+  {
+    "name": "The Crafty Catsman — pricing breakdown",
+    "url": "https://www.thecraftycatsman.com/news/xtool-o1-omni-launch-pricing-configurations-2026/"
+  },
+  {
+    "name": "The Crafty Catsman price tracker",
+    "url": "https://www.thecraftycatsman.com/hybrid-workshop-product-tracker/"
+  },
+  {
+    "name": "The Gadgeteer — launch coverage",
+    "url": "https://the-gadgeteer.com/2026/06/29/xtool-o1-omni-targets-the-four-printer-problem-for-creators/"
+  },
+  {
+    "name": "The Gadgeteer review",
+    "url": "https://the-gadgeteer.com/2025/04/29/eufymake-e1-uv-printing-system-review/"
+  },
+  {
+    "name": "The Maker's Chest (independent comparison)",
+    "url": "https://themakerschest.com/blogs/laser-engravers/eufymake-e1-vs-longer-eprint"
+  },
+  {
+    "name": "Tom's Hardware — launch-event hands-on",
+    "url": "https://www.tomshardware.com/maker-stem/xtool-says-its-01-omni-printer-can-print-it-all-firm-steps-into-the-world-of-uv-printing-for-output-on-all-surfaces-at-up-to-5mm-thick"
+  },
+  {
+    "name": "Tom's Hardware (labeled Sponsored Content)",
+    "url": "https://www.tomshardware.com/peripherals/printers/desktop-full-color-3d-uv-industrial-modular-g1-series-heygears"
+  },
+  {
+    "name": "Tom's Hardware review",
+    "url": "https://www.tomshardware.com/3d-printing/eufymake-e1-uv-printer-review"
+  },
+  {
+    "name": "Trustpilot aggregate",
+    "url": "https://www.trustpilot.com/review/eufymake.com"
+  },
+  {
+    "name": "xTool Academy — UV/DTF/DTG explainer",
+    "url": "https://www.xtool.com/blogs/xtool-academy/xtool-o1-uv-dtf-dtg-printing"
+  },
+  {
+    "name": "Yanko Design",
+    "url": "https://www.yankodesign.com/2026/01/13/longer-eprint-replaces-uv-dtf-and-rotary-printers-with-one-box/"
+  }
+]
