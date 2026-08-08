@@ -1,1 +1,2312 @@
-
+[
+  {
+    "id": "eufy-e1",
+    "name": "eufyMake E1",
+    "maker": "eufyMake / Anker",
+    "status": "shipping",
+    "statusText": "Shipping now",
+    "price": 2199,
+    "confidence": 4,
+    "head": "Single piezo head; model undisclosed",
+    "envelope": "330 × 420 mm · 100 mm object · 5 mm relief",
+    "caps": [
+      "uv",
+      "relief",
+      "uvdtf",
+      "rotary"
+    ],
+    "uses": [
+      "signs",
+      "tumblers",
+      "uvdtf",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Best measured-job evidence and an approachable maker workflow.",
+    "avoid": "Avoid if disclosed head identity or open consumables are mandatory.",
+    "concern": "The head model remains undisclosed; the official $599 replacement module is user-serviceable but materially affects TCO.",
+    "url": "https://www.eufymake.com/products/eufymake-e1",
+    "ownership": "Closed consumable ecosystem; official replacement head is $599, with an app-guided user-swap procedure and Care-program discounts.",
+    "legacyId": "eufy_e1",
+    "priceDetail": "$2,199 (no ink) – $3,299 (deluxe); most common bundle $2,499",
+    "priceNote": "KS price was $1,699–$2,299; retail rose after launch.",
+    "tech": "Piezo UV-LED inkjet · CMYKWG (6-channel, incl. flexible white for fabric)",
+    "printheadDetail": "Single piezo inkjet head (model undisclosed) · 1440 DPI · official replacement module $599",
+    "camera": "8MP camera for auto-alignment (~90 sec full-bed scan)",
+    "bedSensor": "Dual positioning lasers + camera — active height/contour scan, incl. on transparent materials",
+    "bedSensorFlag": "Max 5mm surface-height variance tolerance per hands-on testing — separate from the 60mm chamber clearance spec; the two numbers are often conflated.",
+    "bedSize": "330×420mm standard bed (mini bed 90×330mm) · 60mm object Z-clearance",
+    "speed": "No official rating. Real-world: 1h12m (light-texture phone case) to 6h55m (full 2mm-relief canvas).",
+    "confidenceNote": "High confidence — 5+ independent hands-on reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "300+ materials: wood, metal, acrylic, glass, ceramic, stone, leather, fabric."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "5mm max",
+        "note": "Confirmed identically across official specs and 3 independent reviews. Adjustable 0.3–5.0mm in 0.1mm steps."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Confirmed NOT a 3D printer by 3 independent reviewers — surface relief only, no freestanding object, no supports."
+      },
+      "dtf": {
+        "v": "partial",
+        "note": "UV-DTF via optional laminator accessory — makes rigid stickers/decals, not garment transfers. Cannot print loose/wearable fabric (cracks)."
+      }
+    },
+    "accessories": [
+      "Rotary attachment (~$399, cylinders/mugs)",
+      "UV DTF Laminating Machine (~$399)",
+      "Roll-to-Film Attachment (10m, repeatedly delayed)",
+      "Ink & cleaning cartridge kits",
+      "High-capacity CISS (announced, not yet released)"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: eufyMake lists the replacement UV printhead at $599. Retail listings conflict at $571.29 and $699; report the range without averaging. The official app-guided SOP uses a quick-release swap and ~2.5 mm hex key, so owner replacement does not require a service center. eufyMake Care includes one free replacement plus 30% off additional heads (~$419 effective).",
+      "NEW 2026-08-02: eufyMake's official US price for each 100ml UV ink cartridge is now $29.99, reduced from $42.99; the 980ml ink-and-cleaning kit is $209.99. Subscription and regional pricing may differ.",
+      "NEW 2026-07-26 (Reddit, r/eufyMakeOfficial and r/printers owner sentiment): broader sampling skews more mixed-positive than press coverage alone suggests -- several long-time owners report the machine has \"paid for itself,\" including one small shop that scaled from 2 to 5 units plus 2 additional E1s across two locations.",
+      "Ink & mandatory maintenance cost is the #1 complaint across every review — no vacation/idle mode; a beta unit was bricked by improper long-term power-off.",
+      "AI relief-generation features sit behind a token/credit paywall on top of the hardware cost.",
+      "Trustpilot aggregate is 2.0/5 (20 reviews) vs. glowing on-site testimonials (95% five-star) — a stark, worth-noting gap.",
+      "Broke Kickstarter's all-time funding record — reported as either $44M (Forbes) or $46M (Tom's Hardware), a real source conflict.",
+      "REDDIT OWNER SENTIMENT (r/eufyMakeOfficial, r/printers, July 2026): more mixed-positive than press coverage suggests — many long-time owners report \"happy,\" \"paid for itself in the first month,\" and genuine small-business use; one shop scaled from 2 printers to 5 printers plus 2 eufyMake E1s across two locations.",
+      "Real owner complaints corroborated independently: white ink \"settles\" and wastes a lot of ink if not run for a couple of days (moisturizing-mode ink burn); batch/jig alignment can drift ~1mm; metal objects have stuck to the door magnets mid-print and ruined a batch; one owner replaced a clogged printhead ($600) and still burned $300 of ink chasing a bad magenta channel afterward.",
+      "One Reddit owner running the E1 daily for 9 months confirmed it works but said they're waiting for an i3200-headed alternative (Morpho) rather than buy a second eufyMake, citing F1080-head unclogging hassle and slow support."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://www.eufymake.com/products/eufymake-e1"
+      ],
+      [
+        "Official pricing/ink update (Jul 2026)",
+        "https://www.eufymake.com/blogs/news/lower-ink-prices-faster-printing-ciss"
+      ],
+      [
+        "Official replacement UV printhead — $599",
+        "https://www.eufymake.com/products/uv-print-head"
+      ],
+      [
+        "Official printhead replacement SOP",
+        "https://wiki.eufymake.com/en/Maintenance-Care/printhead-replacement-sop"
+      ],
+      [
+        "Kickstarter campaign",
+        "https://www.kickstarter.com/projects/ankermake/eufymake-e1-the-first-personal-3d-textured-uv-printer"
+      ],
+      [
+        "Forbes — funding record + spec sheet",
+        "https://www.forbes.com/sites/marksparrow/2025/06/26/eufymake-smashes-kickstarter-record-with-launch-of-brands-new-3d-uv-printer/"
+      ],
+      [
+        "Tom's Hardware review",
+        "https://www.tomshardware.com/3d-printing/eufymake-e1-uv-printer-review"
+      ],
+      [
+        "The Gadgeteer review",
+        "https://the-gadgeteer.com/2025/04/29/eufymake-e1-uv-printing-system-review/"
+      ],
+      [
+        "Fauxhammer review (\"2.5D\" framing)",
+        "https://www.fauxhammer.com/reviews/eufymake-e1-review-a-real-look-at-the-2-5d-resin-printer-that-might-actually-change-home-uv-printing/"
+      ],
+      [
+        "SlashGear review",
+        "https://www.slashgear.com/2144864/eufymake-e1-price-specs-review/"
+      ],
+      [
+        "Trustpilot aggregate",
+        "https://www.trustpilot.com/review/eufymake.com"
+      ],
+      [
+        "Reddit r/eufyMakeOfficial — small-scale production thread",
+        "https://www.reddit.com/r/eufyMakeOfficial/comments/1ssgsoy/those_using_their_e1_for_small_scale_production/"
+      ],
+      [
+        "Reddit r/eufyMakeOfficial — profitable products thread",
+        "https://www.reddit.com/r/eufyMakeOfficial/comments/1sca4t5/eufymake_e1_owners_what_products_are_actually/"
+      ],
+      [
+        "Reddit r/printers — ink pricing rant",
+        "https://www.reddit.com/r/printers/comments/1tmyeik/eufymake_e1_has_incredible_potential_ruined_by/"
+      ],
+      [
+        "Reddit r/3dprinter — HeyGears thread w/ 9-month E1 owner comment",
+        "https://www.reddit.com/r/3dprinter/comments/1utx2un/has_anyone_heard_of_this_3d_printer_brand_is_it/"
+      ]
+    ],
+    "tco": {
+      "setup": 300,
+      "maint": 240,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet.",
+      "printheadEstimate": {
+        "value": 599,
+        "label": "$599 official eufyMake replacement module",
+        "official": true
+      },
+      "ink": {
+        "model": "measured",
+        "note": "Two measured eufyMake E1 jobs (Tom's Hardware, July 2026): textured phone case = $4.50 total ink over 1h12m; 12x16 textured canvas = $19.89 total ink over 6h55m. Used directly as job-cost anchors rather than a derived $/mL rate.",
+        "lightJobCost": 4.5,
+        "heavyJobCost": 19.89
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "longer-se",
+    "name": "LONGER ePrint SE",
+    "maker": "LONGER",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 1499,
+    "confidence": 2,
+    "head": "1 head; model undisclosed",
+    "envelope": "310 × 420 mm · object height undisclosed · 60 mm stacked claim",
+    "caps": [
+      "uv",
+      "relief",
+      "transfer",
+      "rotary"
+    ],
+    "uses": [
+      "signs",
+      "tumblers",
+      "uvdtf",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Low campaign entry price for a broad advertised desktop UV workflow.",
+    "avoid": "Avoid if you need proven fulfillment, production speed, or independently verified relief claims.",
+    "concern": "The original June 2026 shipping-start claim passed without broad delivery validation.",
+    "url": "https://www.longer.net/products/longer-eprint-dual-head-uv-printer/?ref=longerlasermichael5",
+    "ownership": "Head model, replacement path, and shipping-unit maintenance costs remain unresolved.",
+    "legacyId": "longer_se",
+    "priceDetail": "$1,499 (campaign) → $1,699 (retail)",
+    "priceNote": "Entry single-head edition of the ePrint family.",
+    "tech": "UV-LED piezo inkjet · Single printhead, 6 ink channels",
+    "printheadDetail": "1 head; model undisclosed · 1440 DPI",
+    "camera": "“CCD vision system” per third-party comparison sites — exact spec not confirmed on official pages",
+    "bedSensor": "Auto height detection claimed; sensing mechanism (laser/IR/etc.) not disclosed by the manufacturer",
+    "bedSensorFlag": null,
+    "bedSize": "310×420mm flatbed · 60mm object clearance · rotary: 40–100mm dia, 80–210mm length",
+    "speed": "No absolute figure published for the single-head SE. Longer's dual-head marketing claims 4–6× faster white/texture stacking by comparison — implying the SE is the slower baseline.",
+    "confidenceNote": "Low confidence — zero independent hands-on reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "300+ materials: wood, acrylic, metal, glass, leather, stone, PVC, ABS, ceramics, canvas."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "5–15mm demonstrated / 60mm claimed",
+        "note": "Official effects list shows discrete 5mm and 15mm embossing tiers. Press coverage separately cites a 60mm figure that appears to conflate the object-clearance spec with achievable relief height — no independent measurement of either exists yet."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Confirmed absent — no source claims this capability."
+      },
+      "dtf": {
+        "v": "yes",
+        "note": "Genuine garment DTF: “DTF Combo” bundle includes hot-melt powder, transfer film, DTF ink, plus a heat-press workflow. Also does UV-DTF decals. An unconventional “UV DTG” marketing claim is unverified."
+      }
+    },
+    "accessories": [
+      "ePrint SE Rotary (single-printhead model) — $369 Kickstarter add-on",
+      "Laminator Kit (machine plus initial laminating materials) — $389 Kickstarter add-on",
+      "Conveyor — $499 Kickstarter add-on",
+      "Roll-to-Roll Attachment — $639 Kickstarter add-on",
+      "UV Cleaning Kit — $299 Kickstarter add-on",
+      "DTF Upgrade Kit — $459 Kickstarter add-on",
+      "200ml Flexible White Ink ×3 — $149 Kickstarter add-on",
+      "200ml White Ink ×3 — $149 Kickstarter add-on",
+      "200ml Glossy Ink ×3 — $149 Kickstarter add-on",
+      "200ml ×6 W+G+CMYK Ink set — $299 Kickstarter add-on",
+      "Hot Stamping Foils — $109 Kickstarter add-on",
+      "Laminator Machine Material Kit (materials only) — $79 Kickstarter add-on",
+      "UV Films — $229 Kickstarter add-on",
+      "Material Kit — $169 Kickstarter add-on"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Campaign fulfillment is now estimated for the end of August 2026. This is a revised estimate after the earlier June target passed, not confirmed delivery.",
+      "NEW 2026-08-02: Five CUPP owner-test videos show a physical ePrint unit producing high-relief, multi-pass, embossed, and flat full-color jobs. A flat pet-photo recording runs about 6.7 minutes, but substrate size and quality mode are not yet controlled for cross-brand comparison.",
+      "NEW 2026-08-02: Video review found mild visible banding in flat or low-detail color areas on two samples. Confidence is low-to-moderate because this is visual footage analysis without a measurement target.",
+      "NEW 2026-08-02: Relief-height evidence remains contradictory: the current claim is 15mm, an official test demonstrates 22mm, and early promotion claimed 60mm. CUPP preserves all three dated values.",
+      "NEW 2026-07-26 (Facebook, community sentiment): early sentiment in LONGER-adjacent groups remains mixed -- several commenters repeat the unresolved open-tank-vs-cartridge question first flagged in the research backlog; still no shipping-unit confirmation either way.",
+      "Not shipped as of Jul 24, 2026 — every spec here is manufacturer-sourced; no independent reviewer, Reddit owner, or teardown exists.",
+      "Software currently supports only JPG/PNG — no TIFF/PSD/AI/CAD support yet, per the maker's own FAQ.",
+      "Printhead warranty is only 3 months (vs. 1-year machine warranty); switching to third-party ink requires manual recalibration and a full flush.",
+      "No published safety/VOC certification for the open ink system, unlike eufyMake's GREENGUARD Gold-certified ink.",
+      "REDDIT FLAG (r/UVprinting, unverified rumor): a commenter who says they've seen the machine live claims it may actually ship with proprietary cartridges like eufyMake, contradicting the \"open tank, third-party ink\" marketing that's the machine's main selling point — worth confirming before buying on that basis alone.",
+      "An experienced UV-printing commenter (r/UVprinting) states desktop UV printheads generally last only 6–12 months regardless of usage, and that small desktop UV printers as a category are \"an unmanageable amount of maintenance vs. the volume of work they can do\" — useful category-wide context, not Longer-specific.",
+      "One backer is already reselling their All-in-One Combo slot (paid $2,949) to switch to the xTool O1 Omni instead — not a quality complaint (they cite already owning an xTool laser), but a sign of some early-backer churn toward the competing xTool launch.",
+      "NEW 2026-07-26 (Facebook, Longer ePrint Kickstarter Backers group): backer skepticism is rising further — multiple backers in the same thread question whether the product exists at all, citing continued silence from Longer while competitors post active video content. A sentiment signal, not a spec change, but worth watching for a phase shift toward an actual shipping update."
+    ],
+    "sources": [
+      [
+        "Kickstarter campaign + current add-ons",
+        "https://www.kickstarter.com/projects/longer3d/longer-eprint-the-worlds-1st-dual-head-personal-uv-printer/description#h:Add-Ons"
+      ],
+      [
+        "Official product page",
+        "https://www.longer3d.com/products/longer-eprint-dual-head-uv-printer"
+      ],
+      [
+        "Longer3D press blog",
+        "https://www.longer3d.com/blogs/news/longer-eprint-the-first-dual-print-head-personal-uv-printer-makes-a-grand-debut"
+      ],
+      [
+        "LONGER official ePrint video playlist",
+        "https://www.youtube.com/playlist?list=PLLz1z_0pXsW2ELs95FjDNXh5iCkrGznNp"
+      ],
+      [
+        "LONGER official 22mm relief test — 16h09m, 222ml",
+        "https://www.youtube.com/shorts/7TR_nrRYTjE"
+      ],
+      [
+        "Yanko Design",
+        "https://www.yankodesign.com/2026/01/13/longer-eprint-replaces-uv-dtf-and-rotary-printers-with-one-box/"
+      ],
+      [
+        "All3DP",
+        "https://all3dp.com/4/longer-releases-eprint-the-worlds-first-dual-printhead-3d-texture-personal-uv-printer/"
+      ],
+      [
+        "The Maker's Chest (independent comparison)",
+        "https://themakerschest.com/blogs/laser-engravers/eufymake-e1-vs-longer-eprint"
+      ],
+      [
+        "Laserbuying (independent comparison)",
+        "https://www.laserbuying.com/blogs/articles/eufymake-e1-vs-longer-eprint-which-personal-uv-printer-wins-in-2026"
+      ],
+      [
+        "Barchart/press wire",
+        "https://www.barchart.com/story/news/36783298/longer-eprint-worlds-first-all-in-one-printer-supporting-both-uv-dtf-is-now-the-no-1-kickstarter-live-project"
+      ],
+      [
+        "Reddit r/UVprinting — \"maintenance trap\" startup thread",
+        "https://www.reddit.com/r/UVprinting/comments/1tt2do9/buying_the_unreleased_longer_eprint_for_a_startup/"
+      ],
+      [
+        "Reddit r/UVprinting — backer reselling slot",
+        "https://www.reddit.com/r/UVprinting/comments/1uvkb93/selling_longer_eprint_backer_1250/"
+      ],
+      [
+        "Facebook — Longer ePrint Kickstarter Backers, continued-silence sentiment thread",
+        "https://www.facebook.com/groups/eprinter/"
+      ]
+    ],
+    "tco": {
+      "setup": 300,
+      "maint": 200,
+      "life": 1.5,
+      "tcoSourceNote": "Not in TCO Assumptions sheet (no confirmed retail price yet) -- class-average estimate, low confidence.",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": true
+  },
+  {
+    "id": "longer-dual",
+    "name": "LONGER ePrint",
+    "maker": "LONGER",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 1899,
+    "confidence": 2,
+    "head": "2 heads; models undisclosed",
+    "envelope": "310 × 420 mm · object height undisclosed · 60 mm stacked claim",
+    "caps": [
+      "uv",
+      "relief",
+      "transfer",
+      "rotary"
+    ],
+    "uses": [
+      "signs",
+      "tumblers",
+      "uvdtf",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Dual-head campaign configuration with aggressive advertised capability per dollar.",
+    "avoid": "Avoid if speed, maintenance, delivery, or serviceability must already be proven.",
+    "concern": "Dual-head speed, relief, maintenance, and fulfillment claims need shipping-unit verification.",
+    "url": "https://www.longer.net/products/longer-eprint-dual-head-uv-printer/?ref=longerlasermichael5",
+    "ownership": "Consumables and maintenance economics are not yet supported by mature owner data.",
+    "legacyId": "longer_dual",
+    "priceDetail": "$1,899 (campaign) → $2,499 sale / $3,299 list (retail)",
+    "priceNote": "Retail rose substantially above crowdfunding price.",
+    "tech": "UV-LED piezo inkjet · Dual printhead, 12 ink channels (up to 6 white)",
+    "printheadDetail": "2 heads; models undisclosed · 1440 DPI",
+    "camera": "“CCD vision system” per third-party comparison sites — exact spec not confirmed on official pages",
+    "bedSensor": "Auto height detection claimed; sensing mechanism (laser/IR/etc.) not disclosed by the manufacturer",
+    "bedSensorFlag": null,
+    "bedSize": "310×420mm flatbed · 60mm object clearance · rotary: 40–100mm dia, 80–210mm length",
+    "speed": "No absolute figure. Claims: up to 6× faster (white/texture stacking, dual-head) or 1.5–2× (flat color) vs. single-head machines.",
+    "confidenceNote": "Low confidence — zero independent hands-on reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "300+ materials: wood, acrylic, metal, glass, leather, stone, PVC, ABS, ceramics, canvas."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "5–15mm demonstrated / 60mm claimed",
+        "note": "Official effects list shows discrete 5mm and 15mm embossing tiers. Press coverage separately cites a 60mm figure that appears to conflate the object-clearance spec with achievable relief height — no independent measurement of either exists yet."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Confirmed absent — no source claims this capability."
+      },
+      "dtf": {
+        "v": "yes",
+        "note": "Genuine garment DTF: “DTF Combo” bundle includes hot-melt powder, transfer film, DTF ink, plus a heat-press workflow. Also does UV-DTF decals. An unconventional “UV DTG” marketing claim is unverified."
+      }
+    },
+    "accessories": [
+      "ePrint Rotary (dual-printhead model) — $389 Kickstarter add-on",
+      "Laminator Kit (machine plus initial laminating materials) — $389 Kickstarter add-on",
+      "Conveyor — $499 Kickstarter add-on",
+      "Roll-to-Roll Attachment — $639 Kickstarter add-on",
+      "UV Cleaning Kit — $299 Kickstarter add-on",
+      "DTF Upgrade Kit — $459 Kickstarter add-on",
+      "200ml Flexible White Ink ×3 — $149 Kickstarter add-on",
+      "200ml White Ink ×3 — $149 Kickstarter add-on",
+      "200ml Glossy Ink ×3 — $149 Kickstarter add-on",
+      "200ml ×6 W+G+CMYK Ink set — $299 Kickstarter add-on",
+      "Hot Stamping Foils — $109 Kickstarter add-on",
+      "Laminator Machine Material Kit (materials only) — $79 Kickstarter add-on",
+      "UV Films — $229 Kickstarter add-on",
+      "Material Kit — $169 Kickstarter add-on"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Campaign fulfillment is now estimated for the end of August 2026. This is a revised estimate after the earlier June target passed, not confirmed delivery.",
+      "NEW 2026-08-02: Five CUPP owner-test videos show a physical ePrint unit producing high-relief, multi-pass, embossed, and flat full-color jobs. A flat pet-photo recording runs about 6.7 minutes, but substrate size and quality mode are not yet controlled for cross-brand comparison.",
+      "NEW 2026-08-02: Video review found mild visible banding in flat or low-detail color areas on two samples. Confidence is low-to-moderate because this is visual footage analysis without a measurement target.",
+      "NEW 2026-08-02: Relief-height evidence remains contradictory: the current claim is 15mm, an official test demonstrates 22mm, and early promotion claimed 60mm. CUPP preserves all three dated values.",
+      "NEW 2026-07-26 (Facebook, community sentiment): same open-tank-vs-cartridge ambiguity applies to the dual-head configuration; treat as unresolved pending a shipping unit.",
+      "Not shipped as of Jul 24, 2026 — every spec here is manufacturer-sourced; no independent reviewer, Reddit owner, or teardown exists.",
+      "Software currently supports only JPG/PNG — no TIFF/PSD/AI/CAD support yet, per the maker's own FAQ.",
+      "Printhead warranty is only 3 months (vs. 1-year machine warranty); switching to third-party ink requires manual recalibration and a full flush.",
+      "No published safety/VOC certification for the open ink system, unlike eufyMake's GREENGUARD Gold-certified ink.",
+      "REDDIT FLAG (r/UVprinting, unverified rumor): a commenter who says they've seen the machine live claims it may actually ship with proprietary cartridges like eufyMake, contradicting the \"open tank, third-party ink\" marketing that's the machine's main selling point — worth confirming before buying on that basis alone.",
+      "An experienced UV-printing commenter (r/UVprinting) states desktop UV printheads generally last only 6–12 months regardless of usage, and that small desktop UV printers as a category are \"an unmanageable amount of maintenance vs. the volume of work they can do\" — useful category-wide context, not Longer-specific.",
+      "One backer is already reselling their All-in-One Combo slot (paid $2,949) to switch to the xTool O1 Omni instead — not a quality complaint (they cite already owning an xTool laser), but a sign of some early-backer churn toward the competing xTool launch.",
+      "NEW 2026-07-26 (Facebook, Longer ePrint Kickstarter Backers group): backer skepticism is rising further — multiple backers in the same thread question whether the product exists at all, citing continued silence from Longer while competitors post active video content. A sentiment signal, not a spec change, but worth watching for a phase shift toward an actual shipping update."
+    ],
+    "sources": [
+      [
+        "Kickstarter campaign + current add-ons",
+        "https://www.kickstarter.com/projects/longer3d/longer-eprint-the-worlds-1st-dual-head-personal-uv-printer/description#h:Add-Ons"
+      ],
+      [
+        "Official product page",
+        "https://www.longer3d.com/products/longer-eprint-dual-head-uv-printer"
+      ],
+      [
+        "Longer3D press blog",
+        "https://www.longer3d.com/blogs/news/longer-eprint-the-first-dual-print-head-personal-uv-printer-makes-a-grand-debut"
+      ],
+      [
+        "LONGER official ePrint video playlist",
+        "https://www.youtube.com/playlist?list=PLLz1z_0pXsW2ELs95FjDNXh5iCkrGznNp"
+      ],
+      [
+        "LONGER official 22mm relief test — 16h09m, 222ml",
+        "https://www.youtube.com/shorts/7TR_nrRYTjE"
+      ],
+      [
+        "Yanko Design",
+        "https://www.yankodesign.com/2026/01/13/longer-eprint-replaces-uv-dtf-and-rotary-printers-with-one-box/"
+      ],
+      [
+        "All3DP",
+        "https://all3dp.com/4/longer-releases-eprint-the-worlds-first-dual-printhead-3d-texture-personal-uv-printer/"
+      ],
+      [
+        "The Maker's Chest (independent comparison)",
+        "https://themakerschest.com/blogs/laser-engravers/eufymake-e1-vs-longer-eprint"
+      ],
+      [
+        "Laserbuying (independent comparison)",
+        "https://www.laserbuying.com/blogs/articles/eufymake-e1-vs-longer-eprint-which-personal-uv-printer-wins-in-2026"
+      ],
+      [
+        "Barchart/press wire",
+        "https://www.barchart.com/story/news/36783298/longer-eprint-worlds-first-all-in-one-printer-supporting-both-uv-dtf-is-now-the-no-1-kickstarter-live-project"
+      ],
+      [
+        "Reddit r/UVprinting — \"maintenance trap\" startup thread",
+        "https://www.reddit.com/r/UVprinting/comments/1tt2do9/buying_the_unreleased_longer_eprint_for_a_startup/"
+      ],
+      [
+        "Reddit r/UVprinting — backer reselling slot",
+        "https://www.reddit.com/r/UVprinting/comments/1uvkb93/selling_longer_eprint_backer_1250/"
+      ],
+      [
+        "Facebook — Longer ePrint Kickstarter Backers, continued-silence sentiment thread",
+        "https://www.facebook.com/groups/eprinter/"
+      ]
+    ],
+    "tco": {
+      "setup": 300,
+      "maint": 250,
+      "life": 1.5,
+      "tcoSourceNote": "Not in TCO Assumptions sheet (no confirmed retail price yet) -- class-average estimate, low confidence.",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": true
+  },
+  {
+    "id": "omtech-u1",
+    "name": "OMTech Spectra A3+ U1",
+    "maker": "OMTech",
+    "status": "shipping",
+    "statusText": "Shipping now",
+    "price": 3200,
+    "confidence": 5,
+    "head": "1 × Epson F1080",
+    "envelope": "350 × 450 mm · 140 mm object · 5 mm relief",
+    "caps": [
+      "uv",
+      "relief",
+      "openink"
+    ],
+    "uses": [
+      "signs",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": true,
+    "best": "Strong disclosed hardware and open-tank consumable economics for flat UV work.",
+    "avoid": "Avoid if rotary or UV-DTF is central to your business without a separate workflow.",
+    "concern": "Independent production benchmarks and public replacement-head pricing remain unavailable.",
+    "url": "https://omtech.com/products/omtech-spectra-a3-plus-dual-head-uv-printer?sca_ref=10723561.Kg5GqGIeLb&sca_source=Facebook&utm_source=affiliate&utm_medium=promotors&utm_campaign=michael-james",
+    "ownership": "Open tanks and documented hardware improve cost transparency; independent throughput data is still limited.",
+    "legacyId": "omtech_u1",
+    "priceDetail": "$3,199.99 (current) / $4,499.99 (MSRP)",
+    "priceNote": "Sale pricing is time-sensitive; a 3L CMYKWV ink set is included.",
+    "tech": "UV-LED inkjet · 1 × Epson F1080, CMYKWW",
+    "printheadDetail": "1 × Epson F1080 · 1080 nozzles · 6 channels · 46kHz · 4.5pL droplet · 720×1440 DPI",
+    "camera": "None confirmed on the U1",
+    "bedSensor": "IR (infrared) auto height sensing — a basic sensor, not a laser/lidar contour scanner",
+    "bedSensorFlag": "One reviewer's video notes different, less reliable behavior on transparent substrates (glass/acrylic).",
+    "bedSize": "350×450mm print area (“beyond standard A3”) · 140mm object Z-clearance",
+    "speed": "2.4 m²/hour rated output · 400mm/s head travel, 1770mm/s² acceleration",
+    "confidenceNote": "Medium confidence — shipping, but limited long-term reliability data",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "Acrylic, wood, canvas, ceramic, metal, glass, PVC, cardboard, leather, and other flat surfaces."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "5mm max",
+        "note": "Confirmed by official spec and an independent field-comparison table."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Flatbed UV decorator only — not an additive/3D-object printer."
+      },
+      "dtf": {
+        "v": "no",
+        "note": "UV-DTF transfer stickers possible (general UV workflow) but no garment/fabric DTF — that's a separate OMTech product (Aurora D1). Single-head model omits the second UV lamp and varnish channel available on the U1 Pro."
+      }
+    },
+    "accessories": [
+      "3L UV ink kit (bundled promo, ~$300 value)",
+      "Rotary attachment (~$149.99, limited-batch rollout)",
+      "Open 250ml refillable ink tanks, no proprietary cartridges"
+    ],
+    "callouts": [
+      "Genuinely open ink platform — refillable tanks, no chips, third-party ink compatible. Positioned by one analyst as “the anti-E1.”",
+      "Software is a bare-bones PC RIP tool, not a polished consumer app — no texture/asset library like competitors offer.",
+      "Printhead warranty is only 1 month (vs. 1-year machine warranty) — shortest in this comparison set.",
+      "Heavy and non-portable: 153 lb / 30.7×22.6×22.0 in — a genuine desktop-shop machine, not a craft-room device.",
+      "REDDIT OWNER (3 months in, r/UVprinting): strongly positive — \"quality has been fantastic,\" refillable ink \"10/10,\" no maintenance box (just a bottle you empty), feels \"super solid\" (~150 lb). Print speed matches spec: 20 fridge magnets (60×80mm) in ~4 min one-pass / ~7.5 min two-pass.",
+      "REDDIT RED FLAG: a different owner (Spanish-language comment, same thread) reports BOTH factory Epson F1080 printheads failed on their Spectra U1 Pro within under 3 months — a genuine reliability data point the 1-month printhead warranty doesn't cover well.",
+      "Community is broadly skeptical of OMTech's own YouTube coverage: \"so many reviews on YouTube are people that received free units.\" A promo code tied to the MonsonMade channel name was confirmed circulating for this exact printer, corroborating that its OMTech review is an affiliate/sponsored relationship."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://omtech.com/products/omtech-spectra-a3-plus-dual-head-uv-printer"
+      ],
+      [
+        "3D Printing Cost Calculator — field comparison",
+        "https://3dprintingcostcalculator.com/news/best-desktop-uv-printer"
+      ],
+      [
+        "The Crafty Catsman price tracker",
+        "https://www.thecraftycatsman.com/hybrid-workshop-product-tracker/"
+      ],
+      [
+        "MonsonMade co. — unboxing/honest review (YouTube)",
+        "https://www.youtube.com/watch?v=YrEjS_z3wEM"
+      ],
+      [
+        "Ryan Mercer — Spectra U1 Pro hands-on (related model)",
+        "https://www.ryanmercer.com/ryansthoughts/2026/2/27/omtech-spectra-u1-pro-review-a-serious-desktop-uv-printer-for-small-businesses"
+      ],
+      [
+        "Amazon listing",
+        "https://www.amazon.com/OMTech-Spectra-1440X720-Cleaning-Textures/dp/B0GQ3438P2"
+      ],
+      [
+        "Reddit r/UVprinting — owner thread incl. printhead-failure report",
+        "https://www.reddit.com/r/UVprinting/comments/1sce40h/omtech_spectra_uv_printer/"
+      ],
+      [
+        "Official sale page — U1/U1 Pro current pricing",
+        "https://omtech.com/pages/omtech-2026-sale"
+      ],
+      [
+        "Official consumables — 500mL Hard UV Ink Set",
+        "https://omtech.com/products/omtech-500ml-hard-uv-ink-set-cmykwv-6-pack"
+      ]
+    ],
+    "tco": {
+      "setup": 500,
+      "maint": 250,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet.",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "rate",
+        "ratePerMl": 0.0667,
+        "mlPerJobDefault": 5,
+        "note": "OMTech hard UV ink set, $0.0667/mL blended (CMYKWV 6x500mL set, $199.99). mL/job is a rough user-adjustable placeholder -- no independent per-job ink-consumption benchmark exists yet for OMTech."
+      }
+    },
+    "affiliate": true
+  },
+  {
+    "id": "omtech-pro",
+    "name": "OMTech Spectra A3+ U1 Pro",
+    "maker": "OMTech",
+    "status": "shipping",
+    "statusText": "Shipping now",
+    "price": 4800,
+    "confidence": 5,
+    "head": "2 × Epson F1080",
+    "envelope": "350 × 450 mm · 140 mm object · 5 mm relief",
+    "caps": [
+      "uv",
+      "relief",
+      "varnish",
+      "openink"
+    ],
+    "uses": [
+      "signs",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": true,
+    "best": "Higher-throughput dual-head flat UV and varnish configuration with strong documentation.",
+    "avoid": "Avoid if you need an inexpensive entry machine or integrated rotary and UV-DTF workflows.",
+    "concern": "Manual lists a spare head; current inclusion and public replacement pricing need confirmation.",
+    "url": "https://omtech.com/products/omtech-spectra-a3-plus-dual-head-uv-printer?sca_ref=10723561.Kg5GqGIeLb&sca_source=Facebook&utm_source=affiliate&utm_medium=promotors&utm_campaign=michael-james",
+    "ownership": "Open tanks, named heads, and documented hardware give this the clearest ownership picture in CUPP.",
+    "legacyId": "omtech_u1pro",
+    "priceDetail": "$4,799.99 (current) / $5,499.99 (MSRP)",
+    "priceNote": "Sale pricing is time-sensitive; a 3L CMYKWV ink set is included.",
+    "tech": "UV-LED inkjet · 2 × Epson F1080, CMYKWW + varnish",
+    "printheadDetail": "2 × Epson F1080 · 2160 nozzles combined · 7 channels · 46kHz · 4.5pL droplet · 720×1440 DPI",
+    "camera": "None confirmed on the U1 Pro",
+    "bedSensor": "IR (infrared) auto height sensing — a basic sensor, not a laser/lidar contour scanner",
+    "bedSensorFlag": "One reviewer's video notes different, less reliable behavior on transparent substrates (glass/acrylic).",
+    "bedSize": "350×450mm print area (“beyond standard A3”) · 140mm object Z-clearance",
+    "speed": "2.4 m²/hour rated output · 400mm/s head travel, 1770mm/s² acceleration",
+    "confidenceNote": "Medium confidence — shipping, but limited long-term reliability data",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "Acrylic, wood, canvas, ceramic, metal, glass, PVC, cardboard, leather, and other flat surfaces."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "5mm max",
+        "note": "Confirmed by official spec and an independent field-comparison table."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Flatbed UV decorator only — not an additive/3D-object printer."
+      },
+      "dtf": {
+        "v": "no",
+        "note": "UV-DTF transfer stickers possible (general UV workflow) but no garment/fabric DTF — that's a separate OMTech product (Aurora D1). Adds a second UV lamp and varnish channel over the single-head U1."
+      }
+    },
+    "accessories": [
+      "3L UV ink kit (bundled promo, ~$300 value)",
+      "Rotary attachment (~$149.99, limited-batch rollout)",
+      "Open 250ml refillable ink tanks, no proprietary cartridges"
+    ],
+    "callouts": [
+      "Genuinely open ink platform — refillable tanks, no chips, third-party ink compatible. Positioned by one analyst as “the anti-E1.”",
+      "Software is a bare-bones PC RIP tool, not a polished consumer app — no texture/asset library like competitors offer.",
+      "Printhead warranty is only 1 month (vs. 1-year machine warranty) — shortest in this comparison set.",
+      "Heavy and non-portable: 153 lb / 30.7×22.6×22.0 in — a genuine desktop-shop machine, not a craft-room device.",
+      "REDDIT OWNER (3 months in, r/UVprinting): strongly positive — \"quality has been fantastic,\" refillable ink \"10/10,\" no maintenance box (just a bottle you empty), feels \"super solid\" (~150 lb). Print speed matches spec: 20 fridge magnets (60×80mm) in ~4 min one-pass / ~7.5 min two-pass.",
+      "REDDIT RED FLAG: a different owner (Spanish-language comment, same thread) reports BOTH factory Epson F1080 printheads failed on their Spectra U1 Pro within under 3 months — a genuine reliability data point the 1-month printhead warranty doesn't cover well.",
+      "Community is broadly skeptical of OMTech's own YouTube coverage: \"so many reviews on YouTube are people that received free units.\" A promo code tied to the MonsonMade channel name was confirmed circulating for this exact printer, corroborating that its OMTech review is an affiliate/sponsored relationship."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://omtech.com/products/omtech-spectra-a3-plus-dual-head-uv-printer"
+      ],
+      [
+        "3D Printing Cost Calculator — field comparison",
+        "https://3dprintingcostcalculator.com/news/best-desktop-uv-printer"
+      ],
+      [
+        "The Crafty Catsman price tracker",
+        "https://www.thecraftycatsman.com/hybrid-workshop-product-tracker/"
+      ],
+      [
+        "MonsonMade co. — unboxing/honest review (YouTube)",
+        "https://www.youtube.com/watch?v=YrEjS_z3wEM"
+      ],
+      [
+        "Ryan Mercer — Spectra U1 Pro hands-on (related model)",
+        "https://www.ryanmercer.com/ryansthoughts/2026/2/27/omtech-spectra-u1-pro-review-a-serious-desktop-uv-printer-for-small-businesses"
+      ],
+      [
+        "Amazon listing",
+        "https://www.amazon.com/OMTech-Spectra-1440X720-Cleaning-Textures/dp/B0GQ3438P2"
+      ],
+      [
+        "Reddit r/UVprinting — owner thread incl. printhead-failure report",
+        "https://www.reddit.com/r/UVprinting/comments/1sce40h/omtech_spectra_uv_printer/"
+      ],
+      [
+        "Official sale page — U1/U1 Pro current pricing",
+        "https://omtech.com/pages/omtech-2026-sale"
+      ],
+      [
+        "Official consumables — 500mL Hard UV Ink Set",
+        "https://omtech.com/products/omtech-500ml-hard-uv-ink-set-cmykwv-6-pack"
+      ]
+    ],
+    "tco": {
+      "setup": 500,
+      "maint": 300,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet.",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "rate",
+        "ratePerMl": 0.0667,
+        "mlPerJobDefault": 6,
+        "note": "Same ink set as OMTech U1 (dual-head may use marginally more ink/job -- placeholder only)."
+      }
+    },
+    "affiliate": true
+  },
+  {
+    "id": "xtool-single",
+    "name": "xTool O1 Omni — Single UV",
+    "maker": "xTool",
+    "status": "promising",
+    "statusText": "Promising, not proven",
+    "price": 1699,
+    "confidence": 3,
+    "head": "1 × Epson F1080",
+    "envelope": "330 × 420 mm · 150 mm claimed · 5 mm relief claimed",
+    "caps": [
+      "uv",
+      "relief",
+      "uvdtf"
+    ],
+    "uses": [
+      "signs",
+      "uvdtf",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Low preorder entry for an integrated flat UV and UV-DTF workflow.",
+    "avoid": "Avoid if you need shipping-unit reliability evidence or expect to upgrade editions later.",
+    "concern": "Factory preorder configuration; launch observations are not production validation.",
+    "url": "https://www.xtool.com",
+    "ownership": "Ink pricing, replacement path, and long-term cleaning workflow remain preproduction unknowns.",
+    "legacyId": "xtool_single",
+    "priceDetail": "$1,699 → $2,499 MSRP",
+    "priceNote": "Direct-to-consumer deposit model — not Kickstarter/Indiegogo.",
+    "tech": "UV-LED inkjet + UV-DTF — marketed as part of the “4-in-1” Omni platform",
+    "printheadDetail": "1 × Epson F1080 · 720×1440 DPI",
+    "camera": "“Pixel-Scan™ Vision System” — full-bed line laser (height) + CIS scan, 1440×1200 dpi, ±0.2mm claimed accuracy",
+    "bedSensor": "Laser-guided autofocus/altimetry — auto-detects highest point for head clearance",
+    "bedSensorFlag": "Independent press at the launch event reported some printhead-to-workpiece collisions and failed job starts on pre-production units.",
+    "bedSize": "Standard 330×122mm / Large 330×420mm bed",
+    "speed": "No official throughput spec. Demo cup job ≈15 min incl. scan; xTool's own staff indicated speed updates were still coming.",
+    "confidenceNote": "Low confidence — press/launch-event impressions only, no owner reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "Acrylic, wood, glass, metal, ceramic, and more — all editions."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "7mm official / 5mm reported",
+        "note": "Official spec states 7mm; Tom's Hardware's hands-on at the launch event reported 5mm of relief — an unresolved numeric conflict."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Builds surface relief on existing objects only — no freestanding 3D object, no support material."
+      },
+      "dtf": {
+        "v": "partial",
+        "note": "UV-DTF decals for hard/curved objects only — no garment/fabric DTF or DTG on this entry-level edition. That requires the UV+DT Fabric Edition."
+      }
+    },
+    "accessories": [
+      "RF1 Roll Feeder (continuous UV DTF, up to 15m)",
+      "LM1 Laminator (UV DTF lamination + foil stamping)",
+      "OR1 Rotary Attachment (tumblers/mugs, 1:1 3D preview)"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Secondary reporting cites a $399 replacement printhead, roughly 6–12 months reference life, and a three-month printhead warranty. These figures still require primary xTool confirmation; long-term storage remains unresolved.",
+      "NEW 2026-08-02: Secondary reporting places deposit-backer shipping in August 2026, new Dual UV orders in early September, and Single UV/DT+UV orders in mid-September. These are configuration-specific estimates, not confirmed broad fulfillment.",
+      "NEW 2026-07-26 (Facebook, xTool O1 Omni Official Group): the printhead-replacement-cost question was reaffirmed as still unanswered by xTool staff in the official group as of this pass -- not a new gap, but confirmed still open.",
+      "No edition upgrade path — printhead/ink configuration is factory-fixed for the machine's life. Buying UV-only forecloses ever adding apparel printing.",
+      "Closed, proprietary ink cartridges (trade-off for fewer clogging variables vs. open-ink rivals).",
+      "Independent press witnessed printhead collisions and failed job starts on pre-production hardware at the launch event — a real (not marketing) limitation.",
+      "UPDATE from r/xToolOfficial (mid-July 2026): a small number of early units are already in real owners' hands and posting genuine production photos (coins/medals, canvas up to the full 32×42cm/A3+ bed) — this is ahead of the broad August ship date, though the community itself says \"very few people have tried the Omni\" so far, so treat it as early-access, not general availability.",
+      "Even early owners can't yet answer basic ownership questions publicly — ink consumption per print and dishwasher-safety of printed items were both asked in an owner's own showcase thread and went unanswered, and printhead replacement cost/service policy remains an open, actively-debated question in the community.",
+      "NEW 2026-07-26 (Facebook, xTool O1 Omni Printer Official Group, 17.5K members): the printhead purge/long-term-storage question was asked again — 'if you want to store this long term without having to buy a new print head after, is there a way? Can you purge it?' — and still has no documented answer. Same open item, now reaffirmed a second time."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://www.xtool.com/pages/the-worlds-first-4-in-1-xtool-o1-omni-printer"
+      ],
+      [
+        "PR Newswire launch release",
+        "https://www.prnewswire.com/news-releases/xtool-launches-o1-omni-printer-the-worlds-first-all-in-one-desktop-printer-for-virtually-any-material-302811463.html"
+      ],
+      [
+        "Tom's Hardware — launch-event hands-on",
+        "https://www.tomshardware.com/maker-stem/xtool-says-its-01-omni-printer-can-print-it-all-firm-steps-into-the-world-of-uv-printing-for-output-on-all-surfaces-at-up-to-5mm-thick"
+      ],
+      [
+        "The Gadgeteer — launch coverage",
+        "https://the-gadgeteer.com/2026/06/29/xtool-o1-omni-targets-the-four-printer-problem-for-creators/"
+      ],
+      [
+        "Samcraft — model comparison guide",
+        "https://samcraft.shop/blogs/guides/xtool-o1-omni-models-compared"
+      ],
+      [
+        "Samcraft — vs. HeyGears G1",
+        "https://samcraft.shop/blogs/guides/xtool-o1-omni-vs-heygears-g1"
+      ],
+      [
+        "xTool Academy — UV/DTF/DTG explainer",
+        "https://www.xtool.com/blogs/xtool-academy/xtool-o1-uv-dtf-dtg-printing"
+      ],
+      [
+        "The Crafty Catsman — pricing breakdown",
+        "https://www.thecraftycatsman.com/news/xtool-o1-omni-launch-pricing-configurations-2026/"
+      ],
+      [
+        "Reddit r/xToolOfficial — early owner showcase thread",
+        "https://www.reddit.com/r/xToolOfficial/comments/1uxkkec/new_productions_with_o1_omniprinter/"
+      ],
+      [
+        "Reddit r/xToolOfficial — vs. eufyMake E1 discussion",
+        "https://www.reddit.com/r/xToolOfficial/comments/1uxgusg/xtool_omni_vs_eufymake_e1/"
+      ],
+      [
+        "Facebook — xTool O1 Omni Printer Official Group, printhead storage question (private group; membership required to view)",
+        "https://www.facebook.com/groups/1369975394262258/"
+      ]
+    ],
+    "tco": {
+      "setup": 300,
+      "maint": 200,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet.",
+      "printheadEstimate": {
+        "value": 399,
+        "label": "$399 secondary-source figure citing xTool; primary confirmation pending",
+        "official": false
+      },
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "xtool-dual",
+    "name": "xTool O1 Omni — Dual UV",
+    "maker": "xTool",
+    "status": "promising",
+    "statusText": "Promising, not proven",
+    "price": 2699,
+    "confidence": 3,
+    "head": "2 × Epson F1080",
+    "envelope": "330 × 420 mm · 150 mm claimed · 5 mm relief claimed",
+    "caps": [
+      "uv",
+      "relief",
+      "uvdtf",
+      "fluorescent"
+    ],
+    "uses": [
+      "signs",
+      "uvdtf",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Broader color and flexible-media options than the single-head edition.",
+    "avoid": "Avoid if production reliability and consumable pricing must be known before purchase.",
+    "concern": "Shipping-unit performance, live ink pricing, and replacement path remain unknown.",
+    "url": "https://www.xtool.com",
+    "ownership": "Integrated workflow is promising, but the economic model is still based on launch-stage information.",
+    "legacyId": "xtool_dual",
+    "priceDetail": "$2,699 → $3,299 MSRP",
+    "priceNote": "Direct-to-consumer deposit model — not Kickstarter/Indiegogo.",
+    "tech": "UV-LED inkjet + UV-DTF, dual printhead — adds fluorescent/flexible-material channels",
+    "printheadDetail": "2 × Epson F1080 · 720×1440 DPI",
+    "camera": "“Pixel-Scan™ Vision System” — full-bed line laser (height) + CIS scan, 1440×1200 dpi, ±0.2mm claimed accuracy",
+    "bedSensor": "Laser-guided autofocus/altimetry — auto-detects highest point for head clearance",
+    "bedSensorFlag": "Independent press at the launch event reported some printhead-to-workpiece collisions and failed job starts on pre-production units.",
+    "bedSize": "Standard 330×122mm / Large 330×420mm bed",
+    "speed": "No official throughput spec. Demo cup job ≈15 min incl. scan; xTool's own staff indicated speed updates were still coming.",
+    "confidenceNote": "Low confidence — press/launch-event impressions only, no owner reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "Acrylic, wood, glass, metal, ceramic, and more — all editions."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "7mm official / 5mm reported",
+        "note": "Official spec states 7mm; Tom's Hardware's hands-on at the launch event reported 5mm of relief — an unresolved numeric conflict."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Builds surface relief on existing objects only — no freestanding 3D object, no support material."
+      },
+      "dtf": {
+        "v": "partial",
+        "note": "Adds flexible and fluorescent ink channels over the Single UV edition, but still only UV-DTF decals — no garment/fabric DTF or DTG. That requires the UV+DT Fabric Edition."
+      }
+    },
+    "accessories": [
+      "RF1 Roll Feeder (continuous UV DTF, up to 15m)",
+      "LM1 Laminator (UV DTF lamination + foil stamping)",
+      "OR1 Rotary Attachment (tumblers/mugs, 1:1 3D preview)"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Secondary reporting cites a $399 replacement printhead, roughly 6–12 months reference life, and a three-month printhead warranty. These figures still require primary xTool confirmation; long-term storage remains unresolved.",
+      "NEW 2026-08-02: Secondary reporting places deposit-backer shipping in August 2026, new Dual UV orders in early September, and Single UV/DT+UV orders in mid-September. These are configuration-specific estimates, not confirmed broad fulfillment.",
+      "NEW 2026-07-26 (Facebook, xTool O1 Omni Official Group): same unresolved printhead-replacement-cost question applies to this configuration.",
+      "No edition upgrade path — printhead/ink configuration is factory-fixed for the machine's life. Buying UV-only forecloses ever adding apparel printing.",
+      "Closed, proprietary ink cartridges (trade-off for fewer clogging variables vs. open-ink rivals).",
+      "Independent press witnessed printhead collisions and failed job starts on pre-production hardware at the launch event — a real (not marketing) limitation.",
+      "UPDATE from r/xToolOfficial (mid-July 2026): a small number of early units are already in real owners' hands and posting genuine production photos (coins/medals, canvas up to the full 32×42cm/A3+ bed) — this is ahead of the broad August ship date, though the community itself says \"very few people have tried the Omni\" so far, so treat it as early-access, not general availability.",
+      "Even early owners can't yet answer basic ownership questions publicly — ink consumption per print and dishwasher-safety of printed items were both asked in an owner's own showcase thread and went unanswered, and printhead replacement cost/service policy remains an open, actively-debated question in the community.",
+      "NEW 2026-07-26 (Facebook, xTool O1 Omni Printer Official Group, 17.5K members): the printhead purge/long-term-storage question was asked again — 'if you want to store this long term without having to buy a new print head after, is there a way? Can you purge it?' — and still has no documented answer. Same open item, now reaffirmed a second time."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://www.xtool.com/pages/the-worlds-first-4-in-1-xtool-o1-omni-printer"
+      ],
+      [
+        "PR Newswire launch release",
+        "https://www.prnewswire.com/news-releases/xtool-launches-o1-omni-printer-the-worlds-first-all-in-one-desktop-printer-for-virtually-any-material-302811463.html"
+      ],
+      [
+        "Tom's Hardware — launch-event hands-on",
+        "https://www.tomshardware.com/maker-stem/xtool-says-its-01-omni-printer-can-print-it-all-firm-steps-into-the-world-of-uv-printing-for-output-on-all-surfaces-at-up-to-5mm-thick"
+      ],
+      [
+        "The Gadgeteer — launch coverage",
+        "https://the-gadgeteer.com/2026/06/29/xtool-o1-omni-targets-the-four-printer-problem-for-creators/"
+      ],
+      [
+        "Samcraft — model comparison guide",
+        "https://samcraft.shop/blogs/guides/xtool-o1-omni-models-compared"
+      ],
+      [
+        "Samcraft — vs. HeyGears G1",
+        "https://samcraft.shop/blogs/guides/xtool-o1-omni-vs-heygears-g1"
+      ],
+      [
+        "xTool Academy — UV/DTF/DTG explainer",
+        "https://www.xtool.com/blogs/xtool-academy/xtool-o1-uv-dtf-dtg-printing"
+      ],
+      [
+        "The Crafty Catsman — pricing breakdown",
+        "https://www.thecraftycatsman.com/news/xtool-o1-omni-launch-pricing-configurations-2026/"
+      ],
+      [
+        "Reddit r/xToolOfficial — early owner showcase thread",
+        "https://www.reddit.com/r/xToolOfficial/comments/1uxkkec/new_productions_with_o1_omniprinter/"
+      ],
+      [
+        "Reddit r/xToolOfficial — vs. eufyMake E1 discussion",
+        "https://www.reddit.com/r/xToolOfficial/comments/1uxgusg/xtool_omni_vs_eufymake_e1/"
+      ],
+      [
+        "Facebook — xTool O1 Omni Printer Official Group, printhead storage question (private group; membership required to view)",
+        "https://www.facebook.com/groups/1369975394262258/"
+      ]
+    ],
+    "tco": {
+      "setup": 300,
+      "maint": 250,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet (price not modeled there; setup/maintenance carried over).",
+      "printheadEstimate": {
+        "value": 399,
+        "label": "$399 secondary-source figure citing xTool; primary confirmation pending",
+        "official": false
+      },
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "xtool-dtuv",
+    "name": "xTool O1 Omni — DT+UV",
+    "maker": "xTool",
+    "status": "promising",
+    "statusText": "Promising, not proven",
+    "price": 2799,
+    "confidence": 3,
+    "head": "2 × Epson F1080 dedicated paths",
+    "envelope": "330 × 420 mm · 150 mm claimed · 5 mm relief claimed",
+    "caps": [
+      "uv",
+      "uvdtf",
+      "dtg",
+      "textiles"
+    ],
+    "uses": [
+      "signs",
+      "uvdtf",
+      "cases",
+      "textiles",
+      "general"
+    ],
+    "openInk": false,
+    "best": "The broadest integrated UV plus apparel workflow in the current consumer shortlist.",
+    "avoid": "Avoid if you prefer simpler maintenance or need verified dual-path production economics.",
+    "concern": "Dedicated UV and fabric paths lack shipping-unit workflow and maintenance evidence.",
+    "url": "https://www.xtool.com",
+    "ownership": "Two ink paths may add versatility and maintenance complexity; long-term data does not yet exist.",
+    "legacyId": "xtool_dtuv",
+    "priceDetail": "$2,799 → $3,499 MSRP",
+    "priceNote": "Direct-to-consumer deposit model — not Kickstarter/Indiegogo. Only edition with dedicated fabric printhead.",
+    "tech": "UV-LED inkjet + UV-DTF + DTG/DTF (fabric edition) — dedicated dual-path heads",
+    "printheadDetail": "2 × Epson F1080 dedicated paths (1 UV, 1 fabric) · 720×1440 DPI",
+    "camera": "“Pixel-Scan™ Vision System” — full-bed line laser (height) + CIS scan, 1440×1200 dpi, ±0.2mm claimed accuracy",
+    "bedSensor": "Laser-guided autofocus/altimetry — auto-detects highest point for head clearance",
+    "bedSensorFlag": "Independent press at the launch event reported some printhead-to-workpiece collisions and failed job starts on pre-production units.",
+    "bedSize": "Standard 330×122mm / Large 330×420mm bed · DTG platen 300×390mm",
+    "speed": "No official throughput spec. Demo cup job ≈15 min incl. scan; xTool's own staff indicated speed updates were still coming.",
+    "confidenceNote": "Low confidence — press/launch-event impressions only, no owner reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "Acrylic, wood, glass, metal, ceramic, and more — all editions."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "7mm official / 5mm reported",
+        "note": "Official spec states 7mm; Tom's Hardware's hands-on at the launch event reported 5mm of relief — an unresolved numeric conflict."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Builds surface relief on existing objects only — no freestanding 3D object, no support material."
+      },
+      "dtf": {
+        "v": "yes",
+        "note": "Only edition that does true garment DTF/DTG (heat-press apparel transfer) via a dedicated fabric printhead, in addition to UV-DTF decals from the UV path."
+      }
+    },
+    "accessories": [
+      "RF1 Roll Feeder (continuous UV DTF, up to 15m)",
+      "LM1 Laminator (UV DTF lamination + foil stamping)",
+      "OR1 Rotary Attachment (tumblers/mugs, 1:1 3D preview)",
+      "Compatible with xTool WonderPress heat press (DTF/DTG curing)"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Secondary reporting cites a $399 replacement printhead, roughly 6–12 months reference life, and a three-month printhead warranty. These figures still require primary xTool confirmation; long-term storage remains unresolved.",
+      "NEW 2026-08-02: Secondary reporting places deposit-backer shipping in August 2026, new Dual UV orders in early September, and Single UV/DT+UV orders in mid-September. These are configuration-specific estimates, not confirmed broad fulfillment.",
+      "NEW 2026-07-26 (Facebook, xTool O1 Omni Official Group): same unresolved printhead-replacement-cost question applies to this configuration.",
+      "No edition upgrade path — printhead/ink configuration is factory-fixed for the machine's life. Buying UV-only forecloses ever adding apparel printing.",
+      "Closed, proprietary ink cartridges (trade-off for fewer clogging variables vs. open-ink rivals).",
+      "Independent press witnessed printhead collisions and failed job starts on pre-production hardware at the launch event — a real (not marketing) limitation.",
+      "UPDATE from r/xToolOfficial (mid-July 2026): a small number of early units are already in real owners' hands and posting genuine production photos (coins/medals, canvas up to the full 32×42cm/A3+ bed) — this is ahead of the broad August ship date, though the community itself says \"very few people have tried the Omni\" so far, so treat it as early-access, not general availability.",
+      "Even early owners can't yet answer basic ownership questions publicly — ink consumption per print and dishwasher-safety of printed items were both asked in an owner's own showcase thread and went unanswered, and printhead replacement cost/service policy remains an open, actively-debated question in the community.",
+      "NEW 2026-07-26 (Facebook, xTool O1 Omni Printer Official Group, 17.5K members): the printhead purge/long-term-storage question was asked again — 'if you want to store this long term without having to buy a new print head after, is there a way? Can you purge it?' — and still has no documented answer. Same open item, now reaffirmed a second time."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://www.xtool.com/pages/the-worlds-first-4-in-1-xtool-o1-omni-printer"
+      ],
+      [
+        "PR Newswire launch release",
+        "https://www.prnewswire.com/news-releases/xtool-launches-o1-omni-printer-the-worlds-first-all-in-one-desktop-printer-for-virtually-any-material-302811463.html"
+      ],
+      [
+        "Tom's Hardware — launch-event hands-on",
+        "https://www.tomshardware.com/maker-stem/xtool-says-its-01-omni-printer-can-print-it-all-firm-steps-into-the-world-of-uv-printing-for-output-on-all-surfaces-at-up-to-5mm-thick"
+      ],
+      [
+        "The Gadgeteer — launch coverage",
+        "https://the-gadgeteer.com/2026/06/29/xtool-o1-omni-targets-the-four-printer-problem-for-creators/"
+      ],
+      [
+        "Samcraft — model comparison guide",
+        "https://samcraft.shop/blogs/guides/xtool-o1-omni-models-compared"
+      ],
+      [
+        "Samcraft — vs. HeyGears G1",
+        "https://samcraft.shop/blogs/guides/xtool-o1-omni-vs-heygears-g1"
+      ],
+      [
+        "xTool Academy — UV/DTF/DTG explainer",
+        "https://www.xtool.com/blogs/xtool-academy/xtool-o1-uv-dtf-dtg-printing"
+      ],
+      [
+        "The Crafty Catsman — pricing breakdown",
+        "https://www.thecraftycatsman.com/news/xtool-o1-omni-launch-pricing-configurations-2026/"
+      ],
+      [
+        "Reddit r/xToolOfficial — early owner showcase thread",
+        "https://www.reddit.com/r/xToolOfficial/comments/1uxkkec/new_productions_with_o1_omniprinter/"
+      ],
+      [
+        "Reddit r/xToolOfficial — vs. eufyMake E1 discussion",
+        "https://www.reddit.com/r/xToolOfficial/comments/1uxgusg/xtool_omni_vs_eufymake_e1/"
+      ],
+      [
+        "Facebook — xTool O1 Omni Printer Official Group, printhead storage question (private group; membership required to view)",
+        "https://www.facebook.com/groups/1369975394262258/"
+      ]
+    ],
+    "tco": {
+      "setup": 400,
+      "maint": 300,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet (price not modeled there; setup/maintenance carried over).",
+      "printheadEstimate": {
+        "value": 399,
+        "label": "$399 secondary-source figure citing xTool; primary confirmation pending",
+        "official": false
+      },
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "xone-basic",
+    "name": "Procolored X One — Basic",
+    "maker": "Procolored",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 3799,
+    "confidence": 2,
+    "head": "2 × XH-6",
+    "envelope": "330 mm width · 140 mm object · relief undisclosed",
+    "caps": [
+      "uv",
+      "laser"
+    ],
+    "uses": [
+      "signs",
+      "cases",
+      "general"
+    ],
+    "openInk": false,
+    "best": "UV printing combined with blue-diode and IR laser functions in one campaign-stage platform.",
+    "avoid": "Avoid if you need independently validated safety, maintenance, or shipping performance.",
+    "concern": "Estimated January 2027 delivery; deposited-relief limits were not verified.",
+    "url": "https://procolored-dtfprinter.kckb.me/msffb0126",
+    "ownership": "Cross-process integration may increase service complexity; shipping-unit ownership evidence is absent.",
+    "legacyId": "proc_basic",
+    "priceDetail": "$3,799 (campaign) — stated MSRP $7,999",
+    "priceNote": "No retail/Amazon price exists yet. Entry tier — laser engraving only, no UV-DTF or rotary.",
+    "tech": "UV printing + dual laser engraver/cutter (blue diode + IR) — no UV-DTF on this tier",
+    "printheadDetail": "2 × “XH-6” printhead — name not found in Procolored's existing part ecosystem by an independent reviewer, treated as unverified · up to 1440 DPI claimed",
+    "camera": "CCD camera “Vision Positioning” system for 2D placement/registration",
+    "bedSensor": "Infrared (IR) height detection paired with the camera — not laser/lidar",
+    "bedSensorFlag": null,
+    "bedSize": "A5 standard / A3 expanded platforms · 330mm max print width · 140mm object clearance",
+    "speed": "~10+ minutes for a full A3 print (rough early estimate) — reviewer explicitly flags this as modest, “desktop-scale” output.",
+    "confidenceNote": "Lowest confidence — zero independent reviews, brand trust concerns",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "400+ compatible materials: wood, metal, acrylic, leather, glass, stainless steel, ceramic, plastic."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "not disclosed",
+        "note": "Marketed as “instant-curing UV varnish” relief/texture, but no maximum height figure has been published anywhere — a genuine spec gap versus every other machine in this set."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Confirmed not a 3D printer — UV-flatbed + laser hybrid only on this tier."
+      },
+      "dtf": {
+        "v": "no",
+        "note": "Basic tier has no UV-DTF capability — that's added starting at the Standard tier. This tier is UV-flatbed + laser engraving only."
+      }
+    },
+    "accessories": [
+      "20W blue diode laser (included)",
+      "2W IR laser head for metal marking (included on Basic per campaign copy)"
+    ],
+    "callouts": [
+      "NEW 2026-07-26 (Facebook, cross-model research): a Procolored-adjacent group discussion referenced the K13 printhead family in a way that lends indirect corroboration to the XH-6 head's existence, but did not resolve its true origin/spec -- logged as a partial, not a confirmation.",
+      "Brand-trust flag: Procolored's official printer software (six other models) was independently confirmed by G DATA, BleepingComputer, and others to have shipped a cryptocurrency-stealer and Windows backdoor (“XRed”) for ~6 months in 2024–25. Not the X one specifically, but the same company controls its bundled software.",
+      "NEW 2026-08-02: The final Kickstarter funding total remains unresolved. Searchable post-close coverage still only confirms more than $860,000 and 200+ backers; a direct campaign-page check is still required before CUPP publishes a final total.",
+      "A reviewer explicitly titled coverage “Buyer Be Aware” — Kickstarter carries no delivery guarantee, and Procolored has a prior pattern of disgruntled backers on an earlier campaign.",
+      "Combining dust-generating laser work with dust-sensitive UV printheads in one sealed chassis is engineering-novel and unverified beyond a vague “completely sealed away” claim.",
+      "Not shipped — estimated delivery January 2027, the furthest-out ship date of any machine in this set.",
+      "REDDIT PATTERN (r/DTFTransferTalk, r/heatpress, r/dtf — on Procolored's existing, unrelated DTF printer lines): consistently negative independent brand sentiment predating the X one — \"Procolored is junk!!\", \"I HIGHLY recommend not buying Procolored products... absolute nightmare since day one,\" \"took Procolored 10 hours of troubleshooting,\" and one owner \"switching to screen printing\" over support quality. Common complaint themes: parts availability and printer longevity.",
+      "An industrial printing technician independently raised the exact same skepticism as All3DP about combining a dirt-generating laser with a dust-sensitive UV printhead in one chassis — corroborating it's a widely-shared technical concern, not one reviewer's opinion.",
+      "The Reddit user running the official X one Q&A video is tagged \"Brand Affiliate\" by Reddit itself — confirms that coverage is a paid/sponsored relationship, not independent.",
+      "FACEBOOK OFFICIAL Q&A (Procolored X one Launch Group, admin reply, ~13 weeks ago): Procolored itself confirmed the machine has an emergency stop button for safety, but explicitly stated \"at this stage, the system does not support print resume after a complete power loss\" — a genuine, brand-confirmed limitation not disclosed on the main spec pages. The same reply said discounted external air-purifier bundles are \"currently being planned\" for launch, i.e. not yet finalized or priced despite early-bird marketing mentioning them.",
+      "NEW 2026-07-26 (Facebook, \"Are procolored printers trash?\" group): a K13 Lite owner (a different Procolored product, not the X One) reports printhead/line clogging within about a month of use, an unresolved cleaning-cycle process, and support that \"seemed like AI.\" Does not confirm anything about the X One specifically, but corroborates the existing company-level brand-trust concern from a second, independent Procolored product line."
+    ],
+    "sources": [
+      [
+        "Procolored — X one launch",
+        "https://www.procolored.com/blogs/news/x-one-launches-uv-printer-laser-engraver"
+      ],
+      [
+        "Facebook — Procolored X one Launch Group, official Q&A on power loss/emergency stop (private group; membership required to view)",
+        "https://www.facebook.com/groups/1670774934298034/"
+      ],
+      [
+        "Kickstarter campaign",
+        "https://www.kickstarter.com/projects/procolored/procolored-x-one-full-color-uv-laser-in-one-system"
+      ],
+      [
+        "CNX Software",
+        "https://www.cnx-software.com/2026/05/21/procolored-x-one-a-3-in-1-uv-printer-and-color-laser-engraver-with-uv-dtf-support/"
+      ],
+      [
+        "All3DP — “Buyer Be Aware”",
+        "https://all3dp.com/4/procoloreds-x-one-folds-a-uv-printer-a-laser-cutter-and-a-sticker-maker-into-one-box/"
+      ],
+      [
+        "AndresJet — industry-blog skepticism",
+        "https://www.andresjet.com/blogs/knowledge/procolored-x-one-raises-a-hard-question-for-desktop-uv-printing"
+      ],
+      [
+        "G DATA — malware disclosure",
+        "https://www.gdatasoftware.com/blog/2025/05/38200-printer-infected-software-downloads"
+      ],
+      [
+        "BleepingComputer — malware coverage",
+        "https://www.bleepingcomputer.com/news/security/printer-maker-procolored-offered-malware-laced-drivers-for-months/"
+      ],
+      [
+        "TechRadar — malware coverage",
+        "https://www.techradar.com/pro/security/procolored-printers-shipped-out-with-malware-ridden-drivers-for-half-a-year"
+      ],
+      [
+        "Reddit r/DTFTransferTalk — brand sentiment",
+        "https://www.reddit.com/r/DTFTransferTalk/comments/1tyilaf/procolored_and_their_support_have_been_so_bad_im/"
+      ],
+      [
+        "Reddit r/lasercutting — X one Q&A (Brand Affiliate tagged)",
+        "https://www.reddit.com/r/lasercutting/comments/1rw1dot/answering_your_questions_about_the_procolored_x/"
+      ],
+      [
+        "Facebook — \"Are procolored printers trash?\" group, K13 Lite reliability report",
+        "https://www.facebook.com/groups/1270712091796928/"
+      ]
+    ],
+    "tco": {
+      "setup": 500,
+      "maint": 300,
+      "life": 0.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet (family-level 'Procolored X One' row applied to all three tiers).",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": true
+  },
+  {
+    "id": "xone-standard",
+    "name": "Procolored X One — Standard",
+    "maker": "Procolored",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 3999,
+    "confidence": 2,
+    "head": "2 × XH-6",
+    "envelope": "330 mm width · 140 mm object · relief undisclosed",
+    "caps": [
+      "uv",
+      "uvdtf",
+      "rotary",
+      "laser"
+    ],
+    "uses": [
+      "signs",
+      "tumblers",
+      "uvdtf",
+      "cases",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Unusually broad UV, UV-DTF, rotary, and laser feature set on paper.",
+    "avoid": "Avoid if you need production validation rather than campaign-stage integration claims.",
+    "concern": "Campaign-stage hardware with no independent shipping-unit validation.",
+    "url": "https://procolored-dtfprinter.kckb.me/msffb0126",
+    "ownership": "Multiple subsystems create a broad workflow but an unproven maintenance and support burden.",
+    "legacyId": "proc_standard",
+    "priceDetail": "$3,999 (campaign) — stated MSRP $8,599",
+    "priceNote": "No retail/Amazon price exists yet. Adds UV-DTF and rotary over Basic.",
+    "tech": "UV printing + dual laser engraver/cutter + UV-DTF — marketed as “3-in-1”",
+    "printheadDetail": "2 × “XH-6” printhead — name not found in Procolored's existing part ecosystem by an independent reviewer, treated as unverified · up to 1440 DPI claimed",
+    "camera": "CCD camera “Vision Positioning” system for 2D placement/registration",
+    "bedSensor": "Infrared (IR) height detection paired with the camera — not laser/lidar",
+    "bedSensorFlag": null,
+    "bedSize": "A5 standard / A3 expanded platforms · 330mm max print width · 140mm object clearance",
+    "speed": "~10+ minutes for a full A3 print (rough early estimate) — reviewer explicitly flags this as modest, “desktop-scale” output.",
+    "confidenceNote": "Lowest confidence — zero independent reviews, brand trust concerns",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "400+ compatible materials: wood, metal, acrylic, leather, glass, stainless steel, ceramic, plastic."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "not disclosed",
+        "note": "Marketed as “instant-curing UV varnish” relief/texture, but no maximum height figure has been published anywhere — a genuine spec gap versus every other machine in this set."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Confirmed not a 3D printer — UV-flatbed + laser + UV-DTF hybrid only."
+      },
+      "dtf": {
+        "v": "partial",
+        "note": "UV-DTF only (roll-to-roll printed stickers/decals for rigid or curved surfaces), added over the Basic tier. Does not do textile/garment DTF — a different process on Procolored's separate F/K-series machines."
+      }
+    },
+    "accessories": [
+      "20W blue diode laser (included)",
+      "UV-DTF Kit / Sticker Fixture Kit",
+      "Rotary Attachment Kit"
+    ],
+    "callouts": [
+      "NEW 2026-07-26 (Facebook, cross-model research): see Basic tier -- same partial XH-6/K13 corroboration note applies.",
+      "Brand-trust flag: Procolored's official printer software (six other models) was independently confirmed by G DATA, BleepingComputer, and others to have shipped a cryptocurrency-stealer and Windows backdoor (“XRed”) for ~6 months in 2024–25. Not the X one specifically, but the same company controls its bundled software.",
+      "NEW 2026-08-02: The final Kickstarter funding total remains unresolved. Searchable post-close coverage still only confirms more than $860,000 and 200+ backers; a direct campaign-page check is still required before CUPP publishes a final total.",
+      "A reviewer explicitly titled coverage “Buyer Be Aware” — Kickstarter carries no delivery guarantee, and Procolored has a prior pattern of disgruntled backers on an earlier campaign.",
+      "Combining dust-generating laser work with dust-sensitive UV printheads in one sealed chassis is engineering-novel and unverified beyond a vague “completely sealed away” claim.",
+      "Not shipped — estimated delivery January 2027, the furthest-out ship date of any machine in this set.",
+      "REDDIT PATTERN (r/DTFTransferTalk, r/heatpress, r/dtf — on Procolored's existing, unrelated DTF printer lines): consistently negative independent brand sentiment predating the X one — \"Procolored is junk!!\", \"I HIGHLY recommend not buying Procolored products... absolute nightmare since day one,\" \"took Procolored 10 hours of troubleshooting,\" and one owner \"switching to screen printing\" over support quality. Common complaint themes: parts availability and printer longevity.",
+      "An industrial printing technician independently raised the exact same skepticism as All3DP about combining a dirt-generating laser with a dust-sensitive UV printhead in one chassis — corroborating it's a widely-shared technical concern, not one reviewer's opinion.",
+      "The Reddit user running the official X one Q&A video is tagged \"Brand Affiliate\" by Reddit itself — confirms that coverage is a paid/sponsored relationship, not independent.",
+      "FACEBOOK OFFICIAL Q&A (Procolored X one Launch Group, admin reply, ~13 weeks ago): Procolored itself confirmed the machine has an emergency stop button for safety, but explicitly stated \"at this stage, the system does not support print resume after a complete power loss\" — a genuine, brand-confirmed limitation not disclosed on the main spec pages. The same reply said discounted external air-purifier bundles are \"currently being planned\" for launch, i.e. not yet finalized or priced despite early-bird marketing mentioning them.",
+      "NEW 2026-07-26 (Facebook, \"Are procolored printers trash?\" group): a K13 Lite owner (a different Procolored product, not the X One) reports printhead/line clogging within about a month of use, an unresolved cleaning-cycle process, and support that \"seemed like AI.\" Does not confirm anything about the X One specifically, but corroborates the existing company-level brand-trust concern from a second, independent Procolored product line."
+    ],
+    "sources": [
+      [
+        "Procolored — X one launch",
+        "https://www.procolored.com/blogs/news/x-one-launches-uv-printer-laser-engraver"
+      ],
+      [
+        "Facebook — Procolored X one Launch Group, official Q&A on power loss/emergency stop (private group; membership required to view)",
+        "https://www.facebook.com/groups/1670774934298034/"
+      ],
+      [
+        "Kickstarter campaign",
+        "https://www.kickstarter.com/projects/procolored/procolored-x-one-full-color-uv-laser-in-one-system"
+      ],
+      [
+        "CNX Software",
+        "https://www.cnx-software.com/2026/05/21/procolored-x-one-a-3-in-1-uv-printer-and-color-laser-engraver-with-uv-dtf-support/"
+      ],
+      [
+        "All3DP — “Buyer Be Aware”",
+        "https://all3dp.com/4/procoloreds-x-one-folds-a-uv-printer-a-laser-cutter-and-a-sticker-maker-into-one-box/"
+      ],
+      [
+        "AndresJet — industry-blog skepticism",
+        "https://www.andresjet.com/blogs/knowledge/procolored-x-one-raises-a-hard-question-for-desktop-uv-printing"
+      ],
+      [
+        "G DATA — malware disclosure",
+        "https://www.gdatasoftware.com/blog/2025/05/38200-printer-infected-software-downloads"
+      ],
+      [
+        "BleepingComputer — malware coverage",
+        "https://www.bleepingcomputer.com/news/security/printer-maker-procolored-offered-malware-laced-drivers-for-months/"
+      ],
+      [
+        "TechRadar — malware coverage",
+        "https://www.techradar.com/pro/security/procolored-printers-shipped-out-with-malware-ridden-drivers-for-half-a-year"
+      ],
+      [
+        "Reddit r/DTFTransferTalk — brand sentiment",
+        "https://www.reddit.com/r/DTFTransferTalk/comments/1tyilaf/procolored_and_their_support_have_been_so_bad_im/"
+      ],
+      [
+        "Reddit r/lasercutting — X one Q&A (Brand Affiliate tagged)",
+        "https://www.reddit.com/r/lasercutting/comments/1rw1dot/answering_your_questions_about_the_procolored_x/"
+      ],
+      [
+        "Facebook — \"Are procolored printers trash?\" group, K13 Lite reliability report",
+        "https://www.facebook.com/groups/1270712091796928/"
+      ]
+    ],
+    "tco": {
+      "setup": 500,
+      "maint": 300,
+      "life": 0.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet (family-level 'Procolored X One' row applied to all three tiers).",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": true
+  },
+  {
+    "id": "xone-pro",
+    "name": "Procolored X One — Professional",
+    "maker": "Procolored",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 4199,
+    "confidence": 2,
+    "head": "2 × XH-6",
+    "envelope": "330 mm width · 140 mm object · relief undisclosed",
+    "caps": [
+      "uv",
+      "uvdtf",
+      "rotary",
+      "laser"
+    ],
+    "uses": [
+      "signs",
+      "tumblers",
+      "uvdtf",
+      "cases",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Most expanded X One laser package for buyers specifically seeking an all-in-one platform.",
+    "avoid": "Avoid if proven integration, safety, maintenance, or production economics are required.",
+    "concern": "Integration, safety workflow, maintenance, and production economics remain unverified.",
+    "url": "https://procolored-dtfprinter.kckb.me/msffb0126",
+    "ownership": "Highest campaign complexity in this family, with the greatest unresolved serviceability risk.",
+    "legacyId": "proc_pro",
+    "priceDetail": "$4,199 (campaign) — stated MSRP $8,999",
+    "priceNote": "No retail/Amazon price exists yet. Top tier — adds a second, expanded IR laser head.",
+    "tech": "UV printing + dual laser engraver/cutter (expanded IR) + UV-DTF — marketed as “3-in-1”",
+    "printheadDetail": "2 × “XH-6” printhead — name not found in Procolored's existing part ecosystem by an independent reviewer, treated as unverified · up to 1440 DPI claimed",
+    "camera": "CCD camera “Vision Positioning” system for 2D placement/registration",
+    "bedSensor": "Infrared (IR) height detection paired with the camera — not laser/lidar",
+    "bedSensorFlag": null,
+    "bedSize": "A5 standard / A3 expanded platforms · 330mm max print width · 140mm object clearance",
+    "speed": "~10+ minutes for a full A3 print (rough early estimate) — reviewer explicitly flags this as modest, “desktop-scale” output.",
+    "confidenceNote": "Lowest confidence — zero independent reviews, brand trust concerns",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "400+ compatible materials: wood, metal, acrylic, leather, glass, stainless steel, ceramic, plastic."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "not disclosed",
+        "note": "Marketed as “instant-curing UV varnish” relief/texture, but no maximum height figure has been published anywhere — a genuine spec gap versus every other machine in this set."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Confirmed not a 3D printer — UV-flatbed + laser + UV-DTF hybrid only."
+      },
+      "dtf": {
+        "v": "partial",
+        "note": "UV-DTF only (roll-to-roll printed stickers/decals for rigid or curved surfaces). Does not do textile/garment DTF — a different process on Procolored's separate F/K-series machines."
+      }
+    },
+    "accessories": [
+      "20W blue diode laser (included)",
+      "UV-DTF Kit / Sticker Fixture Kit",
+      "Rotary Attachment Kit",
+      "Expanded 2W IR laser head for metal marking"
+    ],
+    "callouts": [
+      "NEW 2026-07-26 (Facebook, cross-model research): see Basic tier -- same partial XH-6/K13 corroboration note applies.",
+      "Brand-trust flag: Procolored's official printer software (six other models) was independently confirmed by G DATA, BleepingComputer, and others to have shipped a cryptocurrency-stealer and Windows backdoor (“XRed”) for ~6 months in 2024–25. Not the X one specifically, but the same company controls its bundled software.",
+      "NEW 2026-08-02: The final Kickstarter funding total remains unresolved. Searchable post-close coverage still only confirms more than $860,000 and 200+ backers; a direct campaign-page check is still required before CUPP publishes a final total.",
+      "A reviewer explicitly titled coverage “Buyer Be Aware” — Kickstarter carries no delivery guarantee, and Procolored has a prior pattern of disgruntled backers on an earlier campaign.",
+      "Combining dust-generating laser work with dust-sensitive UV printheads in one sealed chassis is engineering-novel and unverified beyond a vague “completely sealed away” claim.",
+      "Not shipped — estimated delivery January 2027, the furthest-out ship date of any machine in this set.",
+      "REDDIT PATTERN (r/DTFTransferTalk, r/heatpress, r/dtf — on Procolored's existing, unrelated DTF printer lines): consistently negative independent brand sentiment predating the X one — \"Procolored is junk!!\", \"I HIGHLY recommend not buying Procolored products... absolute nightmare since day one,\" \"took Procolored 10 hours of troubleshooting,\" and one owner \"switching to screen printing\" over support quality. Common complaint themes: parts availability and printer longevity.",
+      "An industrial printing technician independently raised the exact same skepticism as All3DP about combining a dirt-generating laser with a dust-sensitive UV printhead in one chassis — corroborating it's a widely-shared technical concern, not one reviewer's opinion.",
+      "The Reddit user running the official X one Q&A video is tagged \"Brand Affiliate\" by Reddit itself — confirms that coverage is a paid/sponsored relationship, not independent.",
+      "FACEBOOK OFFICIAL Q&A (Procolored X one Launch Group, admin reply, ~13 weeks ago): Procolored itself confirmed the machine has an emergency stop button for safety, but explicitly stated \"at this stage, the system does not support print resume after a complete power loss\" — a genuine, brand-confirmed limitation not disclosed on the main spec pages. The same reply said discounted external air-purifier bundles are \"currently being planned\" for launch, i.e. not yet finalized or priced despite early-bird marketing mentioning them.",
+      "NEW 2026-07-26 (Facebook, \"Are procolored printers trash?\" group): a K13 Lite owner (a different Procolored product, not the X One) reports printhead/line clogging within about a month of use, an unresolved cleaning-cycle process, and support that \"seemed like AI.\" Does not confirm anything about the X One specifically, but corroborates the existing company-level brand-trust concern from a second, independent Procolored product line."
+    ],
+    "sources": [
+      [
+        "Procolored — X one launch",
+        "https://www.procolored.com/blogs/news/x-one-launches-uv-printer-laser-engraver"
+      ],
+      [
+        "Facebook — Procolored X one Launch Group, official Q&A on power loss/emergency stop (private group; membership required to view)",
+        "https://www.facebook.com/groups/1670774934298034/"
+      ],
+      [
+        "Kickstarter campaign",
+        "https://www.kickstarter.com/projects/procolored/procolored-x-one-full-color-uv-laser-in-one-system"
+      ],
+      [
+        "CNX Software",
+        "https://www.cnx-software.com/2026/05/21/procolored-x-one-a-3-in-1-uv-printer-and-color-laser-engraver-with-uv-dtf-support/"
+      ],
+      [
+        "All3DP — “Buyer Be Aware”",
+        "https://all3dp.com/4/procoloreds-x-one-folds-a-uv-printer-a-laser-cutter-and-a-sticker-maker-into-one-box/"
+      ],
+      [
+        "AndresJet — industry-blog skepticism",
+        "https://www.andresjet.com/blogs/knowledge/procolored-x-one-raises-a-hard-question-for-desktop-uv-printing"
+      ],
+      [
+        "G DATA — malware disclosure",
+        "https://www.gdatasoftware.com/blog/2025/05/38200-printer-infected-software-downloads"
+      ],
+      [
+        "BleepingComputer — malware coverage",
+        "https://www.bleepingcomputer.com/news/security/printer-maker-procolored-offered-malware-laced-drivers-for-months/"
+      ],
+      [
+        "TechRadar — malware coverage",
+        "https://www.techradar.com/pro/security/procolored-printers-shipped-out-with-malware-ridden-drivers-for-half-a-year"
+      ],
+      [
+        "Reddit r/DTFTransferTalk — brand sentiment",
+        "https://www.reddit.com/r/DTFTransferTalk/comments/1tyilaf/procolored_and_their_support_have_been_so_bad_im/"
+      ],
+      [
+        "Reddit r/lasercutting — X one Q&A (Brand Affiliate tagged)",
+        "https://www.reddit.com/r/lasercutting/comments/1rw1dot/answering_your_questions_about_the_procolored_x/"
+      ],
+      [
+        "Facebook — \"Are procolored printers trash?\" group, K13 Lite reliability report",
+        "https://www.facebook.com/groups/1270712091796928/"
+      ]
+    ],
+    "tco": {
+      "setup": 500,
+      "maint": 300,
+      "life": 0.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet (family-level 'Procolored X One' row applied to all three tiers).",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": true
+  },
+  {
+    "id": "morpho-f1080",
+    "name": "Morpho F1080",
+    "maker": "Morpho",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 1599,
+    "confidence": 2,
+    "head": "F1080 (XP600 wording)",
+    "envelope": "330 × 420 mm with extension · 168 mm object · 60 mm stacked claim",
+    "caps": [
+      "uv",
+      "relief",
+      "vision"
+    ],
+    "uses": [
+      "signs",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Low campaign price with structured-light positioning and ambitious stacked-relief claims.",
+    "avoid": "Avoid if stacked relief, software, or serviceability must already be owner-validated.",
+    "concern": "The 60 mm stacked-relief claim is distinct from 5 mm spray clearance; shipping is planned for Q4 2026.",
+    "url": "https://www.morpho.inc",
+    "ownership": "Head terminology, recurring ink economics, software maturity, and service path need clarification.",
+    "legacyId": "morpho_f1080",
+    "priceDetail": "$1,599 (campaign) → $2,699 MSRP",
+    "priceNote": "$50 refundable deposit locks early pricing.",
+    "tech": "UV-LED inkjet · F1080 (6-channel) base head",
+    "printheadDetail": "Epson F1080 (XP600 wording in some materials), 1440 DPI",
+    "camera": "Most camera hardware of any machine here: dual 8MP stereo-vision + IR structured light (0.2mm accuracy claimed) + 5MP macro (“ReliefScan”, scans real objects into printable relief) + 2MP live-view + collision-avoidance laser",
+    "bedSensor": "Stereo-vision + structured light contour detection — a fundamentally different (claimed higher-fidelity) approach than a simple rangefinder",
+    "bedSensorFlag": "Entirely unverified — the product hasn't shipped and no independent testing exists.",
+    "bedSize": "330×220×168mm enclosed (420×330×168mm with optional A3 bed — bundling status disputed) · 10kg max object weight",
+    "speed": "No absolute figure. Claims up to 9× faster (Pro, White+CMYK) vs. an unspecified generic baseline — an independent analyst flags this as marketing framing, not a real competitor comparison.",
+    "confidenceNote": "Low confidence, but upgraded — no shipped units, yet a real firsthand hands-on account now exists from a live maker-faire demo (see callouts)",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "Claimed 2,000+ materials/surfaces."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "60mm claimed / 35mm demonstrated",
+        "flag": "Headline number (~10× most competitors) but only a 35mm sample has actually been shown; the spec page briefly self-contradicted with a “5mm” row during launch week before being corrected to 60mm.",
+        "note": "ReliefScan lets users scan a physical object's texture and reproduce it as printable relief."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "Base F1080 model explicitly listed as \"No\" for full-color 3D — that capability is Pro (i3200) model only."
+      },
+      "dtf": {
+        "v": "no",
+        "note": "A roll-to-roll UV-DTF accessory is “in development” per a July livestream — no ship date, spec, or price yet."
+      }
+    },
+    "accessories": [
+      "A3 Extended Print Bed (bundling disputed)",
+      "Rotary Jig (auto-levels via camera+laser)",
+      "Electrostatic Mat",
+      "Roll-to-Roll System (in development)",
+      "Open Jig System + SDK"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Multiple creators now show real printing on Morpho units. These remain preproduction, loaned, evaluator, or controlled-access machines; they verify capability but not ordinary-customer fulfillment, production reliability, or long-term TCO.",
+      "NEW 2026-08-05 (Facebook screen-capture evidence, manufacturer-produced): Morpho's i3200 configuration completed a full-color flat print in 2:18, versus 10:59 for Morpho's F1080 and 14:35 for an unidentified competing F1080 printer — approximately 4.8× and 6.3× faster. A separate 1 mm raised fish print took 13:39 on the Morpho i3200 versus 1:10:53 on an unidentified F1080 printer — approximately 5.2× faster. Morpho did not disclose enough settings for controlled or independent benchmarking; these are whole-printer results, not proof of printhead-only speed.",
+      "NEW 2026-08-02: Kickstarter's own project page still read “Coming soon” on August 2. The expected August launch and refundable reservation deposit are campaign-stage signals, not shipment evidence.",
+      "NEW 2026-07-26 (Facebook, early-creator program): a small early-creator unit has reportedly reached at least one tester ahead of the public Kickstarter launch -- unverified beyond a single post, no independent review yet.",
+      "NEW 2026-07-26 (Facebook, brand livestream recap): a Morpho-run livestream recap repeated the G7 Master ColorSpace certification claim without providing a registry number -- the registry conflict flagged in the backlog remains unresolved.",
+      "Furthest from shipping of all 8 machines — Kickstarter itself isn't live yet as of this report. Every spec is manufacturer-sourced; zero independent verification exists.",
+      "The full-color-3D claim (the single most eye-catching feature on paper) is explicitly unconfirmed by independent analysis — no finished object has been shown, Pro model only, no water-soluble support material has been described anywhere.",
+      "Spec page self-contradicted during launch week on both the 60mm/5mm relief height and a “4×” vs. “2.4×” enclosed-volume claim — both later “corrected,” worth noting as a QA/consistency flag.",
+      "Founder is DJI's former camera-division R&D VP with ~200 engineers reported — a genuine credibility positive distinct from the unverified spec claims.",
+      "MAJOR UPDATE (Reddit r/MorphoPrintOfficial, 13 days ago): a real independent hands-on account now exists from a live demo unit at the MRRF maker festival — this contradicts \"zero hands-on impressions.\" The reporter saw the claimed 4.5–9× speed advantage demoed live, noted no harsh ink odor, timed the camera alignment at ~40–60 sec (Morpho says they're targeting <20 sec), and was told BOTH refillable and sealed cartridge options will ship — not purely open-ink as the marketing implies. Texture quality was praised as smoother than competitors with no visible layer lines. Treat as a vendor-guided demo, not independent unit testing — but real, not just marketing copy.",
+      "Morpho's own brand-run subreddit now states outright that it \"achieved G7 Master ColorSpace certification\" and includes a built-in spectrophotometer — this directly conflicts with an independent analyst's earlier finding that no Morpho listing exists in the public G7 certification registry. Flagged as an unresolved conflict between official claims and independent verification.",
+      "Community members considering F1080-based machines (eufyMake, OMTech single-head, xTool single/dual UV) repeatedly cite Morpho's i3200 head as a reason to wait, even sight-unseen — reputation is building ahead of any shipped units.",
+      "NEW 2026-07-26 (Facebook, Morpho UV Printer Users group, admin post): a real early-creator unit has arrived outside the Kickstarter/retail channel — the group admin posted photos of prints made a few hours after it arrived, and another member confirmed a limited pre-launch seeding program ('did you get it as an early creator?!'). This is the second real hands-on data point after the MRRF demo, though still not general availability.",
+      "NEW 2026-07-26 (Facebook, Morpho UV Printer Official Group): a member recapped an official livestream stating most software features are free/offline, with some advanced AI features possibly requiring a subscription — secondhand and unconfirmed against a primary source, logged at low confidence."
+    ],
+    "sources": [
+      [
+        "Official site / spec table",
+        "https://www.morpho.inc/"
+      ],
+      [
+        "Official deposit/store page",
+        "https://estore.morpho.inc/products/morpho-uv-printer"
+      ],
+      [
+        "Kickstarter (pre-launch)",
+        "https://www.kickstarter.com/projects/morpho-inc/morpho-desktop-uv-printer"
+      ],
+      [
+        "Morpho Facebook — i3200 vs. F1080 timing comparison (screen-capture reviewed by CUPP)",
+        "https://www.facebook.com/share/v/14jZwj24jSr/"
+      ],
+      [
+        "HansTechTalk — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=oN5fgnnTl4c"
+      ],
+      [
+        "Bitner Built — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=JvEeQZSuvLk"
+      ],
+      [
+        "3D Printing Cost Calculator — deep-dive analysis",
+        "https://3dprintingcostcalculator.com/news/morpho-uv-printer"
+      ],
+      [
+        "3D Printing Cost Calculator — field comparison",
+        "https://3dprintingcostcalculator.com/news/best-desktop-uv-printer"
+      ],
+      [
+        "Machines for Makers — spec listing",
+        "https://www.machinesformakers.com/products/morpho-desktop-uv-printer"
+      ],
+      [
+        "The Crafty Catsman — digest",
+        "https://www.thecraftycatsman.com/news/uv-printing-digest-2026-07-12/"
+      ],
+      [
+        "GlobeNewswire — press release",
+        "https://www.globenewswire.com/news-release/2026/07/02/3321428/0/en/Morpho-Unveils-Desktop-UV-Printing-System-to-Bridge-the-Gap-Between-Industrial-Power-and-Creative-Freedom.html"
+      ],
+      [
+        "Reddit r/MorphoPrintOfficial — MRRF hands-on account",
+        "https://www.reddit.com/r/MorphoPrintOfficial/comments/1uty7sr/my_morpho_experience_from_mrrf_event/"
+      ],
+      [
+        "Reddit r/MorphoPrintOfficial — brand G7/spectrophotometer claim",
+        "https://www.reddit.com/r/MorphoPrintOfficial/"
+      ],
+      [
+        "Reddit r/3Dprinting — category-wide maintenance discussion",
+        "https://www.reddit.com/r/3Dprinting/comments/1v2fcrf/whats_with_this_recent_wave_of_uv_printers/"
+      ],
+      [
+        "Facebook — Morpho UV Printer Users, early-creator unit prints thread",
+        "https://www.facebook.com/groups/1039221979045867/"
+      ],
+      [
+        "Facebook — Morpho UV Printer Official Group, livestream software recap",
+        "https://www.facebook.com/groups/1841037633231835/"
+      ]
+    ],
+    "tco": {
+      "setup": 300,
+      "maint": 250,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet.",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "morpho-i3200",
+    "name": "Morpho Pro i3200",
+    "maker": "Morpho",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 2799,
+    "confidence": 2,
+    "head": "Epson i3200",
+    "envelope": "330 × 420 mm with extension · 168 mm object · 60 mm stacked claim",
+    "caps": [
+      "uv",
+      "relief",
+      "vision"
+    ],
+    "uses": [
+      "signs",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "More promising head architecture and vision system than the base Morpho configuration.",
+    "avoid": "Avoid if stacking, software, delivery, and serviceability must already be proven.",
+    "concern": "Camera and head architecture are promising, but production validation is missing.",
+    "url": "https://www.morpho.inc",
+    "ownership": "Named head improves transparency, while ink pricing, replacement process, and support remain immature.",
+    "legacyId": "morpho_pro",
+    "priceDetail": "$2,799 (campaign) → $4,999 MSRP",
+    "priceNote": "$50 refundable deposit locks early pricing.",
+    "tech": "UV-LED inkjet · i3200 (8-channel, industrial-grade) head, field-upgradable from F1080 (price not disclosed)",
+    "printheadDetail": "Epson i3200, 2400 DPI, 3.8pL variable droplet",
+    "camera": "Most camera hardware of any machine here: dual 8MP stereo-vision + IR structured light (0.2mm accuracy claimed) + 5MP macro (“ReliefScan”, scans real objects into printable relief) + 2MP live-view + collision-avoidance laser",
+    "bedSensor": "Stereo-vision + structured light contour detection — a fundamentally different (claimed higher-fidelity) approach than a simple rangefinder",
+    "bedSensorFlag": "Entirely unverified — the product hasn't shipped and no independent testing exists.",
+    "bedSize": "330×220×168mm enclosed (420×330×168mm with optional A3 bed — bundling status disputed) · 10kg max object weight",
+    "speed": "No absolute figure. Claims up to 9× faster (Pro, White+CMYK) vs. an unspecified generic baseline — an independent analyst flags this as marketing framing, not a real competitor comparison.",
+    "confidenceNote": "Low confidence, but upgraded — no shipped units, yet a real firsthand hands-on account now exists from a live maker-faire demo (see callouts)",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "Claimed 2,000+ materials/surfaces."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "60mm claimed / 35mm demonstrated",
+        "flag": "Headline number (~10× most competitors) but only a 35mm sample has actually been shown; the spec page briefly self-contradicted with a “5mm” row during launch week before being corrected to 60mm.",
+        "note": "ReliefScan lets users scan a physical object's texture and reproduce it as printable relief."
+      },
+      "full3d": {
+        "v": "partial",
+        "note": "Listed as “supported with specialty inks” on the Pro model only. An independent analyst states plainly: no freestanding full-color 3D print has been shown, no price or build volume published for this mode. Treat as a roadmap claim, not a confirmed feature — no water-soluble support material is mentioned anywhere."
+      },
+      "dtf": {
+        "v": "no",
+        "note": "A roll-to-roll UV-DTF accessory is “in development” per a July livestream — no ship date, spec, or price yet."
+      }
+    },
+    "accessories": [
+      "A3 Extended Print Bed (bundling disputed)",
+      "Rotary Jig (auto-levels via camera+laser)",
+      "Electrostatic Mat",
+      "Roll-to-Roll System (in development)",
+      "Open Jig System + SDK"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Multiple creators now show real printing on Morpho units. These remain preproduction, loaned, evaluator, or controlled-access machines; they verify capability but not ordinary-customer fulfillment, production reliability, or long-term TCO.",
+      "NEW 2026-08-05 (Facebook screen-capture evidence, manufacturer-produced): Morpho's i3200 configuration completed a full-color flat print in 2:18, versus 10:59 for Morpho's F1080 and 14:35 for an unidentified competing F1080 printer — approximately 4.8× and 6.3× faster. A separate 1 mm raised fish print took 13:39 on the Morpho i3200 versus 1:10:53 on an unidentified F1080 printer — approximately 5.2× faster. Morpho did not disclose enough settings for controlled or independent benchmarking; these are whole-printer results, not proof of printhead-only speed.",
+      "NEW 2026-08-02: Kickstarter's own project page still read “Coming soon” on August 2. The expected August launch and refundable reservation deposit are campaign-stage signals, not shipment evidence.",
+      "NEW 2026-07-26 (Facebook, early-creator program): see F1080 tier -- same early-unit sighting applies to the i3200 configuration.",
+      "Furthest from shipping of all 8 machines — Kickstarter itself isn't live yet as of this report. Every spec is manufacturer-sourced; zero independent verification exists.",
+      "The full-color-3D claim (the single most eye-catching feature on paper) is explicitly unconfirmed by independent analysis — no finished object has been shown, Pro model only, no water-soluble support material has been described anywhere.",
+      "Spec page self-contradicted during launch week on both the 60mm/5mm relief height and a “4×” vs. “2.4×” enclosed-volume claim — both later “corrected,” worth noting as a QA/consistency flag.",
+      "Founder is DJI's former camera-division R&D VP with ~200 engineers reported — a genuine credibility positive distinct from the unverified spec claims.",
+      "MAJOR UPDATE (Reddit r/MorphoPrintOfficial, 13 days ago): a real independent hands-on account now exists from a live demo unit at the MRRF maker festival — this contradicts \"zero hands-on impressions.\" The reporter saw the claimed 4.5–9× speed advantage demoed live, noted no harsh ink odor, timed the camera alignment at ~40–60 sec (Morpho says they're targeting <20 sec), and was told BOTH refillable and sealed cartridge options will ship — not purely open-ink as the marketing implies. Texture quality was praised as smoother than competitors with no visible layer lines. Treat as a vendor-guided demo, not independent unit testing — but real, not just marketing copy.",
+      "Morpho's own brand-run subreddit now states outright that it \"achieved G7 Master ColorSpace certification\" and includes a built-in spectrophotometer — this directly conflicts with an independent analyst's earlier finding that no Morpho listing exists in the public G7 certification registry. Flagged as an unresolved conflict between official claims and independent verification.",
+      "Community members considering F1080-based machines (eufyMake, OMTech single-head, xTool single/dual UV) repeatedly cite Morpho's i3200 head as a reason to wait, even sight-unseen — reputation is building ahead of any shipped units.",
+      "NEW 2026-07-26 (Facebook, Morpho UV Printer Users group, admin post): a real early-creator unit has arrived outside the Kickstarter/retail channel — the group admin posted photos of prints made a few hours after it arrived, and another member confirmed a limited pre-launch seeding program ('did you get it as an early creator?!'). This is the second real hands-on data point after the MRRF demo, though still not general availability.",
+      "NEW 2026-07-26 (Facebook, Morpho UV Printer Official Group): a member recapped an official livestream stating most software features are free/offline, with some advanced AI features possibly requiring a subscription — secondhand and unconfirmed against a primary source, logged at low confidence."
+    ],
+    "sources": [
+      [
+        "Official site / spec table",
+        "https://www.morpho.inc/"
+      ],
+      [
+        "Official deposit/store page",
+        "https://estore.morpho.inc/products/morpho-uv-printer"
+      ],
+      [
+        "Kickstarter (pre-launch)",
+        "https://www.kickstarter.com/projects/morpho-inc/morpho-desktop-uv-printer"
+      ],
+      [
+        "Morpho Facebook — i3200 vs. F1080 timing comparison (screen-capture reviewed by CUPP)",
+        "https://www.facebook.com/share/v/14jZwj24jSr/"
+      ],
+      [
+        "HansTechTalk — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=oN5fgnnTl4c"
+      ],
+      [
+        "Bitner Built — Morpho evaluator video",
+        "https://www.youtube.com/watch?v=JvEeQZSuvLk"
+      ],
+      [
+        "3D Printing Cost Calculator — deep-dive analysis",
+        "https://3dprintingcostcalculator.com/news/morpho-uv-printer"
+      ],
+      [
+        "3D Printing Cost Calculator — field comparison",
+        "https://3dprintingcostcalculator.com/news/best-desktop-uv-printer"
+      ],
+      [
+        "Machines for Makers — spec listing",
+        "https://www.machinesformakers.com/products/morpho-desktop-uv-printer"
+      ],
+      [
+        "The Crafty Catsman — digest",
+        "https://www.thecraftycatsman.com/news/uv-printing-digest-2026-07-12/"
+      ],
+      [
+        "GlobeNewswire — press release",
+        "https://www.globenewswire.com/news-release/2026/07/02/3321428/0/en/Morpho-Unveils-Desktop-UV-Printing-System-to-Bridge-the-Gap-Between-Industrial-Power-and-Creative-Freedom.html"
+      ],
+      [
+        "Reddit r/MorphoPrintOfficial — MRRF hands-on account",
+        "https://www.reddit.com/r/MorphoPrintOfficial/comments/1uty7sr/my_morpho_experience_from_mrrf_event/"
+      ],
+      [
+        "Reddit r/MorphoPrintOfficial — brand G7/spectrophotometer claim",
+        "https://www.reddit.com/r/MorphoPrintOfficial/"
+      ],
+      [
+        "Reddit r/3Dprinting — category-wide maintenance discussion",
+        "https://www.reddit.com/r/3Dprinting/comments/1v2fcrf/whats_with_this_recent_wave_of_uv_printers/"
+      ],
+      [
+        "Facebook — Morpho UV Printer Users, early-creator unit prints thread",
+        "https://www.facebook.com/groups/1039221979045867/"
+      ],
+      [
+        "Facebook — Morpho UV Printer Official Group, livestream software recap",
+        "https://www.facebook.com/groups/1841037633231835/"
+      ]
+    ],
+    "tco": {
+      "setup": 300,
+      "maint": 300,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet.",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "g1x-starter",
+    "name": "HeyGears G1X Starter",
+    "maker": "HeyGears",
+    "status": "promising",
+    "statusText": "Promising, not proven",
+    "price": 2999,
+    "confidence": 3,
+    "head": "Epson i3200-U1HD",
+    "envelope": "330 × 420 mm UV mode · 130 mm object · 5 mm relief",
+    "caps": [
+      "uv",
+      "relief",
+      "3dupgrade"
+    ],
+    "uses": [
+      "signs",
+      "cases",
+      "relief",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Credible head architecture and a path toward full-color 3D without buying the full pack immediately.",
+    "avoid": "Avoid if historical campaign pricing, current rewards, and delivery status are unacceptable unknowns.",
+    "concern": "UV surface work only out of the box; current reward pricing still needs capture.",
+    "url": "https://www.kickstarter.com",
+    "ownership": "A premium head and modular concept are attractive, but resin-station economics and support remain unproven.",
+    "legacyId": "heygears_starter",
+    "priceDetail": "$2,999 (campaign) → $4,999 MSRP",
+    "priceNote": "UV/2.5D only — does NOT include the Resin Station and cannot do full-color 3D despite the “G1X” name.",
+    "tech": "UV-LED inkjet only — no Resin Station on this tier",
+    "printheadDetail": "Epson i3200: 3,200 nozzles, 3.9pL, up to 1440×2400 DPI",
+    "camera": "Fixed line-scan imaging camera for position/shape/edge detection and auto-alignment (feeds “Blueprint Studio” software)",
+    "bedSensor": "Not confirmed — no laser/lidar Z-height auto-sensing found in any source; likely manual Z-height setting",
+    "bedSensorFlag": "A real spec gap versus eufyMake, xTool, and Morpho, all of which have some form of auto height sensing.",
+    "bedSize": "420×330mm flatbed (UV mode)",
+    "speed": "“Up to 3×” UV print speed vs. single-F1080 rivals — the manufacturer's own internal benchmark, not third-party tested.",
+    "confidenceNote": "Lowest confidence — zero independent (non-sponsored) reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "400+ compatible substrates: metal, wood, acrylic, ceramic, glass, leather."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "5mm recommended / 10mm claimed max",
+        "note": "HeyGears' own copy says textures “up to 10mm, with 5mm or less recommended for optimal quality/stability” — most third-party coverage cites a flat 5mm headline instead."
+      },
+      "full3d": {
+        "v": "no",
+        "note": "This tier has the i3200 head but does NOT include the Resin Station — full-color 3D with water-soluble support is exclusive to the Full-3D Pack, despite the shared “G1X” name."
+      },
+      "dtf": {
+        "v": "partial",
+        "note": "Modular Roll-to-Film/DTF add-on for garment transfers, skin-safe/low-allergen ink claimed — pricing not yet published."
+      }
+    },
+    "accessories": [
+      "Rotary attachment (cylindrical objects, price TBD)",
+      "Roll-to-film/DTF attachment (price TBD)"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Campaign FAQ estimates December 2026 for G1X rewards and March 2027 for the G1/F1080 Starter Pack. These are campaign estimates, not delivery confirmation.",
+      "NEW 2026-08-02: Four evaluator videos show flat UV, raised-texture, and full-color 3D output on evaluator units. The units are sponsored, loaned, or preproduction evidence and do not establish production reliability or long-term TCO.",
+      "NEW 2026-08-02: Kickstarter page metadata reported the campaign at 7,875% funded. A separate secondary source claimed roughly $10 million; CUPP has not reconciled that dollar total against the campaign page.",
+      "NEW 2026-08-02: HeyGears provided a pre-launch, explicitly non-final printhead replacement estimate of under $2,000. This is more authoritative than the older ~$1,300 community estimate, but it is not a confirmed sale price.",
+      "NEW 2026-07-26 (Facebook/Reddit, cost estimation thread): community members independently produced a similar ~$1,300 printhead-replacement estimate via a third-party cost-estimator method, converging with (but not independently confirming) the earlier Reddit figure.",
+      "If it ships as advertised, this would be the first sub-$5,500 desktop machine doing true full-color 3D printing with water-soluble support — a capability previously exclusive to $30k+ industrial machines (e.g. Stratasys J-series).",
+      "G1 vs. G1X naming is genuinely confusing: only the “Full-3D Pack” configuration does full-color 3D. The “G1X Starter” (same i3200 head) does NOT include the Resin Station and cannot do it.",
+      "The most-cited hands-on coverage (Tom's Hardware) is explicitly labeled Sponsored Content — treat it as paid placement, not independent editorial.",
+      "Spec inconsistencies flagged across the manufacturer's own marketing: layer thickness given as both 10–20μm and 10–30μm; texture height cited as 5mm, 10mm, and separately “up to 150mm Deep Relief” in different copy.",
+      "HARD NUMBER FROM REDDIT (r/3dprinter, community-sourced, not officially published): the i3200 printhead reportedly costs ~$1,300 to replace, lasts 12–24 months only with daily use, and the machine has no purge-and-store function — meaning it WILL clog if powered off or left unplugged. This means the G1X is effectively designed for constant commercial-volume use, not the casual/prosumer use its marketing implies. Treat this figure as community-sourced and unverified by HeyGears directly, but detailed enough to weigh seriously.",
+      "One 9-month eufyMake E1 owner on Reddit says they're specifically waiting for an i3200-headed machine (naming Morpho, in the same breath as HeyGears) instead of buying a second F1080-based printer — a cross-brand signal that the i3200 head's reputation is already shaping buying decisions ahead of any G1X units shipping.",
+      "FACEBOOK UPDATE (HeyGears G1 Series Official Community, official brand post, July 24, 2026): the Kickstarter passed $7,000,000 raised with 1,600+ backers in its first 22 hours, prompting an announced $10M stretch goal (3 replacement air filters for every backer) — an unusually fast funding pace for this comparison set and a signal of strong pent-up demand, though it says nothing about the product's actual reliability once units ship. Community members in the same group were already asking basic availability questions (\"when can we buy/receive this machine\") that a live pre-launch webinar reportedly did not fully answer.",
+      "NEW 2026-07-26 (Facebook, HeyGears G1 Series Official Community): a member confirmed the Blue Print Studio software (3D mode) displays total mL of material needed for a project, answering part of an ink/resin cost-visibility question — though UV-mode cost estimation wasn't addressed."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://store.heygears.com/pages/heygears-g1"
+      ],
+      [
+        "Official blog — G1X announcement",
+        "https://store.heygears.com/blogs/blog/meet-heygears-g1x-the-world-s-1st-desktop-3-in-1-full-color-3d-uv-printer"
+      ],
+      [
+        "Steve Makes Everything — G1X evaluator video",
+        "https://www.youtube.com/watch?v=IlAAKqK1rCg"
+      ],
+      [
+        "stlDenise3D — G1X evaluator video",
+        "https://www.youtube.com/watch?v=znvGpn81yn8"
+      ],
+      [
+        "BuildDanielBuild — G1X evaluator video",
+        "https://www.youtube.com/watch?v=htlvYz8XlaI"
+      ],
+      [
+        "Spen's Painting — sponsored G1X evaluator video",
+        "https://www.youtube.com/watch?v=YJ9C3oFTGuE"
+      ],
+      [
+        "3D Printing Industry — spec table + pricing",
+        "https://3dprintingindustry.com/news/heygears-g1-series-desktop-full-color-3d-and-uv-printer-technical-specifications-and-pricing-252408/"
+      ],
+      [
+        "Tom's Hardware (labeled Sponsored Content)",
+        "https://www.tomshardware.com/peripherals/printers/desktop-full-color-3d-uv-industrial-modular-g1-series-heygears"
+      ],
+      [
+        "Fauxhammer — independent commentary",
+        "https://www.fauxhammer.com/3d-printing/heygears-g1-g1-x-announced-full-colour-resin-3d-printing-is-finally-coming-home/"
+      ],
+      [
+        "Make: — coverage",
+        "https://makezine.com/article/digital-fabrication/3d-printing-workshop/heygears-unveils-g1x-the-worlds-first-desktop-full-color-3d-uv-printer/"
+      ],
+      [
+        "3DPrint.com — Kickstarter-risk framing",
+        "https://3dprint.com/329298/heygears-g1-series-launches-on-kickstarter-bringing-full-color-3d-and-uv-printing-to-the-desktop/"
+      ],
+      [
+        "3D Printing Cost Calculator — ink cost analysis",
+        "https://3dprintingcostcalculator.com/news/heygears-g1-price"
+      ],
+      [
+        "Reddit r/3dprinter — printhead cost/maintenance discussion",
+        "https://www.reddit.com/r/3dprinter/comments/1utx2un/has_anyone_heard_of_this_3d_printer_brand_is_it/"
+      ],
+      [
+        "Facebook — HeyGears G1 Series Official Community, $7M/22hr stretch-goal post (private group; membership required to view)",
+        "https://www.facebook.com/groups/heygears.gseries/"
+      ],
+      [
+        "Facebook — HeyGears G1 Series Official Community, Blue Print Studio material-usage estimator confirmation",
+        "https://www.facebook.com/groups/heygears.gseries/"
+      ]
+    ],
+    "tco": {
+      "setup": 500,
+      "maint": 350,
+      "life": 2,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet (family-level 'HeyGears G1X' row applied to both tiers).",
+      "printheadEstimate": {
+        "value": 1300,
+        "label": "~$1,300 -- community-sourced (Reddit) i3200-U1HD estimate, not confirmed by HeyGears"
+      },
+      "ink": {
+        "model": "rate",
+        "ratePerMl": 0.155,
+        "mlPerJobDefault": 4,
+        "note": "HeyGears G1X UV ink, ~$0.13-$0.1967/mL depending on channel (blended ~$0.155/mL used here). mL/job is a rough user-adjustable placeholder -- no independent benchmark exists."
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "g1x-full",
+    "name": "HeyGears G1X Full-3D Pack",
+    "maker": "HeyGears",
+    "status": "promising",
+    "statusText": "Promising, not proven",
+    "price": 3299,
+    "confidence": 3,
+    "head": "Epson i3200-U1HD",
+    "envelope": "Mode-specific volume disputed · 130–150 mm reported · 5 mm UV relief",
+    "caps": [
+      "uv",
+      "relief",
+      "3d",
+      "soluble"
+    ],
+    "uses": [
+      "signs",
+      "cases",
+      "relief",
+      "3d",
+      "general"
+    ],
+    "openInk": false,
+    "best": "Most accessible integrated path to UV surface printing plus full-color material jetting.",
+    "avoid": "Avoid if build volume, support removal, throughput, materials, and service must be verified now.",
+    "concern": "Only this pack includes the resin station; several production details remain disputed or unverified.",
+    "url": "https://www.kickstarter.com",
+    "ownership": "Resin, soluble support, post-processing, and maintenance could dominate total cost; evidence is not mature.",
+    "legacyId": "heygears_full3d",
+    "priceDetail": "$3,299 (campaign) → $5,499 MSRP",
+    "priceNote": "Only the Full-3D Pack (+Resin Station) unlocks full-color 3D — don't confuse SKUs.",
+    "tech": "Digital Material Jetting with Resin Station add-on: CMYK+2×White+Water-Soluble Support+Transparent",
+    "printheadDetail": "Epson i3200: 3,200 nozzles, 3.9pL, up to 1440×2400 DPI",
+    "camera": "Fixed line-scan imaging camera for position/shape/edge detection and auto-alignment (feeds “Blueprint Studio” software)",
+    "bedSensor": "Not confirmed — no laser/lidar Z-height auto-sensing found in any source; likely manual Z-height setting",
+    "bedSensorFlag": "A real spec gap versus eufyMake, xTool, and Morpho, all of which have some form of auto height sensing.",
+    "bedSize": "420×330mm flatbed · full-color 3D build volume 420×330×130mm (sources inconsistent on a separate “mini flatbed” 130×230×150mm fixture)",
+    "speed": "“Up to 3×” UV print speed vs. single-F1080 rivals — the manufacturer's own internal benchmark, not third-party tested.",
+    "confidenceNote": "Lowest confidence — zero independent (non-sponsored) reviews",
+    "tiers": {
+      "flat": {
+        "v": "yes",
+        "note": "400+ compatible substrates: metal, wood, acrylic, ceramic, glass, leather."
+      },
+      "raised": {
+        "v": "yes",
+        "height": "5mm recommended / 10mm claimed max",
+        "note": "HeyGears' own copy says textures “up to 10mm, with 5mm or less recommended for optimal quality/stability” — most third-party coverage cites a flat 5mm headline instead."
+      },
+      "full3d": {
+        "v": "yes",
+        "note": "The headline feature of this comparison set — genuine full-color 3D printing with water-soluble support (dissolve in water, no tools/sanding), CMYK+2W+Support+Transparent. Requires the add-on Resin Station included only in this pack."
+      },
+      "dtf": {
+        "v": "partial",
+        "note": "Modular Roll-to-Film/DTF add-on for garment transfers, skin-safe/low-allergen ink claimed — pricing not yet published."
+      }
+    },
+    "accessories": [
+      "Resin Station (included, ~$300 value)",
+      "Rotary attachment (cylindrical objects, price TBD)",
+      "Roll-to-film/DTF attachment (price TBD)"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: Campaign FAQ estimates December 2026 for G1X rewards and March 2027 for the G1/F1080 Starter Pack. These are campaign estimates, not delivery confirmation.",
+      "NEW 2026-08-02: Four evaluator videos show flat UV, raised-texture, and full-color 3D output on evaluator units. The units are sponsored, loaned, or preproduction evidence and do not establish production reliability or long-term TCO.",
+      "NEW 2026-08-02: Kickstarter page metadata reported the campaign at 7,875% funded. A separate secondary source claimed roughly $10 million; CUPP has not reconciled that dollar total against the campaign page.",
+      "NEW 2026-08-02: HeyGears provided a pre-launch, explicitly non-final printhead replacement estimate of under $2,000. This is more authoritative than the older ~$1,300 community estimate, but it is not a confirmed sale price.",
+      "NEW 2026-07-26 (Facebook/Reddit, cost estimation thread): same converging community estimate applies to the Full-3D configuration.",
+      "If it ships as advertised, this would be the first sub-$5,500 desktop machine doing true full-color 3D printing with water-soluble support — a capability previously exclusive to $30k+ industrial machines (e.g. Stratasys J-series).",
+      "G1 vs. G1X naming is genuinely confusing: only the “Full-3D Pack” configuration does full-color 3D. The “G1X Starter” (same i3200 head) does NOT include the Resin Station and cannot do it.",
+      "The most-cited hands-on coverage (Tom's Hardware) is explicitly labeled Sponsored Content — treat it as paid placement, not independent editorial.",
+      "Spec inconsistencies flagged across the manufacturer's own marketing: layer thickness given as both 10–20μm and 10–30μm; texture height cited as 5mm, 10mm, and separately “up to 150mm Deep Relief” in different copy.",
+      "HARD NUMBER FROM REDDIT (r/3dprinter, community-sourced, not officially published): the i3200 printhead reportedly costs ~$1,300 to replace, lasts 12–24 months only with daily use, and the machine has no purge-and-store function — meaning it WILL clog if powered off or left unplugged. This means the G1X is effectively designed for constant commercial-volume use, not the casual/prosumer use its marketing implies. Treat this figure as community-sourced and unverified by HeyGears directly, but detailed enough to weigh seriously.",
+      "One 9-month eufyMake E1 owner on Reddit says they're specifically waiting for an i3200-headed machine (naming Morpho, in the same breath as HeyGears) instead of buying a second F1080-based printer — a cross-brand signal that the i3200 head's reputation is already shaping buying decisions ahead of any G1X units shipping.",
+      "FACEBOOK UPDATE (HeyGears G1 Series Official Community, official brand post, July 24, 2026): the Kickstarter passed $7,000,000 raised with 1,600+ backers in its first 22 hours, prompting an announced $10M stretch goal (3 replacement air filters for every backer) — an unusually fast funding pace for this comparison set and a signal of strong pent-up demand, though it says nothing about the product's actual reliability once units ship. Community members in the same group were already asking basic availability questions (\"when can we buy/receive this machine\") that a live pre-launch webinar reportedly did not fully answer.",
+      "NEW 2026-07-26 (Facebook, HeyGears G1 Series Official Community): a member confirmed the Blue Print Studio software (3D mode) displays total mL of material needed for a project, answering part of an ink/resin cost-visibility question — though UV-mode cost estimation wasn't addressed."
+    ],
+    "sources": [
+      [
+        "Official product page",
+        "https://store.heygears.com/pages/heygears-g1"
+      ],
+      [
+        "Official blog — G1X announcement",
+        "https://store.heygears.com/blogs/blog/meet-heygears-g1x-the-world-s-1st-desktop-3-in-1-full-color-3d-uv-printer"
+      ],
+      [
+        "Steve Makes Everything — G1X evaluator video",
+        "https://www.youtube.com/watch?v=IlAAKqK1rCg"
+      ],
+      [
+        "stlDenise3D — G1X evaluator video",
+        "https://www.youtube.com/watch?v=znvGpn81yn8"
+      ],
+      [
+        "BuildDanielBuild — G1X evaluator video",
+        "https://www.youtube.com/watch?v=htlvYz8XlaI"
+      ],
+      [
+        "Spen's Painting — sponsored G1X evaluator video",
+        "https://www.youtube.com/watch?v=YJ9C3oFTGuE"
+      ],
+      [
+        "3D Printing Industry — spec table + pricing",
+        "https://3dprintingindustry.com/news/heygears-g1-series-desktop-full-color-3d-and-uv-printer-technical-specifications-and-pricing-252408/"
+      ],
+      [
+        "Tom's Hardware (labeled Sponsored Content)",
+        "https://www.tomshardware.com/peripherals/printers/desktop-full-color-3d-uv-industrial-modular-g1-series-heygears"
+      ],
+      [
+        "Fauxhammer — independent commentary",
+        "https://www.fauxhammer.com/3d-printing/heygears-g1-g1-x-announced-full-colour-resin-3d-printing-is-finally-coming-home/"
+      ],
+      [
+        "Make: — coverage",
+        "https://makezine.com/article/digital-fabrication/3d-printing-workshop/heygears-unveils-g1x-the-worlds-first-desktop-full-color-3d-uv-printer/"
+      ],
+      [
+        "3DPrint.com — Kickstarter-risk framing",
+        "https://3dprint.com/329298/heygears-g1-series-launches-on-kickstarter-bringing-full-color-3d-and-uv-printing-to-the-desktop/"
+      ],
+      [
+        "3D Printing Cost Calculator — ink cost analysis",
+        "https://3dprintingcostcalculator.com/news/heygears-g1-price"
+      ],
+      [
+        "Reddit r/3dprinter — printhead cost/maintenance discussion",
+        "https://www.reddit.com/r/3dprinter/comments/1utx2un/has_anyone_heard_of_this_3d_printer_brand_is_it/"
+      ],
+      [
+        "Facebook — HeyGears G1 Series Official Community, $7M/22hr stretch-goal post (private group; membership required to view)",
+        "https://www.facebook.com/groups/heygears.gseries/"
+      ],
+      [
+        "Facebook — HeyGears G1 Series Official Community, Blue Print Studio material-usage estimator confirmation",
+        "https://www.facebook.com/groups/heygears.gseries/"
+      ]
+    ],
+    "tco": {
+      "setup": 500,
+      "maint": 350,
+      "life": 2,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet (family-level 'HeyGears G1X' row applied to both tiers).",
+      "printheadEstimate": {
+        "value": 1300,
+        "label": "~$1,300 -- community-sourced (Reddit) i3200-U1HD estimate, not confirmed by HeyGears"
+      },
+      "ink": {
+        "model": "rate",
+        "ratePerMl": 0.155,
+        "mlPerJobDefault": 4,
+        "note": "Same UV ink pricing as Starter, plus undisclosed full-color 3D resin usage per job (resin $0.039-$0.059/mL exists but no per-job resin-consumption benchmark exists yet)."
+      }
+    },
+    "affiliate": false
+  },
+  {
+    "id": "inew3d",
+    "name": "iNew3D QC2A",
+    "maker": "iNew3D / SIMBA 3D",
+    "status": "watchlist",
+    "statusText": "Watchlist",
+    "price": 7199,
+    "confidence": 2,
+    "head": "Proprietary modular micro-jetting head",
+    "envelope": "200 × 160 × 80 mm full-color 3D volume",
+    "caps": [
+      "3d",
+      "soluble",
+      "ai"
+    ],
+    "uses": [
+      "3d"
+    ],
+    "openInk": false,
+    "best": "Dedicated full-color photopolymer material jetting rather than a surface-printing hybrid.",
+    "avoid": "Avoid if recurring material prices, head identity, fulfillment, and production validation must be known.",
+    "concern": "Production schedule changed; recurring material prices and shipping-unit validation remain absent.",
+    "url": "https://www.kickstarter.com",
+    "ownership": "Highest entry price and proprietary material path in the comparison; operating economics are unresolved.",
+    "legacyId": "inew3d_qc2a",
+    "priceDetail": "$9,999 MSRP · $7,199–$7,599 (campaign tiers)",
+    "priceNote": "",
+    "tech": "Photopolymer/UV material jetting (PolyJet-class) — CMYW + Transparent + Water-Soluble Support (6 channels, no black/K channel)",
+    "printheadDetail": "Undisclosed “modular printhead” · stated 720×2880 DPI — an unusual, 2D-inkjet-style spec choice for a 3D printer, flagged by an independent reviewer as likely indicating reused 2D printhead hardware",
+    "camera": "None for alignment (not applicable — enclosed chamber, fixed platform). 1080p monitoring/timelapse only.",
+    "bedSensor": "Not applicable — enclosed chamber with a fixed build platform, not an object-placement printer",
+    "bedSensorFlag": null,
+    "bedSize": "Enclosed build volume only 200×160×80mm — flagged by a reviewer as the model's main limitation",
+    "speed": "15 cm³/hour rated · ≈7 hours for a 100mm-tall figurine",
+    "confidenceNote": "Low-medium — campaign closed, but no confirmed independent owner reports found yet",
+    "tiers": {
+      "flat": {
+        "v": "no",
+        "note": "Not applicable — this is not a substrate/object-decorating printer at all."
+      },
+      "raised": {
+        "v": "no",
+        "note": "Not applicable — it prints full-volume enclosed 3D objects, not a raised-relief overlay on existing items."
+      },
+      "full3d": {
+        "v": "yes",
+        "note": "This is the ONLY thing this machine does, and it's real: CMYW jetting + dedicated water-soluble support dissolved in plain water (~15 min, no solvents). Claimed 500,000+ colors via droplet mixing."
+      },
+      "dtf": {
+        "v": "no",
+        "note": "Not applicable."
+      }
+    },
+    "accessories": [
+      "Extra Resin Pack (6×1000g)",
+      "Replaceable printhead (top tier only)",
+      "SimbaSlicer software (bundled)"
+    ],
+    "callouts": [
+      "NEW 2026-08-02: The campaign was reported at $1,425,248 from 226 backers and lists a two-year warranty. A second snapshot reports $1,458,637 from 231 backers; the difference likely reflects capture timing but remains unreconciled. The original June 2026 shipping claim still lacks verified owner-delivery evidence.",
+      "NEW 2026-07-26 (Reddit, delivery tracking): a backer post gives an informal delivery-timeline estimate that is later than Kickstarter's original June 2026 date, consistent with the backlog's flagged 'delivery status unknown and overdue for a check' item -- still not an official confirmation from iNew3D/SIMBA 3D.",
+      "DIFFERENT PRODUCT CATEGORY — this is a fully enclosed desktop full-color material-jetting 3D printer (conceptually a mini Stratasys/Mimaki PolyJet machine), not a UV flatbed printer. It cannot print on your own mugs, phone cases, or wood panels — compare it on the full-color-3D tier only, not on bed size/camera/height-sensor specs against the other machines.",
+      "Small build volume (200×160×80mm) is flagged by an independent reviewer as the model's main limitation.",
+      "An independent reviewer warns printheads need regular use-or-clean cycles or they clog — “not an FFF printer you can forget for a month.”",
+      "Finished parts reportedly begin to deform around 50°C and are weaker than typical FFF plastic — decorative/display use, not functional parts.",
+      "STRONG EXPERT ENDORSEMENT (Reddit r/3Dprinting): a commenter with hands-on industrial PolyJet experience (managed a Stratasys J750/J850) says their team is buying one — and trying to convince the team to buy two — specifically praising the water-soluble support versus the lye-bath ultrasonic cleaning industrial PolyJet support removal normally requires. This is a genuinely credible, expert-level positive data point.",
+      "STRONG COUNTER-SKEPTICISM (same thread): a detailed critical comment flags that the Kickstarter listed the company as based in New York while it's reportedly a 100% Chinese company; no recognized color standard (Pantone/Toyo/HKS/Focaltone) is referenced anywhere; \"resin pack\" pricing and exact contents are never disclosed; other claimed product pages are dead links; and photos of claimed \"industrial installs\" look unconvincing for the scale claimed. Another commenter calls it \"vaporware. Expensive vaporware.\"",
+      "A German-language source (r/3DDruck) describes the project as combining FDM printing with integrated inkjet technology — a hybrid-architecture detail not found in any English-language coverage, and not something we could independently confirm. Flagged for further verification, not taken as fact.",
+      "NEW 2026-07-26 (Facebook, inew3d QC2A Full-Color 3D Printer Launch Group): a community member states shipping is expected to begin \"next month\" (~August 2026) \"if everything goes to plan\" — the first indication of a revised delivery window since the original June 2026 Kickstarter estimate passed. One member's understanding only, not an official statement; still the single most important open question for this printer."
+    ],
+    "sources": [
+      [
+        "Kickstarter campaign",
+        "https://www.kickstarter.com/projects/inew3d/inew3d-the-desktop-full-color-3d-printer-with-ai-modeling"
+      ],
+      [
+        "Kickstarter FAQ",
+        "https://www.kickstarter.com/projects/inew3d/inew3d-the-desktop-full-color-3d-printer-with-ai-modeling/faqs"
+      ],
+      [
+        "Fabbaloo — independent analysis",
+        "https://www.fabbaloo.com/news/qc2a-desktop-3d-printer-brings-full-color-3d-printing-below-us10k"
+      ],
+      [
+        "3D Printing Journal",
+        "https://www.3dprintingjournal.com/p/inew3d-qc2a-full-color-uv-3d-printing"
+      ],
+      [
+        "Gizmocrowd — spec table",
+        "https://www.gizmocrowd.com/post/inew3d-qc2a-3d-printer"
+      ],
+      [
+        "All3DP (marked Sponsored Content)",
+        "https://all3dp.com/4/realistic-full-color-3d-prints-in-one-step-meet-the-inew3d-qc2a/"
+      ],
+      [
+        "Reddit r/3Dprinting — expert endorsement + skepticism thread",
+        "https://www.reddit.com/r/3Dprinting/comments/1s09ey3/inew3d/"
+      ],
+      [
+        "Reddit r/3DDruck — German-language coverage (FDM+inkjet claim)",
+        "https://www.reddit.com/r/3DDruck/comments/1rbn5fn/inew3d_simba3d_vollfarb3ddruck_für_den_desktop/"
+      ],
+      [
+        "Facebook — inew3d QC2A Full-Color 3D Printer Launch Group, delivery-timeline comment",
+        "https://www.facebook.com/groups/888231600602196/"
+      ]
+    ],
+    "tco": {
+      "setup": 700,
+      "maint": 500,
+      "life": 1.5,
+      "tcoSourceNote": "CUPP Master v0.9, TCO Assumptions sheet.",
+      "printheadEstimate": null,
+      "ink": {
+        "model": "unknown",
+        "note": "No disclosed $/mL consumable pricing exists for this printer family (CUPP Master v0.9, Consumables sheet has no row for it)."
+      }
+    },
+    "affiliate": false
+  }
+]
